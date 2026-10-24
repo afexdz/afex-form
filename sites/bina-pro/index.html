@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bina Pro, centre des métiers du bâtiment et de l’énergie à Sétif</title>
+<meta name="description" content="Bina Pro : formations en électricité du bâtiment, plomberie, froid et climatisation, soudure, énergie solaire et sécurité HSE à Sétif. Travaux pratiques en atelier.">
+<meta name="theme-color" content="#161616">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23F2B705'/%3E%3Cpath d='M6 24h20M9 24V13l7-5 7 5v11' fill='none' stroke='%23161616' stroke-width='2.6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--yel:#F2B705;--yelD:#C99600;--blk:#161616;--blk2:#232323;--bp:#14304F;--bpL:#21486F;--con:#E9E7E1;--card:#FFFFFF;--ink:#1A1A1A;--ink2:#5D5B55;--line:#D7D3C9;--h:"Oswald","Cairo",system-ui,sans-serif;--t:"Cairo",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--t);background:var(--con);color:var(--ink);line-height:1.6;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+:focus-visible{outline:3px solid var(--yel);outline-offset:3px}
+.w{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+h1,h2,h3{font-family:var(--h);font-weight:700;line-height:1.08;text-transform:uppercase;letter-spacing:.01em}
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3{text-transform:none;font-family:var(--t);font-weight:800;line-height:1.3}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;font-weight:800;transition:background .2s,color .2s}
+.btn.yel{background:var(--yel);color:var(--blk)}.btn.yel:hover{background:var(--yelD)}
+.btn.out{box-shadow:inset 0 0 0 2px #fff;color:#fff}.btn.out:hover{background:#fff;color:var(--blk)}
+.hazard{height:12px;background:repeating-linear-gradient(-45deg,var(--yel) 0 16px,var(--blk) 16px 32px)}
+header{background:var(--blk);color:#fff}
+.nav{display:flex;align-items:center;gap:22px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--h);font-weight:700;font-size:1.5rem;text-transform:uppercase}
+.logo i{width:30px;height:30px;background:var(--yel);display:grid;place-items:center;color:var(--blk);font-style:normal;font-size:1rem}
+.nav nav{display:flex;gap:4px;margin-inline-start:auto}
+.nav nav a{padding:8px 12px;color:#CFCBC2;font-weight:700;font-size:.95rem}
+.nav nav a:hover{color:var(--yel)}
+.lang{display:flex;gap:2px;padding:3px;background:var(--blk2)}
+.lang button{min-width:38px;height:34px;padding:0 9px;font-weight:800;font-size:.85rem;color:#CFCBC2}
+.lang button[aria-pressed="true"]{background:var(--yel);color:var(--blk)}
+/* blueprint hero */
+.hero{background-color:var(--bp);color:#fff;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:80px 80px,80px 80px,16px 16px,16px 16px}
+.hero .w{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,64px);align-items:center;padding-top:clamp(44px,7vw,90px);padding-bottom:clamp(44px,7vw,90px)}
+.hero h1{font-size:clamp(2.6rem,6vw,4.8rem)}
+.hero p{margin-top:16px;color:#C8D6E6;font-size:clamp(1.05rem,1.4vw,1.2rem);max-width:30em}
+.acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+/* 3D cube of trades */
+.stage{--s:230px;display:grid;justify-items:center;gap:22px}
+.scene{width:var(--s);height:var(--s);perspective:900px;margin:30px 0}
+.cube{position:relative;width:100%;height:100%;transform-style:preserve-3d;transform:rotateX(-16deg) rotateY(24deg) var(--r,rotateX(0));transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.f{position:absolute;inset:0;display:grid;place-items:center;align-content:center;gap:10px;text-align:center;padding:16px;background:var(--yel);color:var(--blk);border:3px solid var(--blk);font-family:var(--h);font-weight:700;font-size:1.15rem;text-transform:uppercase;backface-visibility:hidden}
+[dir="rtl"] .f{text-transform:none;font-family:var(--t);font-weight:800}
+.f svg{width:52px;height:52px}
+.f.f2,.f.f4,.f.f6{background:#FFD23F}
+.f1{transform:translateZ(calc(var(--s)/2))}
+.f2{transform:rotateY(90deg) translateZ(calc(var(--s)/2))}
+.f3{transform:rotateY(180deg) translateZ(calc(var(--s)/2))}
+.f4{transform:rotateY(-90deg) translateZ(calc(var(--s)/2))}
+.f5{transform:rotateX(90deg) translateZ(calc(var(--s)/2))}
+.f6{transform:rotateX(-90deg) translateZ(calc(var(--s)/2))}
+.picker{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.picker button{min-height:42px;padding:0 14px;background:rgba(255,255,255,.08);color:#fff;font-weight:700;font-size:.92rem}
+.picker button[aria-pressed="true"]{background:var(--yel);color:var(--blk)}
+section{padding:clamp(56px,8vw,100px) 0}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:26px}
+.sh h2{font-size:clamp(2rem,4vw,3.2rem)}
+.sh p{color:var(--ink2);max-width:28em}
+.sheet{display:grid;grid-template-columns:1.2fr .8fr;gap:0;background:var(--card);border:2px solid var(--blk)}
+.sheet .main{padding:clamp(22px,3vw,36px)}
+.sheet .main h3{font-size:clamp(1.6rem,3vw,2.2rem)}
+.sheet .main p{margin-top:10px;color:var(--ink2)}
+.sheet ul{list-style:none;margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:8px 20px}
+.sheet li{padding-inline-start:18px;position:relative}
+.sheet li::before{content:"";position:absolute;inset-inline-start:0;top:.62em;width:8px;height:8px;background:var(--yel);outline:2px solid var(--blk)}
+.sheet aside{background:var(--blk);color:#fff;padding:clamp(22px,3vw,36px);display:grid;gap:14px;align-content:start}
+.sheet dt{color:#A9A59B;font-size:.88rem}
+.sheet dd{font-family:var(--h);font-size:1.5rem;font-weight:700}
+[dir="rtl"] .sheet dd{font-family:var(--t);font-weight:800}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;list-style:none;counter-reset:s;border:2px solid var(--blk)}
+.steps li{counter-increment:s;padding:24px;background:var(--card);border-inline-end:2px solid var(--blk)}
+.steps li:last-child{border-inline-end:0}
+.steps li::before{content:counter(s,decimal-leading-zero);display:block;font-family:var(--h);font-size:2.6rem;font-weight:700;color:var(--yelD);line-height:1}
+.steps h3{font-size:1.25rem;margin:10px 0 6px}
+.steps p{color:var(--ink2)}
+.form{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,60px);align-items:start}
+form{background:var(--card);border:2px solid var(--blk);padding:clamp(20px,3vw,32px);display:grid;gap:14px}
+label{display:grid;gap:6px;font-weight:700}
+input,select{min-height:48px;padding:0 14px;border:2px solid #C9C4B8;background:#fff;font-weight:400}
+input:focus,select:focus{outline:3px solid var(--yel);outline-offset:0;border-color:var(--blk)}
+.msg{min-height:1.6em;font-weight:800}
+footer{background:var(--blk);color:#CFCBC2;padding:26px 0;font-size:.92rem}
+footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--yel);text-decoration:underline}
+@media(max-width:960px){.hero .w,.form,.sheet{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.steps li{border-inline-end:0;border-bottom:2px solid var(--blk)}.steps li:last-child{border-bottom:0}}
+@media(max-width:720px){.nav nav{display:none}.lang{margin-inline-start:auto}.stage{--s:170px}.sheet ul{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cube{transition:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="w nav">
+  <a class="logo" href="#"><i aria-hidden="true">B</i><span data-i="brand">Bina Pro</span></a>
+  <nav><a href="#metiers" data-i="n1">Métiers</a><a href="#parcours" data-i="n2">Parcours</a><a href="#inscription" data-i="n3">Inscription</a></nav>
+  <div class="lang" role="group" aria-label="Langue"><button type="button" data-l="fr" aria-pressed="true">FR</button><button type="button" data-l="ar" aria-pressed="false">عربي</button><button type="button" data-l="en" aria-pressed="false">EN</button></div>
+</div></header>
+<div class="hazard" aria-hidden="true"></div>
+<main>
+<section class="hero" style="padding:0"><div class="w">
+  <div>
+    <h1 data-i="h1">Un métier du chantier, appris sur le chantier.</h1>
+    <p data-i="lede">Électricité, plomberie, climatisation, soudure, solaire et sécurité : 70 % de pratique en atelier et un stage en entreprise à Sétif.</p>
+    <div class="acts"><a class="btn yel" href="#inscription" data-i="cta1">S’inscrire</a><a class="btn out" href="#metiers" data-i="cta2">Choisir un métier</a></div>
+  </div>
+  <div class="stage">
+    <div class="scene" aria-hidden="true"><div class="cube" id="cube"></div></div>
+    <div class="picker" id="picker" role="group"></div>
+  </div>
+</div></section>
+
+<section id="metiers"><div class="w">
+  <div class="sh"><h2 data-i="mH">Le métier choisi</h2><p data-i="mP">Tournez le cube ou choisissez un métier : la fiche se met à jour.</p></div>
+  <div class="sheet" id="sheet" aria-live="polite"></div>
+</div></section>
+
+<section id="parcours" style="padding-top:0"><div class="w">
+  <div class="sh"><h2 data-i="pH">Votre parcours</h2></div>
+  <ol class="steps">
+    <li><h3 data-i="s1">Atelier</h3><p data-i="s1p">Câblage, raccords, brasure et soudure sur des postes réels, en groupes de 10.</p></li>
+    <li><h3 data-i="s2">Sécurité</h3><p data-i="s2p">Port des EPI, consignation électrique et travail en hauteur, avant chaque chantier.</p></li>
+    <li><h3 data-i="s3">Stage</h3><p data-i="s3p">Un mois en entreprise de bâtiment ou d’installation, puis l’attestation de qualification.</p></li>
+  </ol>
+</div></section>
+
+<section id="inscription" style="padding-top:0"><div class="w form">
+  <div><h2 data-i="iH" style="font-size:clamp(2rem,4vw,3rem)">Réservez votre place</h2><p data-i="iP" style="margin-top:12px;color:var(--ink2)">Ouvert dès 18 ans, sans diplôme exigé pour la plupart des métiers. L’équipe vous rappelle pour un test d’orientation.</p></div>
+  <form id="f" novalidate data-endpoint="">
+    <label><span data-i="l1">Nom complet</span><input name="name" autocomplete="name" required></label>
+    <label><span data-i="l2">Téléphone</span><input name="tel" type="tel" inputmode="tel" autocomplete="tel" required placeholder="05 / 06 / 07 …"></label>
+    <label><span data-i="l3">Métier</span><select name="trade" id="sel"></select></label>
+    <button class="btn yel" type="submit" data-i="send">Envoyer ma demande</button>
+    <p class="msg" id="msg" aria-live="polite"></p>
+  </form>
+</div></section>
+</main>
+<div class="hazard" aria-hidden="true"></div>
+<footer><div class="w"><span data-i="foot">© 2026 Bina Pro, centre des métiers du bâtiment, Sétif</span><span><span data-i="by">Site réalisé par</span> <a href="https://afexad.app">AFEX Digital</a></span></div></footer>
+
+<script>
+var I={
+fr:{brand:"Bina Pro",n1:"Métiers",n2:"Parcours",n3:"Inscription",h1:"Un métier du chantier, appris sur le chantier.",lede:"Électricité, plomberie, climatisation, soudure, solaire et sécurité : 70 % de pratique en atelier et un stage en entreprise à Sétif.",cta1:"S’inscrire",cta2:"Choisir un métier",mH:"Le métier choisi",mP:"Tournez le cube ou choisissez un métier : la fiche se met à jour.",pH:"Votre parcours",s1:"Atelier",s1p:"Câblage, raccords, brasure et soudure sur des postes réels, en groupes de 10.",s2:"Sécurité",s2p:"Port des EPI, consignation électrique et travail en hauteur, avant chaque chantier.",s3:"Stage",s3p:"Un mois en entreprise de bâtiment ou d’installation, puis l’attestation de qualification.",iH:"Réservez votre place",iP:"Ouvert dès 18 ans, sans diplôme exigé pour la plupart des métiers. L’équipe vous rappelle pour un test d’orientation.",l1:"Nom complet",l2:"Téléphone",l3:"Métier",send:"Envoyer ma demande",foot:"© 2026 Bina Pro, centre des métiers du bâtiment, Sétif",by:"Site réalisé par",dur:"Durée",price:"Tarif",level:"Accès",learn:"Ce que vous apprenez",err:"Indiquez votre nom et un numéro de téléphone valide.",demo:"Démo AFEX Digital : aucune demande n’a été envoyée, ce formulaire n’est pas encore connecté.",lang:"Langue",trades:"Métiers",title:"Bina Pro, centre des métiers du bâtiment et de l’énergie à Sétif"},
+ar:{brand:"بناء برو",n1:"المهن",n2:"المسار",n3:"التسجيل",h1:"مهنة الورشة، تُتعلَّم في الورشة.",lede:"الكهرباء، الترصيص، التكييف، التلحيم، الطاقة الشمسية والسلامة: 70 % تطبيق في الورشة وتربص في مؤسسة بسطيف.",cta1:"سجّل الآن",cta2:"اختر مهنة",mH:"المهنة المختارة",mP:"أدر المكعب أو اختر مهنة: تتحدث البطاقة تلقائيًا.",pH:"مسارك",s1:"الورشة",s1p:"التوصيل، الربط، اللحام بالنحاس والتلحيم على مراكز حقيقية، في أفواج من 10.",s2:"السلامة",s2p:"ارتداء معدات الحماية، عزل الكهرباء والعمل في الأعالي، قبل كل ورشة.",s3:"التربص",s3p:"شهر في مؤسسة بناء أو تركيب، ثم شهادة التأهيل.",iH:"احجز مكانك",iP:"مفتوح ابتداءً من 18 سنة، دون شهادة لأغلب المهن. يتصل بك الفريق لاختبار التوجيه.",l1:"الاسم الكامل",l2:"الهاتف",l3:"المهنة",send:"أرسل طلبي",foot:"© 2026 بناء برو، مركز مهن البناء، سطيف",by:"موقع من إنجاز",dur:"المدة",price:"السعر",level:"الشروط",learn:"ما ستتعلمه",err:"أدخل اسمك ورقم هاتف صحيح.",demo:"عرض AFEX Digital: لم يُرسل أي طلب، هذا النموذج غير متصل بعد.",lang:"اللغة",trades:"المهن",title:"بناء برو، مركز مهن البناء والطاقة بسطيف"},
+en:{brand:"Bina Pro",n1:"Trades",n2:"Path",n3:"Enrol",h1:"A building trade, learned on site.",lede:"Electrics, plumbing, air conditioning, welding, solar and safety: 70% hands-on workshop time and a company placement in Sétif.",cta1:"Enrol now",cta2:"Pick a trade",mH:"The chosen trade",mP:"Turn the cube or pick a trade: the sheet updates.",pH:"Your path",s1:"Workshop",s1p:"Wiring, fittings, brazing and welding on real workstations, in groups of 10.",s2:"Safety",s2p:"PPE, electrical lockout and working at height, before every site.",s3:"Placement",s3p:"A month in a building or installation company, then the qualification certificate.",iH:"Book your place",iP:"Open from age 18, no diploma required for most trades. The team calls you back for an orientation test.",l1:"Full name",l2:"Phone",l3:"Trade",send:"Send my request",foot:"© 2026 Bina Pro, building trades centre, Sétif",by:"Website by",dur:"Length",price:"Fee",level:"Entry",learn:"What you learn",err:"Enter your name and a valid phone number.",demo:"AFEX Digital demo: no request was sent, this form is not connected yet.",lang:"Language",trades:"Trades",title:"Bina Pro, building and energy trades centre in Sétif"}
+};
+var IC={
+ el:'<path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/>',
+ pl:'<path d="M4 8h8v4h4a4 4 0 0 1 4 4v4"/><path d="M4 5v6M17 20h6"/>',
+ ac:'<path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1 19.1 4.9"/><circle cx="12" cy="12" r="3"/>',
+ we:'<path d="m14 4 6 6-9 9H5v-6l9-9Z"/><path d="M3 21l3-3"/>',
+ so:'<circle cx="12" cy="8" r="3"/><path d="M12 1v2M5 8H3M21 8h-2M6.3 3.3l1.4 1.4M17.7 3.3l-1.4 1.4M4 22l2-9h12l2 9H4ZM9 13l-1 9M15 13l1 9M5 17.5h14"/>',
+ hs:'<path d="M4 15a8 8 0 0 1 16 0v2H4v-2Z"/><path d="M12 7V4M9 15V9.5M15 15V9.5M2 19h20"/>'};
+var T=[
+ {k:"el",p:65000,n:{fr:"Électricité du bâtiment",ar:"كهرباء البناء",en:"Building electrics"},du:{fr:"5 mois",ar:"5 أشهر",en:"5 months"},lv:{fr:"Dès 18 ans",ar:"من 18 سنة",en:"From 18"},d:{fr:"Installer et dépanner l’électricité d’un logement et d’un local commercial, selon les normes en vigueur.",ar:"تركيب وإصلاح كهرباء المساكن والمحلات التجارية وفق المعايير المعمول بها.",en:"Install and repair the wiring of homes and shops, to current standards."},l:{fr:["Lecture de schémas","Tableau et disjoncteurs","Prises de terre","Domotique de base"],ar:["قراءة المخططات","اللوحة والقواطع","التأريض","أساسيات المنزل الذكي"],en:["Reading diagrams","Panels and breakers","Earthing","Basic home automation"]}},
+ {k:"pl",p:55000,n:{fr:"Plomberie et sanitaire",ar:"الترصيص والصحي",en:"Plumbing and sanitary"},du:{fr:"4 mois",ar:"4 أشهر",en:"4 months"},lv:{fr:"Dès 18 ans",ar:"من 18 سنة",en:"From 18"},d:{fr:"Poser et réparer les réseaux d’eau, le chauffe-eau et les sanitaires d’un logement.",ar:"تركيب وإصلاح شبكات الماء، سخان الماء والأدوات الصحية في المسكن.",en:"Fit and repair water networks, water heaters and bathrooms."},l:{fr:["Cuivre, PER et multicouche","Évacuations","Chauffe-eau et chaudière","Recherche de fuites"],ar:["النحاس وPER والأنابيب متعددة الطبقات","الصرف","سخان الماء والمرجل","كشف التسربات"],en:["Copper, PEX and multilayer","Drainage","Water heaters and boilers","Leak detection"]}},
+ {k:"ac",p:70000,n:{fr:"Froid et climatisation",ar:"التبريد والتكييف",en:"Refrigeration and air conditioning"},du:{fr:"5 mois",ar:"5 أشهر",en:"5 months"},lv:{fr:"Niveau 4e AM conseillé",ar:"يُنصح بمستوى الرابعة متوسط",en:"Middle-school level advised"},d:{fr:"Installer, charger et entretenir les climatiseurs split et les chambres froides.",ar:"تركيب، شحن وصيانة المكيفات والغرف الباردة.",en:"Install, charge and service split air conditioners and cold rooms."},l:{fr:["Pose de split","Brasure et tirage au vide","Charge en fluide","Diagnostic des pannes"],ar:["تركيب المكيف","اللحام بالنحاس والتفريغ","الشحن بالغاز","تشخيص الأعطال"],en:["Split installation","Brazing and vacuuming","Refrigerant charging","Fault finding"]}},
+ {k:"we",p:60000,n:{fr:"Soudure et charpente métallique",ar:"التلحيم والهياكل المعدنية",en:"Welding and steel framing"},du:{fr:"4 mois",ar:"4 أشهر",en:"4 months"},lv:{fr:"Dès 18 ans",ar:"من 18 سنة",en:"From 18"},d:{fr:"Souder à l’arc et au MIG, fabriquer portails, rampes et petites structures.",ar:"التلحيم بالقوس وMIG، صناعة البوابات والدرابزين والهياكل الصغيرة.",en:"Arc and MIG welding, making gates, railings and small structures."},l:{fr:["Soudure à l’arc","Soudure MIG","Découpe et meulage","Lecture de plans"],ar:["التلحيم بالقوس","التلحيم MIG","القطع والصقل","قراءة المخططات"],en:["Arc welding","MIG welding","Cutting and grinding","Reading drawings"]}},
+ {k:"so",p:58000,n:{fr:"Installateur solaire",ar:"مركّب الطاقة الشمسية",en:"Solar installer"},du:{fr:"3 mois",ar:"3 أشهر",en:"3 months"},lv:{fr:"Base en électricité conseillée",ar:"يُنصح بأساسيات الكهرباء",en:"Basic electrics advised"},d:{fr:"Dimensionner et poser des panneaux photovoltaïques et des chauffe-eau solaires.",ar:"تحجيم وتركيب الألواح الكهروضوئية وسخانات الماء الشمسية.",en:"Size and fit photovoltaic panels and solar water heaters."},l:{fr:["Dimensionnement","Pose en toiture","Onduleurs et batteries","Pompage solaire agricole"],ar:["التحجيم","التركيب على السطح","المموجات والبطاريات","الضخ الشمسي الفلاحي"],en:["System sizing","Roof mounting","Inverters and batteries","Solar water pumping for farms"]}},
+ {k:"hs",p:35000,n:{fr:"Sécurité HSE sur chantier",ar:"السلامة HSE في الورشات",en:"HSE site safety"},du:{fr:"6 semaines",ar:"6 أسابيع",en:"6 weeks"},lv:{fr:"Niveau terminale",ar:"مستوى نهائي",en:"Final-year secondary level"},d:{fr:"Prévenir les risques sur un chantier de bâtiment et tenir le registre de sécurité.",ar:"الوقاية من المخاطر في ورشات البناء ومسك سجل السلامة.",en:"Prevent risks on a building site and keep the safety register."},l:{fr:["Analyse des risques","Travail en hauteur","Premiers secours","Plan de prévention"],ar:["تحليل المخاطر","العمل في الأعالي","الإسعافات الأولية","مخطط الوقاية"],en:["Risk assessment","Working at height","First aid","Prevention plan"]}}
+];
+var ROT=["rotateY(0deg)","rotateY(-90deg)","rotateY(-180deg)","rotateY(90deg)","rotateX(-90deg)","rotateX(90deg)"];
+var lang="fr",cur=0;
+try{var s=localStorage.getItem("binapro-lang");if(s&&I[s])lang=s}catch(e){}
+function $(q){return document.querySelector(q)}
+function fmt(n){return n.toLocaleString(lang==="ar"?"ar-DZ":"fr-FR")+(lang==="ar"?" دج":" DA")}
+function svg(k){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+IC[k]+'</svg>'}
+function show(i){
+  cur=i;var t=I[lang],x=T[i];
+  $("#cube").style.setProperty("--r",ROT[i]);
+  document.querySelectorAll("#picker button").forEach(function(b){b.setAttribute("aria-pressed",+b.dataset.n===i)});
+  $("#sheet").innerHTML='<div class="main"><h3>'+x.n[lang]+'</h3><p>'+x.d[lang]+'</p><h4 style="margin-top:20px;font-size:1rem">'+t.learn+'</h4><ul>'+x.l[lang].map(function(y){return '<li>'+y+'</li>'}).join("")+'</ul></div><aside><dl><dt>'+t.dur+'</dt><dd>'+x.du[lang]+'</dd></dl><dl><dt>'+t.price+'</dt><dd>'+fmt(x.p)+'</dd></dl><dl><dt>'+t.level+'</dt><dd style="font-size:1.1rem">'+x.lv[lang]+'</dd></dl><a class="btn yel" href="#inscription" data-k="'+i+'">'+t.n3+'</a></aside>';
+}
+function render(){
+  var t=I[lang];
+  $("#cube").innerHTML=T.map(function(x,i){return '<div class="f f'+(i+1)+'">'+svg(x.k)+'<span>'+x.n[lang]+'</span></div>'}).join("");
+  $("#picker").setAttribute("aria-label",t.trades);
+  $("#picker").innerHTML=T.map(function(x,i){return '<button type="button" data-n="'+i+'" aria-pressed="false">'+x.n[lang]+'</button>'}).join("");
+  $("#sel").innerHTML=T.map(function(x,i){return '<option value="'+i+'">'+x.n[lang]+'</option>'}).join("");
+  show(cur);
+}
+function setLang(l){
+  lang=l;var t=I[l];document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr";document.title=t.title;
+  document.querySelectorAll("[data-i]").forEach(function(e){e.textContent=t[e.dataset.i]});
+  document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.l===l)});
+  $(".lang").setAttribute("aria-label",t.lang);$("#msg").textContent="";
+  try{localStorage.setItem("binapro-lang",l)}catch(e){}
+  render();
+}
+document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){setLang(b.dataset.l)})});
+$("#picker").addEventListener("click",function(e){var b=e.target.closest("button");if(b)show(+b.dataset.n)});
+$("#sheet").addEventListener("click",function(e){var a=e.target.closest("[data-k]");if(a)$("#sel").value=a.dataset.k});
+$("#f").addEventListener("submit",function(e){e.preventDefault();var t=I[lang],ok=this.name.value.trim()&&/^0[5-7]\d{8}$/.test(this.tel.value.replace(/\s/g,""));
+  if(!ok){$("#msg").textContent=t.err;(this.name.value.trim()?this.tel:this.name).focus();return}
+  $("#msg").textContent=t.demo});
+setLang(lang);
+</script>
+</body>
+</html>

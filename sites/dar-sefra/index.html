@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dar Sefra, école de cuisine et de pâtisserie à Oran</title>
+<meta name="description" content="Dar Sefra : formations de cuisinier, pâtissier et boulanger à Oran. Cuisine algérienne et internationale, stages en restaurant, formations par niveau.">
+<meta name="theme-color" content="#7A2E14">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%23B5532A'/%3E%3Cpath d='M16 6l3 7 7 3-7 3-3 7-3-7-7-3 7-3z' fill='%23F6E3B4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--terra:#B5532A;--terraD:#7A2E14;--saffron:#E3A33B;--olive:#4B5A2A;--cream:#FBF4E6;--card:#FFFBF2;--ink:#2B1A10;--ink2:#6B5546;--line:#EADBC2;--h:"El Messiri",Georgia,serif;--t:"Tajawal",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--t);background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:clip;font-size:17px}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:3px}
+.w{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+h1,h2,h3{font-family:var(--h);line-height:1.15;font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:999px;font-weight:700;transition:background .2s}
+.btn.main{background:var(--terra);color:#fff}.btn.main:hover{background:var(--terraD)}
+.btn.soft{background:transparent;box-shadow:inset 0 0 0 1.5px var(--ink)}.btn.soft:hover{background:var(--line)}
+/* zellige: 8-point stars in saffron, terra and olive */
+.zel{background-color:var(--terraD);background-image:
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg%3E%3Crect x='18' y='18' width='24' height='24' fill='%23E3A33B'/%3E%3Crect x='18' y='18' width='24' height='24' fill='%23E3A33B' transform='rotate(45 30 30)'/%3E%3Ccircle cx='30' cy='30' r='6' fill='%234B5A2A'/%3E%3Cpath d='M0 0h8L0 8zM60 0h-8l8 8zM0 60h8l-8-8zM60 60h-8l8-8z' fill='%23FBF4E6'/%3E%3C/g%3E%3C/svg%3E");background-size:60px 60px}
+header{background:var(--cream);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.nav{display:flex;align-items:center;gap:22px;height:70px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--h);font-weight:700;font-size:1.45rem;color:var(--terraD)}
+.logo i{width:30px;height:30px;border-radius:50%;background:var(--terra);display:grid;place-items:center}
+.logo i::before{content:"";width:14px;height:14px;background:var(--saffron);clip-path:polygon(50% 0,63% 37%,100% 50%,63% 63%,50% 100%,37% 63%,0 50%,37% 37%)}
+.nav nav{display:flex;gap:4px;margin-inline-start:auto}
+.nav nav a{padding:8px 12px;border-radius:999px;font-weight:500;color:var(--ink2)}
+.nav nav a:hover{color:var(--ink);background:var(--line)}
+.lang{display:flex;gap:2px;padding:3px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line);background:var(--card)}
+.lang button{min-width:38px;height:34px;padding:0 9px;border-radius:999px;font-weight:700;font-size:.85rem;color:var(--ink2)}
+.lang button[aria-pressed="true"]{background:var(--terra);color:#fff}
+/* hero */
+.hero .w{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,64px);align-items:center;padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(48px,7vw,90px)}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.4rem);color:var(--terraD)}
+.hero p{margin-top:16px;color:var(--ink2);font-size:clamp(1.05rem,1.4vw,1.25rem);max-width:30em}
+.acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.plate{aspect-ratio:1;max-width:460px;width:100%;margin:0 auto;border-radius:50%;padding:22px;box-shadow:0 30px 60px -30px rgba(122,46,20,.6)}
+.plate .in{width:100%;height:100%;border-radius:50%;background:var(--cream);display:grid;place-items:center;text-align:center;padding:16%;border:6px solid var(--saffron)}
+.plate b{font-family:var(--h);font-size:clamp(1.4rem,2.6vw,2rem);color:var(--terraD);line-height:1.2}
+.plate small{display:block;margin-top:8px;color:var(--ink2)}
+/* levels + 3D flip cards */
+section{padding:clamp(56px,8vw,100px) 0}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:26px}
+.sh h2{font-size:clamp(2rem,3.8vw,3rem);color:var(--terraD)}
+.sh p{color:var(--ink2);max-width:28em}
+.lv{display:inline-flex;flex-wrap:wrap;gap:6px;margin-bottom:24px;padding:4px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1px var(--line)}
+.lv button{min-height:42px;padding:0 18px;border-radius:999px;font-weight:700}
+.lv button[aria-pressed="true"]{background:var(--olive);color:#fff}
+.flips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.flip{perspective:1100px;min-height:300px}
+.flip .inner{position:relative;height:100%;min-height:300px;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.flip .inner.open{transform:rotateY(180deg)}
+[dir="rtl"] .flip .inner.open{transform:rotateY(-180deg)}
+.face .turn{align-self:flex-start;min-height:40px;padding:0 14px;border-radius:999px;font-weight:700;font-size:.9rem}
+.front .turn{background:var(--line);color:var(--terraD)}
+.back .turn{background:rgba(255,255,255,.14);color:var(--cream)}
+.face .turn:hover{filter:brightness(.95)}
+.face{position:absolute;inset:0;border-radius:18px;padding:24px;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;gap:10px}
+.front{background:var(--card);box-shadow:inset 0 0 0 1px var(--line)}
+.front .ic{width:54px;height:54px;border-radius:50%;background:var(--saffron);display:grid;place-items:center;color:var(--terraD)}
+.front .ic svg{width:28px;height:28px}
+.front h3{font-size:1.45rem;color:var(--terraD)}
+.front .meta{margin-top:auto;color:var(--ink2);font-weight:500}
+.back{background:var(--terraD);color:var(--cream);transform:rotateY(180deg)}
+.back h3{font-size:1.25rem;color:var(--saffron)}
+.back ul{list-style:none;display:grid;gap:6px}
+.back li::before{content:"✦ ";color:var(--saffron)}
+.back .pr{margin-top:auto;font-family:var(--h);font-size:1.6rem}
+/* day timeline */
+.day{background:var(--olive);color:var(--cream)}
+.day h2{color:#fff}
+.day .sh p{color:#DDE3C8}
+.tl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;list-style:none}
+.tl li{border-top:3px solid var(--saffron);padding-top:14px}
+.tl b{font-family:var(--h);font-size:1.6rem;color:var(--saffron);display:block}
+.tl h3{font-size:1.15rem;margin:4px 0}
+.tl p{color:#DDE3C8;font-size:.95rem}
+/* form */
+.form{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,60px);align-items:start}
+form{background:var(--card);border-radius:20px;padding:clamp(20px,3vw,32px);display:grid;gap:14px;box-shadow:inset 0 0 0 1px var(--line)}
+label{display:grid;gap:6px;font-weight:700}
+input,select{min-height:48px;padding:0 14px;border:1px solid #D9C6A5;border-radius:10px;background:#fff;font-weight:400}
+input:focus,select:focus{outline:2px solid var(--terra);outline-offset:0}
+.msg{min-height:1.6em;color:var(--terraD);font-weight:700}
+footer{padding:26px 0;color:var(--ink2);font-size:.92rem;border-top:1px solid var(--line)}
+footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--ink);text-decoration:underline}
+.band{height:44px}
+@media(max-width:960px){.hero .w,.form{grid-template-columns:1fr}.flips{grid-template-columns:1fr 1fr}.tl{grid-template-columns:1fr 1fr}}
+@media(max-width:720px){.nav nav{display:none}.lang{margin-inline-start:auto}}
+@media(max-width:560px){.flips,.tl{grid-template-columns:1fr}.plate{max-width:320px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.flip .inner{transition:none}}
+</style>
+</head>
+<body>
+<header><div class="w nav">
+  <a class="logo" href="#"><i aria-hidden="true"></i><span data-i="brand">Dar Sefra</span></a>
+  <nav><a href="#formations" data-i="n1">Formations</a><a href="#journee" data-i="n2">Une journée</a><a href="#inscription" data-i="n3">Inscription</a></nav>
+  <div class="lang" role="group" aria-label="Langue"><button type="button" data-l="fr" aria-pressed="true">FR</button><button type="button" data-l="ar" aria-pressed="false">عربي</button><button type="button" data-l="en" aria-pressed="false">EN</button></div>
+</div></header>
+<div class="band zel" aria-hidden="true"></div>
+<main>
+<section class="hero" style="padding:0"><div class="w">
+  <div>
+    <h1 data-i="h1">Apprenez la cuisine en cuisine.</h1>
+    <p data-i="lede">Cuisinier, pâtissier, boulanger : cuisine algérienne et internationale, en petits groupes, avec un stage en restaurant à Oran.</p>
+    <div class="acts"><a class="btn main" href="#inscription" data-i="cta1">S’inscrire</a><a class="btn soft" href="#formations" data-i="cta2">Voir les formations</a></div>
+  </div>
+  <div class="plate zel" aria-hidden="true"><div class="in"><div><b data-i="plateB">Rechta, m’hadjeb, croissant, entremets</b><small data-i="plateS">Ce que vous préparez dès le premier mois</small></div></div></div>
+</div></section>
+
+<section id="formations" style="background:var(--card)"><div class="w">
+  <div class="sh"><h2 data-i="fH">Nos formations</h2><p data-i="fP">Choisissez votre niveau, puis retournez une carte pour voir le programme et le tarif.</p></div>
+  <div class="lv" role="group" id="lv"></div>
+  <div class="flips" id="flips"></div>
+</div></section>
+
+<section class="day" id="journee"><div class="w">
+  <div class="sh"><h2 data-i="dH">Une journée à l’école</h2><p data-i="dP">Chaque journée suit le rythme d’une vraie brigade de restaurant.</p></div>
+  <ol class="tl">
+    <li><b>08:00</b><h3 data-i="t1">Mise en place</h3><p data-i="t1p">Épluchage, découpes et préparation des postes.</p></li>
+    <li><b>10:00</b><h3 data-i="t2">Technique du jour</h3><p data-i="t2p">Une technique montrée par le chef, puis refaite par chacun.</p></li>
+    <li><b>12:00</b><h3 data-i="t3">Service</h3><p data-i="t3p">Le déjeuner est servi au restaurant d’application de l’école.</p></li>
+    <li><b>14:00</b><h3 data-i="t4">Pâtisserie et dégustation</h3><p data-i="t4p">Gâteaux traditionnels ou viennoiseries, puis retour du chef.</p></li>
+  </ol>
+</div></section>
+
+<section id="inscription"><div class="w form">
+  <div><h2 data-i="iH" style="font-size:clamp(2rem,3.8vw,3rem);color:var(--terraD)">Réservez votre place</h2><p data-i="iP" style="margin-top:12px;color:var(--ink2)">Groupes de 12 personnes au plus. Laissez vos coordonnées, l’école vous rappelle pour l’entretien d’admission.</p></div>
+  <form id="f" novalidate data-endpoint="">
+    <label><span data-i="l1">Nom complet</span><input name="name" autocomplete="name" required></label>
+    <label><span data-i="l2">Téléphone</span><input name="tel" type="tel" inputmode="tel" autocomplete="tel" required placeholder="05 / 06 / 07 …"></label>
+    <label><span data-i="l3">Formation</span><select name="course" id="sel"></select></label>
+    <button class="btn main" type="submit" data-i="send">Envoyer ma demande</button>
+    <p class="msg" id="msg" aria-live="polite"></p>
+  </form>
+</div></section>
+</main>
+<div class="band zel" aria-hidden="true"></div>
+<footer><div class="w"><span data-i="foot">© 2026 Dar Sefra, école de cuisine, Oran</span><span><span data-i="by">Site réalisé par</span> <a href="https://afexad.app">AFEX Digital</a></span></div></footer>
+
+<script>
+var I={
+fr:{brand:"Dar Sefra",n1:"Formations",n2:"Une journée",n3:"Inscription",h1:"Apprenez la cuisine en cuisine.",lede:"Cuisinier, pâtissier, boulanger : cuisine algérienne et internationale, en petits groupes, avec un stage en restaurant à Oran.",cta1:"S’inscrire",cta2:"Voir les formations",plateB:"Rechta, m’hadjeb, croissant, entremets",plateS:"Ce que vous préparez dès le premier mois",fH:"Nos formations",fP:"Choisissez votre niveau, puis retournez une carte pour voir le programme et le tarif.",dH:"Une journée à l’école",dP:"Chaque journée suit le rythme d’une vraie brigade de restaurant.",t1:"Mise en place",t1p:"Épluchage, découpes et préparation des postes.",t2:"Technique du jour",t2p:"Une technique montrée par le chef, puis refaite par chacun.",t3:"Service",t3p:"Le déjeuner est servi au restaurant d’application de l’école.",t4:"Pâtisserie et dégustation",t4p:"Gâteaux traditionnels ou viennoiseries, puis retour du chef.",iH:"Réservez votre place",iP:"Groupes de 12 personnes au plus. Laissez vos coordonnées, l’école vous rappelle pour l’entretien d’admission.",l1:"Nom complet",l2:"Téléphone",l3:"Formation",send:"Envoyer ma demande",foot:"© 2026 Dar Sefra, école de cuisine, Oran",by:"Site réalisé par",turn:"Voir le programme",back:"Retourner",err:"Indiquez votre nom et un numéro de téléphone valide.",demo:"Démo AFEX Digital : aucune demande n’a été envoyée, ce formulaire n’est pas encore connecté.",lang:"Langue",levels:"Niveaux",title:"Dar Sefra, école de cuisine et de pâtisserie à Oran",lv:{ini:"Initiation",dip:"Diplômante",per:"Perfectionnement"}},
+ar:{brand:"دار السفرة",n1:"التكوينات",n2:"يوم في المدرسة",n3:"التسجيل",h1:"تعلّم الطبخ داخل المطبخ.",lede:"طباخ، حلواني، خباز: المطبخ الجزائري والعالمي، في أفواج صغيرة، مع تربص في مطعم بوهران.",cta1:"سجّل الآن",cta2:"اكتشف التكوينات",plateB:"رشتة، محاجب، كرواسون، حلويات راقية",plateS:"ما تحضّره منذ الشهر الأول",fH:"تكويناتنا",fP:"اختر مستواك، ثم اقلب البطاقة لترى البرنامج والسعر.",dH:"يوم في المدرسة",dP:"كل يوم يتبع إيقاع فريق مطبخ حقيقي.",t1:"التحضير",t1p:"التقشير، التقطيع وتجهيز المراكز.",t2:"تقنية اليوم",t2p:"تقنية يعرضها الشاف، ثم يعيدها كل متكوّن.",t3:"الخدمة",t3p:"يُقدَّم الغداء في مطعم التطبيق بالمدرسة.",t4:"الحلويات والتذوق",t4p:"حلويات تقليدية أو معجنات، ثم ملاحظات الشاف.",iH:"احجز مكانك",iP:"أفواج من 12 شخصًا كحد أقصى. اترك معلوماتك وتتصل بك المدرسة لمقابلة القبول.",l1:"الاسم الكامل",l2:"الهاتف",l3:"التكوين",send:"أرسل طلبي",foot:"© 2026 دار السفرة، مدرسة الطبخ، وهران",by:"موقع من إنجاز",turn:"عرض البرنامج",back:"رجوع",err:"أدخل اسمك ورقم هاتف صحيح.",demo:"عرض AFEX Digital: لم يُرسل أي طلب، هذا النموذج غير متصل بعد.",lang:"اللغة",levels:"المستويات",title:"دار السفرة، مدرسة الطبخ والحلويات بوهران",lv:{ini:"تمهيدي",dip:"بشهادة",per:"تحسين المستوى"}},
+en:{brand:"Dar Sefra",n1:"Courses",n2:"A day here",n3:"Enrol",h1:"Learn to cook in a kitchen.",lede:"Cook, pastry chef, baker: Algerian and international cuisine, in small groups, with a restaurant placement in Oran.",cta1:"Enrol now",cta2:"See the courses",plateB:"Rechta, m’hadjeb, croissants, entremets",plateS:"What you make from the first month",fH:"Our courses",fP:"Pick your level, then flip a card to see the programme and the fee.",dH:"A day at the school",dP:"Every day follows the rhythm of a real restaurant brigade.",t1:"Mise en place",t1p:"Peeling, cutting and setting up each station.",t2:"Technique of the day",t2p:"The chef shows one technique, then everyone does it.",t3:"Service",t3p:"Lunch is served in the school’s training restaurant.",t4:"Pastry and tasting",t4p:"Traditional cakes or viennoiserie, then the chef’s feedback.",iH:"Book your place",iP:"Groups of 12 at most. Leave your details and the school calls you for an admission interview.",l1:"Full name",l2:"Phone",l3:"Course",send:"Send my request",foot:"© 2026 Dar Sefra, cooking school, Oran",by:"Website by",turn:"See the programme",back:"Flip back",err:"Enter your name and a valid phone number.",demo:"AFEX Digital demo: no request was sent, this form is not connected yet.",lang:"Language",levels:"Levels",title:"Dar Sefra, cooking and pastry school in Oran",lv:{ini:"Introductory",dip:"Diploma",per:"Advanced"}}
+};
+var ICONS={cook:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 13.9A4 4 0 0 1 7 6a5 5 0 0 1 10 0 4 4 0 0 1 1 7.9V20H6v-6.1Z"/><path d="M6 17h12"/></svg>',
+ cake:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 21V13a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8"/><path d="M4 16c2 1 4 1 6 0s4-1 6 0 3 1 4 0M2 21h20M12 11V7"/><path d="M12 4.5c.5.8.5 1.5 0 2.5"/></svg>',
+ bread:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 11a8 5 0 0 1 16 0v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-7Z"/><path d="M9 9l-1 3M13 8.5l-1 3M17 9.5l-1 3"/></svg>'};
+var C=[
+ {lv:"ini",ic:"cook",p:35000,t:{fr:"Cuisine algérienne familiale",ar:"المطبخ الجزائري العائلي",en:"Algerian home cooking"},du:{fr:"6 semaines",ar:"6 أسابيع",en:"6 weeks"},l:{fr:["Chorba, rechta, couscous","Tajines et sauces","Hygiène et conservation"],ar:["الشوربة، الرشتة، الكسكسي","الطواجن والصلصات","النظافة والحفظ"],en:["Chorba, rechta, couscous","Tagines and sauces","Hygiene and storage"]}},
+ {lv:"ini",ic:"cake",p:32000,t:{fr:"Gâteaux traditionnels",ar:"الحلويات التقليدية",en:"Traditional cakes"},du:{fr:"5 semaines",ar:"5 أسابيع",en:"5 weeks"},l:{fr:["Baklawa, makrout, griwech","Tcharek et dziriette","Montage d’un plateau de fête"],ar:["البقلاوة، المقروط، القريوش","التشاراك والدزيريات","تحضير صينية الأعراس"],en:["Baklawa, makrout, griwech","Tcharek and dziriette","Building a celebration tray"]}},
+ {lv:"ini",ic:"bread",p:30000,t:{fr:"Boulangerie et galettes",ar:"المخبزة والكسرة",en:"Bread and flatbreads"},du:{fr:"4 semaines",ar:"4 أسابيع",en:"4 weeks"},l:{fr:["Pain maison et matlou’","Kesra et m’hadjeb","Levain et fermentation"],ar:["الخبز والمطلوع","الكسرة والمحاجب","الخميرة والتخمير"],en:["House bread and matlou’","Kesra and m’hadjeb","Sourdough and fermentation"]}},
+ {lv:"dip",ic:"cook",p:120000,t:{fr:"Cuisinier professionnel",ar:"طباخ محترف",en:"Professional cook"},du:{fr:"9 mois",ar:"9 أشهر",en:"9 months"},l:{fr:["Cuisine algérienne et internationale","Stage de 2 mois en restaurant","Diplôme de cuisinier"],ar:["المطبخ الجزائري والعالمي","تربص شهرين في مطعم","شهادة طباخ"],en:["Algerian and international cuisine","2-month restaurant placement","Cook’s diploma"]}},
+ {lv:"dip",ic:"cake",p:110000,t:{fr:"Pâtissier professionnel",ar:"حلواني محترف",en:"Professional pastry chef"},du:{fr:"8 mois",ar:"8 أشهر",en:"8 months"},l:{fr:["Pâtisserie française et orientale","Chocolat et entremets","Stage en pâtisserie"],ar:["الحلويات الفرنسية والشرقية","الشوكولاتة والحلويات الراقية","تربص في محل حلويات"],en:["French and oriental pastry","Chocolate and entremets","Pastry shop placement"]}},
+ {lv:"dip",ic:"bread",p:95000,t:{fr:"Boulanger et viennoiseries",ar:"خباز ومعجنات",en:"Baker and viennoiserie"},du:{fr:"6 mois",ar:"6 أشهر",en:"6 months"},l:{fr:["Baguette, pains spéciaux","Croissants et brioches","Gestion d’un fournil"],ar:["الباقيت والخبز الخاص","الكرواسون والبريوش","تسيير مخبزة"],en:["Baguettes, speciality breads","Croissants and brioches","Running a bakehouse"]}},
+ {lv:"per",ic:"cook",p:45000,t:{fr:"Cuisine de restaurant et dressage",ar:"مطبخ المطاعم والتقديم",en:"Restaurant cooking and plating"},du:{fr:"4 semaines",ar:"4 أسابيع",en:"4 weeks"},l:{fr:["Cuissons et sauces de base","Dressage à l’assiette","Coût d’un plat"],ar:["الطهي والصلصات الأساسية","تقديم الأطباق","حساب تكلفة الطبق"],en:["Cooking methods and base sauces","Plating","Costing a dish"]}},
+ {lv:"per",ic:"cake",p:40000,t:{fr:"Wedding cake et pièces montées",ar:"كعك الأعراس والقطع المركبة",en:"Wedding cakes and showpieces"},du:{fr:"3 semaines",ar:"3 أسابيع",en:"3 weeks"},l:{fr:["Pâte à sucre et décor","Montage sur étages","Devis pour un mariage"],ar:["عجينة السكر والتزيين","التركيب على طوابق","تسعير طلبية عرس"],en:["Sugar paste and decoration","Tiered assembly","Quoting a wedding order"]}},
+ {lv:"per",ic:"bread",p:38000,t:{fr:"Ouvrir son activité de traiteur",ar:"فتح نشاط ممون حفلات",en:"Starting a catering business"},du:{fr:"3 semaines",ar:"3 أسابيع",en:"3 weeks"},l:{fr:["Registre de commerce et hygiène","Menus et prix","Vendre sur Instagram et WhatsApp"],ar:["السجل التجاري والنظافة","القوائم والأسعار","البيع عبر إنستغرام وواتساب"],en:["Business registration and hygiene","Menus and pricing","Selling on Instagram and WhatsApp"]}}
+];
+var lang="fr",lv="ini";
+try{var s=localStorage.getItem("darsefra-lang");if(s&&I[s])lang=s}catch(e){}
+function $(q){return document.querySelector(q)}
+function fmt(n){return n.toLocaleString(lang==="ar"?"ar-DZ":"fr-FR")+(lang==="ar"?" دج":" DA")}
+function render(){
+  var t=I[lang];
+  $("#lv").setAttribute("aria-label",t.levels);
+  $("#lv").innerHTML=Object.keys(t.lv).map(function(k){return '<button type="button" data-v="'+k+'" aria-pressed="'+(k===lv)+'">'+t.lv[k]+'</button>'}).join("");
+  $("#flips").innerHTML=C.filter(function(c){return c.lv===lv}).map(function(c){return '<article class="flip"><div class="inner"><div class="face front"><span class="ic">'+ICONS[c.ic]+'</span><h3>'+c.t[lang]+'</h3><span class="meta">'+c.du[lang]+'</span><button type="button" class="turn" aria-expanded="false">'+t.turn+'</button></div><div class="face back" aria-hidden="true"><h3>'+c.t[lang]+'</h3><ul>'+c.l[lang].map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul><span class="pr">'+fmt(c.p)+'</span><button type="button" class="turn" tabindex="-1">'+t.back+'</button></div></div></article>'}).join("");
+  $("#sel").innerHTML=C.map(function(c,i){return '<option value="'+i+'">'+c.t[lang]+'</option>'}).join("");
+}
+function setLang(l){
+  lang=l;var t=I[l];document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr";document.title=t.title;
+  document.querySelectorAll("[data-i]").forEach(function(e){e.textContent=t[e.dataset.i]});
+  document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.l===l)});
+  $(".lang").setAttribute("aria-label",t.lang);$("#msg").textContent="";
+  try{localStorage.setItem("darsefra-lang",l)}catch(e){}
+  render();
+}
+document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){setLang(b.dataset.l)})});
+$("#lv").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;lv=b.dataset.v;render()});
+$("#flips").addEventListener("click",function(e){var b=e.target.closest(".turn");if(!b)return;var inner=b.closest(".inner"),open=!inner.classList.contains("open");inner.classList.toggle("open",open);
+  var f=inner.querySelector(".front"),k=inner.querySelector(".back");f.setAttribute("aria-hidden",open);k.setAttribute("aria-hidden",!open);f.querySelector(".turn").tabIndex=open?-1:0;k.querySelector(".turn").tabIndex=open?0:-1;f.querySelector(".turn").setAttribute("aria-expanded",open);(open?k:f).querySelector(".turn").focus({preventScroll:true})});
+$("#f").addEventListener("submit",function(e){e.preventDefault();var t=I[lang],ok=this.name.value.trim()&&/^0[5-7]\d{8}$/.test(this.tel.value.replace(/\s/g,""));
+  if(!ok){$("#msg").textContent=t.err;(this.name.value.trim()?this.tel:this.name).focus();return}
+  $("#msg").textContent=t.demo});
+setLang(lang);
+</script>
+</body>
+</html>

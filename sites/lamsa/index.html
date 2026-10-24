@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lamsa, institut de coiffure, esthétique et couture à Constantine</title>
+<meta name="description" content="Lamsa : formations en coiffure, esthétique, couture et broderie traditionnelle (karakou, fetla) à Constantine. Groupes réservés aux femmes, diplôme en fin de formation.">
+<meta name="theme-color" content="#5B1F3D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%235B1F3D'/%3E%3Cpath d='M9 22c4-1 7-5 7-12 0 7 3 11 7 12' fill='none' stroke='%23C9A24A' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#5B1F3D;--plumD:#3E1229;--gold:#C9A24A;--goldL:#F4E7C9;--blush:#FAF1F1;--card:#FFFFFF;--ink:#2A1420;--ink2:#6E5764;--line:#EDDDE2;--h:"Playfair Display","Amiri",Georgia,serif;--t:"Almarai",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--t);background:var(--blush);color:var(--ink);line-height:1.65;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.w{max-width:1160px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+h1,h2,h3{font-family:var(--h);font-weight:700;line-height:1.15}
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3{font-family:"Amiri",Georgia,serif;line-height:1.35}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:4px;font-weight:700;transition:background .2s,color .2s}
+.btn.gold{background:var(--gold);color:var(--plumD)}.btn.gold:hover{background:#B38D3A}
+.btn.ghost{box-shadow:inset 0 0 0 1.5px var(--goldL);color:var(--goldL)}.btn.ghost:hover{background:rgba(255,255,255,.08)}
+/* fetla: golden thread arabesque */
+.fetla{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='40' viewBox='0 0 80 40'%3E%3Cpath d='M0 20c10 0 10-14 20-14s10 14 20 14 10-14 20-14 10 14 20 14M0 20c10 0 10 14 20 14s10-14 20-14 10 14 20 14 10-14 20-14' fill='none' stroke='%23C9A24A' stroke-width='1.4' stroke-opacity='.55'/%3E%3Ccircle cx='20' cy='20' r='2' fill='%23C9A24A' fill-opacity='.6'/%3E%3Ccircle cx='60' cy='20' r='2' fill='%23C9A24A' fill-opacity='.6'/%3E%3C/svg%3E");background-size:80px 40px}
+header{background:var(--plum);color:#fff}
+.nav{display:flex;align-items:center;gap:22px;height:70px}
+.logo{font-family:var(--h);font-size:1.6rem;font-weight:700;color:var(--goldL)}
+[dir="rtl"] .logo{font-family:"Amiri",serif}
+.nav nav{display:flex;gap:4px;margin-inline-start:auto}
+.nav nav a{padding:8px 12px;color:#E9D7DF;font-size:.95rem}
+.nav nav a:hover{color:#fff}
+.lang{display:flex;gap:2px;padding:3px;border-radius:4px;background:rgba(255,255,255,.08)}
+.lang button{min-width:38px;height:34px;padding:0 9px;border-radius:3px;font-weight:700;font-size:.85rem;color:#E9D7DF}
+.lang button[aria-pressed="true"]{background:var(--gold);color:var(--plumD)}
+.hero{background:var(--plum);color:#fff;padding:clamp(40px,7vw,96px) 0 0}
+.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,60px);align-items:end}
+.hero h1{font-size:clamp(2.6rem,6vw,4.8rem);color:#fff}
+.hero h1 + p{margin-top:18px;color:#E9D7DF;font-size:clamp(1.05rem,1.4vw,1.2rem);max-width:30em}
+.acts{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 clamp(40px,6vw,80px)}
+.frame{align-self:stretch;min-height:340px;border-radius:200px 200px 0 0;border:2px solid var(--gold);border-bottom:0;padding:18px 18px 0}
+.frame .in{height:100%;min-height:320px;border-radius:190px 190px 0 0;background-color:var(--plumD)}
+.strip{height:18px;background:var(--gold)}
+section{padding:clamp(56px,8vw,100px) 0}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:26px}
+.sh h2{font-size:clamp(2rem,4vw,3.2rem);color:var(--plum)}
+.sh p{color:var(--ink2);max-width:28em}
+.tabs{display:flex;flex-wrap:wrap;gap:0;border-bottom:1px solid var(--line);margin-bottom:26px}
+.tabs button{min-height:48px;padding:0 20px;font-weight:700;color:var(--ink2);border-bottom:3px solid transparent;margin-bottom:-1px}
+.tabs button[aria-selected="true"]{color:var(--plum);border-bottom-color:var(--gold)}
+.list{list-style:none;border-top:1px solid var(--line)}
+.list li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,3fr) minmax(0,2fr) auto;gap:20px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+.list h3{font-size:1.3rem;color:var(--plum)}
+.list p{color:var(--ink2);font-size:.95rem}
+.list .du{color:var(--ink2);font-weight:700}
+.list .pr{font-family:var(--h);font-size:1.35rem;color:var(--plum);white-space:nowrap}
+[dir="rtl"] .list .pr{font-family:"Amiri",serif}
+.list a{min-height:44px;display:inline-flex;align-items:center;padding:0 16px;border-radius:4px;background:var(--goldL);color:var(--plumD);font-weight:700;white-space:nowrap}
+.list a:hover{background:var(--gold)}
+.week{background:var(--card)}
+.tbl{width:100%;border-collapse:collapse;font-size:.98rem}
+.tbl th,.tbl td{padding:14px 12px;text-align:start;border-bottom:1px solid var(--line)}
+.tbl th{color:var(--ink2);font-weight:700;font-size:.9rem}
+.tbl td:first-child{font-weight:700;color:var(--plum)}
+.tbl .slot{display:inline-block;padding:4px 10px;border-radius:999px;background:var(--blush);font-size:.88rem}
+.tbl .off{color:var(--ink2)}
+.note{margin-top:16px;color:var(--ink2);font-size:.95rem}
+.form{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,60px);align-items:start}
+form{background:var(--card);border-radius:6px;padding:clamp(20px,3vw,32px);display:grid;gap:14px;border-top:4px solid var(--gold)}
+label{display:grid;gap:6px;font-weight:700}
+input,select{min-height:48px;padding:0 14px;border:1px solid #DCC7CF;border-radius:4px;background:#fff;font-weight:400}
+input:focus,select:focus{outline:2px solid var(--plum);outline-offset:0}
+.msg{min-height:1.6em;color:var(--plum);font-weight:700}
+footer{background:var(--plumD);color:#E9D7DF;padding:26px 0;font-size:.92rem}
+footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:#fff;text-decoration:underline}
+@media(max-width:900px){.hero .w,.form{grid-template-columns:1fr}.frame{min-height:220px;max-width:420px;width:100%;margin:0 auto}.frame .in{min-height:200px}.list li{grid-template-columns:1fr auto;gap:6px 16px}.list li > div{grid-column:1/-1}}
+@media(max-width:720px){.nav nav{display:none}.lang{margin-inline-start:auto}.tbl th:nth-child(4),.tbl td:nth-child(4){display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="w nav">
+  <a class="logo" href="#" data-i="brand">Lamsa</a>
+  <nav><a href="#ateliers" data-i="n1">Ateliers</a><a href="#semaine" data-i="n2">Horaires</a><a href="#inscription" data-i="n3">Inscription</a></nav>
+  <div class="lang" role="group" aria-label="Langue"><button type="button" data-l="fr" aria-pressed="true">FR</button><button type="button" data-l="ar" aria-pressed="false">عربي</button><button type="button" data-l="en" aria-pressed="false">EN</button></div>
+</div></header>
+<main>
+<section class="hero" style="padding-bottom:0"><div class="w">
+  <div>
+    <h1 data-i="h1">Un métier entre vos mains.</h1>
+    <p data-i="lede">Coiffure, esthétique, couture et broderie traditionnelle de Constantine, en groupes réservés aux femmes, avec un diplôme à la fin.</p>
+    <div class="acts"><a class="btn gold" href="#inscription" data-i="cta1">S’inscrire</a><a class="btn ghost" href="#ateliers" data-i="cta2">Voir les ateliers</a></div>
+  </div>
+  <div class="frame" aria-hidden="true"><div class="in fetla"></div></div>
+</div><div class="strip" aria-hidden="true"></div></section>
+
+<section id="ateliers"><div class="w">
+  <div class="sh"><h2 data-i="aH">Trois ateliers</h2><p data-i="aP">Chaque atelier a ses formatrices, son matériel et ses modèles pour s’exercer.</p></div>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <ul class="list" id="list"></ul>
+</div></section>
+
+<section class="week" id="semaine"><div class="w">
+  <div class="sh"><h2 data-i="sH">La semaine à l’institut</h2><p data-i="sP">Choisissez le groupe du matin ou de l’après-midi, selon vos journées.</p></div>
+  <div style="overflow-x:auto"><table class="tbl" id="tbl"></table></div>
+  <p class="note" data-i="note">Tous les groupes sont encadrés par des formatrices. Garderie possible pour les enfants de 3 à 6 ans, sur demande.</p>
+</div></section>
+
+<section id="inscription"><div class="w form">
+  <div><h2 data-i="iH" style="font-size:clamp(2rem,4vw,3rem);color:var(--plum)">Réservez votre place</h2><p data-i="iP" style="margin-top:12px;color:var(--ink2)">Laissez vos coordonnées : l’institut vous rappelle pour fixer une visite des ateliers.</p></div>
+  <form id="f" novalidate data-endpoint="">
+    <label><span data-i="l1">Nom complet</span><input name="name" autocomplete="name" required></label>
+    <label><span data-i="l2">Téléphone</span><input name="tel" type="tel" inputmode="tel" autocomplete="tel" required placeholder="05 / 06 / 07 …"></label>
+    <label><span data-i="l3">Formation</span><select name="course" id="sel"></select></label>
+    <label><span data-i="l4">Groupe</span><select name="group" id="grp"></select></label>
+    <button class="btn gold" type="submit" data-i="send">Envoyer ma demande</button>
+    <p class="msg" id="msg" aria-live="polite"></p>
+  </form>
+</div></section>
+</main>
+<footer class="fetla"><div class="w"><span data-i="foot">© 2026 Lamsa, institut de beauté et de couture, Constantine</span><span><span data-i="by">Site réalisé par</span> <a href="https://afexad.app">AFEX Digital</a></span></div></footer>
+
+<script>
+var I={
+fr:{brand:"Lamsa",n1:"Ateliers",n2:"Horaires",n3:"Inscription",h1:"Un métier entre vos mains.",lede:"Coiffure, esthétique, couture et broderie traditionnelle de Constantine, en groupes réservés aux femmes, avec un diplôme à la fin.",cta1:"S’inscrire",cta2:"Voir les ateliers",aH:"Trois ateliers",aP:"Chaque atelier a ses formatrices, son matériel et ses modèles pour s’exercer.",sH:"La semaine à l’institut",sP:"Choisissez le groupe du matin ou de l’après-midi, selon vos journées.",note:"Tous les groupes sont encadrés par des formatrices. Garderie possible pour les enfants de 3 à 6 ans, sur demande.",iH:"Réservez votre place",iP:"Laissez vos coordonnées : l’institut vous rappelle pour fixer une visite des ateliers.",l1:"Nom complet",l2:"Téléphone",l3:"Formation",l4:"Groupe",send:"Envoyer ma demande",foot:"© 2026 Lamsa, institut de beauté et de couture, Constantine",by:"Site réalisé par",choose:"Choisir",err:"Indiquez votre nom et un numéro de téléphone valide.",demo:"Démo AFEX Digital : aucune demande n’a été envoyée, ce formulaire n’est pas encore connecté.",lang:"Langue",title:"Lamsa, institut de coiffure, esthétique et couture à Constantine",
+ cats:{coif:"Coiffure",esth:"Esthétique",cout:"Couture et broderie"},days:["Samedi","Dimanche","Lundi","Mardi","Mercredi"],th:["Jour","Matin (9 h à 12 h)","Après-midi (13 h 30 à 16 h 30)","Atelier libre"],groups:["Groupe du matin","Groupe de l’après-midi"],free:"Pratique encadrée",none:"Fermé"},
+ar:{brand:"لمسة",n1:"الورشات",n2:"المواعيد",n3:"التسجيل",h1:"حرفة بين يديك.",lede:"الحلاقة، التجميل، الخياطة والطرز التقليدي القسنطيني، في أفواج خاصة بالنساء، مع شهادة في النهاية.",cta1:"سجّلي الآن",cta2:"اكتشفي الورشات",aH:"ثلاث ورشات",aP:"لكل ورشة مكوّناتها وعتادها ونماذجها للتدرّب.",sH:"الأسبوع في المعهد",sP:"اختاري فوج الصباح أو المساء حسب أيامك.",note:"كل الأفواج تؤطرها مكوّنات. حضانة ممكنة للأطفال من 3 إلى 6 سنوات عند الطلب.",iH:"احجزي مكانك",iP:"اتركي معلوماتك: يتصل بك المعهد لتحديد زيارة للورشات.",l1:"الاسم الكامل",l2:"الهاتف",l3:"التكوين",l4:"الفوج",send:"أرسلي طلبي",foot:"© 2026 لمسة، معهد التجميل والخياطة، قسنطينة",by:"موقع من إنجاز",choose:"اختاري",err:"أدخلي اسمك ورقم هاتف صحيح.",demo:"عرض AFEX Digital: لم يُرسل أي طلب، هذا النموذج غير متصل بعد.",lang:"اللغة",title:"لمسة، معهد الحلاقة والتجميل والخياطة بقسنطينة",
+ cats:{coif:"الحلاقة",esth:"التجميل",cout:"الخياطة والطرز"},days:["السبت","الأحد","الاثنين","الثلاثاء","الأربعاء"],th:["اليوم","الصباح (9:00 إلى 12:00)","المساء (13:30 إلى 16:30)","ورشة حرة"],groups:["فوج الصباح","فوج المساء"],free:"تطبيق مؤطَّر",none:"مغلق"},
+en:{brand:"Lamsa",n1:"Workshops",n2:"Timetable",n3:"Enrol",h1:"A trade in your hands.",lede:"Hairdressing, beauty, sewing and Constantine’s traditional embroidery, in women-only groups, with a diploma at the end.",cta1:"Enrol now",cta2:"See the workshops",aH:"Three workshops",aP:"Each workshop has its own trainers, equipment and models to practise on.",sH:"A week at the institute",sP:"Pick the morning or the afternoon group, to fit your days.",note:"Every group is led by women trainers. Childcare for children aged 3 to 6 on request.",iH:"Book your place",iP:"Leave your details: the institute calls you back to arrange a visit of the workshops.",l1:"Full name",l2:"Phone",l3:"Course",l4:"Group",send:"Send my request",foot:"© 2026 Lamsa, beauty and sewing institute, Constantine",by:"Website by",choose:"Choose",err:"Enter your name and a valid phone number.",demo:"AFEX Digital demo: no request was sent, this form is not connected yet.",lang:"Language",title:"Lamsa, hairdressing, beauty and sewing institute in Constantine",
+ cats:{coif:"Hairdressing",esth:"Beauty",cout:"Sewing and embroidery"},days:["Saturday","Sunday","Monday","Tuesday","Wednesday"],th:["Day","Morning (9:00 to 12:00)","Afternoon (13:30 to 16:30)","Open workshop"],groups:["Morning group","Afternoon group"],free:"Supervised practice",none:"Closed"}
+};
+var C=[
+ {c:"coif",p:60000,t:{fr:"Coiffure mixte, diplôme",ar:"حلاقة مختلطة، بشهادة",en:"Hairdressing diploma"},d:{fr:"Coupe, couleur, brushing et chignons de fête.",ar:"القص، الصباغة، التمليس وتسريحات الأعراس.",en:"Cutting, colour, blow-drying and wedding updos."},du:{fr:"6 mois",ar:"6 أشهر",en:"6 months"}},
+ {c:"coif",p:22000,t:{fr:"Coiffure de mariée",ar:"تسريحات العروس",en:"Bridal hair"},d:{fr:"Chignons, pose de bijoux et coiffure sous la chachia.",ar:"الشينيون، تركيب الحلي والتسريحة تحت الشاشية.",en:"Updos, jewellery setting and styling under the chachia."},du:{fr:"1 mois",ar:"شهر واحد",en:"1 month"}},
+ {c:"coif",p:18000,t:{fr:"Soins et lissage des cheveux",ar:"العناية وتمليس الشعر",en:"Hair care and straightening"},d:{fr:"Diagnostic du cheveu, kératine et protéines.",ar:"تشخيص الشعر، الكيراتين والبروتين.",en:"Hair diagnosis, keratin and protein treatments."},du:{fr:"3 semaines",ar:"3 أسابيع",en:"3 weeks"}},
+ {c:"esth",p:55000,t:{fr:"Esthéticienne, diplôme",ar:"مختصة تجميل، بشهادة",en:"Beauty therapist diploma"},d:{fr:"Soins du visage, épilation, manucure et hygiène.",ar:"العناية بالوجه، إزالة الشعر، المانيكير والنظافة.",en:"Facials, hair removal, manicure and hygiene."},du:{fr:"5 mois",ar:"5 أشهر",en:"5 months"}},
+ {c:"esth",p:25000,t:{fr:"Maquillage de mariée",ar:"مكياج العروس",en:"Bridal make-up"},d:{fr:"Les tenues du mariage constantinois, du karakou à la gandoura.",ar:"إطلالات العرس القسنطيني، من القفطان إلى القندورة.",en:"Looks for a Constantine wedding, from karakou to gandoura."},du:{fr:"1 mois",ar:"شهر واحد",en:"1 month"}},
+ {c:"esth",p:15000,t:{fr:"Henné et ongles",ar:"الحناء والأظافر",en:"Henna and nails"},d:{fr:"Henné de fête, pose de gel et nail art.",ar:"حناء الأعراس، تركيب الجل وفن الأظافر.",en:"Celebration henna, gel nails and nail art."},du:{fr:"2 semaines",ar:"أسبوعان",en:"2 weeks"}},
+ {c:"cout",p:48000,t:{fr:"Couture, diplôme",ar:"الخياطة، بشهادة",en:"Dressmaking diploma"},d:{fr:"Patronage, coupe et montage de robes et d’ensembles.",ar:"الباترون، القص وتركيب الفساتين والأطقم.",en:"Pattern making, cutting and assembling dresses and outfits."},du:{fr:"6 mois",ar:"6 أشهر",en:"6 months"}},
+ {c:"cout",p:35000,t:{fr:"Broderie fetla et majboud",ar:"طرز الفتلة والمجبود",en:"Fetla and majboud embroidery"},d:{fr:"Fil d’or sur velours, la broderie de la gandoura de Constantine.",ar:"خيط الذهب على القطيفة، طرز القندورة القسنطينية.",en:"Gold thread on velvet, the embroidery of the Constantine gandoura."},du:{fr:"3 mois",ar:"3 أشهر",en:"3 months"}},
+ {c:"cout",p:30000,t:{fr:"Karakou et caftan",ar:"القرقون والقفطان",en:"Karakou and caftan"},d:{fr:"Coupe du karakou, pose du galon et finitions.",ar:"قص القرقون، تركيب الشريط واللمسات الأخيرة.",en:"Cutting the karakou, setting the braid and finishing."},du:{fr:"2 mois",ar:"شهران",en:"2 months"}}
+];
+var SCH=[["coif","esth","cout"],["cout","coif","esth"],["esth","cout","coif"],["coif","esth","cout"],["cout","coif",null]];
+var lang="fr",cat="coif";
+try{var s=localStorage.getItem("lamsa-lang");if(s&&I[s])lang=s}catch(e){}
+function $(q){return document.querySelector(q)}
+function fmt(n){return n.toLocaleString(lang==="ar"?"ar-DZ":"fr-FR")+(lang==="ar"?" دج":" DA")}
+function render(){
+  var t=I[lang],keys=Object.keys(t.cats);
+  $("#tabs").innerHTML=keys.map(function(k){return '<button type="button" role="tab" aria-selected="'+(k===cat)+'" data-c="'+k+'" tabindex="'+(k===cat?0:-1)+'">'+t.cats[k]+'</button>'}).join("");
+  $("#list").innerHTML=C.filter(function(c){return c.c===cat}).map(function(c){var i=C.indexOf(c);return '<li><div><h3>'+c.t[lang]+'</h3><p>'+c.d[lang]+'</p></div><span class="du">'+c.du[lang]+'</span><span class="pr">'+fmt(c.p)+'</span><a href="#inscription" data-k="'+i+'">'+t.choose+'</a></li>'}).join("");
+  $("#tbl").innerHTML='<thead><tr>'+t.th.map(function(h){return '<th scope="col">'+h+'</th>'}).join("")+'</tr></thead><tbody>'+t.days.map(function(d,i){var r=SCH[i];return '<tr><td>'+d+'</td><td><span class="slot">'+t.cats[r[0]]+'</span></td><td><span class="slot">'+t.cats[r[1]]+'</span></td><td class="'+(r[2]?'':'off')+'">'+(r[2]?t.free+' : '+t.cats[r[2]]:t.none)+'</td></tr>'}).join("")+'</tbody>';
+  $("#sel").innerHTML=C.map(function(c,i){return '<option value="'+i+'">'+c.t[lang]+'</option>'}).join("");
+  $("#grp").innerHTML=t.groups.map(function(g){return '<option>'+g+'</option>'}).join("");
+}
+function setLang(l){
+  lang=l;var t=I[l];document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr";document.title=t.title;
+  document.querySelectorAll("[data-i]").forEach(function(e){e.textContent=t[e.dataset.i]});
+  document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.l===l)});
+  $(".lang").setAttribute("aria-label",t.lang);$("#msg").textContent="";
+  try{localStorage.setItem("lamsa-lang",l)}catch(e){}
+  render();
+}
+document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){setLang(b.dataset.l)})});
+$("#tabs").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;cat=b.dataset.c;render();$('#tabs [data-c="'+cat+'"]').focus()});
+$("#tabs").addEventListener("keydown",function(e){var k=Object.keys(I[lang].cats),i=k.indexOf(cat),d=e.key==="ArrowRight"?1:e.key==="ArrowLeft"?-1:0;if(!d)return;if(lang==="ar")d=-d;cat=k[(i+d+k.length)%k.length];render();$('#tabs [data-c="'+cat+'"]').focus()});
+$("#list").addEventListener("click",function(e){var a=e.target.closest("[data-k]");if(a)$("#sel").value=a.dataset.k});
+$("#f").addEventListener("submit",function(e){e.preventDefault();var t=I[lang],ok=this.name.value.trim()&&/^0[5-7]\d{8}$/.test(this.tel.value.replace(/\s/g,""));
+  if(!ok){$("#msg").textContent=t.err;(this.name.value.trim()?this.tel:this.name).focus();return}
+  $("#msg").textContent=t.demo});
+setLang(lang);
+</script>
+</body>
+</html>
