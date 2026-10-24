@@ -5,195 +5,257 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Sahla Digital, école d’informatique, de langues et de transit à Annaba</title>
 <meta name="description" content="Sahla Digital : bureautique, informatique, marketing digital, langues, transit et logistique à Annaba. Cours du soir et test de niveau gratuit.">
-<meta name="theme-color" content="#0B5D8C">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230B5D8C'/%3E%3Cpath d='M6 20c3 0 3-3 6-3s3 3 6 3 3-3 6-3' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3Ccircle cx='22' cy='10' r='3' fill='%23F26B4F'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%230A4FD6'/%3E%3Cpath d='M6 20c3 0 3-3 6-3s3 3 6 3 3-3 6-3' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3Ccircle cx='22' cy='10' r='3' fill='%23FF6B57'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('static');</script>
 <style>
-:root{--sea:#0B5D8C;--seaD:#073F60;--seaL:#E3F0F7;--foam:#F5FAFC;--coral:#F26B4F;--coralD:#D4502F;--ink:#10212C;--ink2:#526570;--line:#D6E4EC;--f:"Rubik",system-ui,sans-serif}
+:root{--sea:#0A4FD6;--deep:#082A6B;--coral:#FF6B57;--sand:#FFF4E6;--foam:#EEF4FF;--white:#FFFFFF;--ink:#0D1B33;--ink2:#56627A;--line:#E3E9F5;
+  --h:"Sora","Baloo Bhaijaan 2",system-ui,sans-serif;--t:"Sora","Baloo Bhaijaan 2",system-ui,sans-serif;--r:28px;--ease:cubic-bezier(.2,.8,.2,1)}
+[dir="rtl"]{--h:"Baloo Bhaijaan 2","Sora",system-ui,sans-serif;--t:"Baloo Bhaijaan 2","Sora",system-ui,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;overflow-x:clip}
-body{font-family:var(--f);background:var(--foam);color:var(--ink);line-height:1.6;overflow-x:clip}
+html{overflow-x:clip}
+html.lenis,html.lenis body{height:auto}
+body{font-family:var(--t);background:var(--white);color:var(--ink);line-height:1.6;overflow-x:clip;font-size:16.5px}
+[dir="rtl"] body{font-size:18px}
 a{color:inherit;text-decoration:none}
 button,input,select{font:inherit;color:inherit}
 button{cursor:pointer;border:0;background:none}
-:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
-.w{max-width:1160px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
-h1,h2,h3{font-weight:700;line-height:1.12;letter-spacing:-.01em}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:12px}
+.w{max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+h1,h2,h3{font-family:var(--h);font-weight:800;line-height:1.05;letter-spacing:-.035em}
 [dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3{letter-spacing:0;line-height:1.3}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:12px;font-weight:700;transition:background .2s}
-.btn.coral{background:var(--coral);color:#fff}.btn.coral:hover{background:var(--coralD)}
-.btn.white{background:#fff;color:var(--sea)}.btn.white:hover{background:var(--seaL)}
-header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
-.nav{display:flex;align-items:center;gap:22px;height:68px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.3rem;color:var(--sea)}
-.logo svg{width:30px;height:30px}
-.nav nav{display:flex;gap:4px;margin-inline-start:auto}
-.nav nav a{padding:8px 12px;border-radius:10px;color:var(--ink2);font-weight:500}
-.nav nav a:hover{background:var(--seaL);color:var(--sea)}
-.lang{display:flex;gap:2px;padding:3px;border-radius:12px;background:var(--seaL)}
-.lang button{min-width:38px;height:34px;padding:0 9px;border-radius:9px;font-weight:700;font-size:.85rem;color:var(--ink2)}
-.lang button[aria-pressed="true"]{background:var(--sea);color:#fff}
-/* hero: the bay of Annaba as waves */
-.hero{background:var(--sea);color:#fff;position:relative;overflow:hidden}
-.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,60px);align-items:center;padding-top:clamp(44px,7vw,90px);padding-bottom:clamp(80px,10vw,130px)}
-.hero h1{font-size:clamp(2.5rem,5.6vw,4.4rem)}
-.hero p{margin-top:16px;color:#CFE3EE;font-size:clamp(1.05rem,1.4vw,1.2rem);max-width:30em}
-.acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.waves{position:absolute;left:0;right:0;bottom:-1px;height:70px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 70' preserveAspectRatio='none'%3E%3Cpath d='M0 30c100 0 100-20 200-20s100 20 200 20 100-20 200-20 100 20 200 20 100-20 200-20 100 20 200 20v40H0Z' fill='%23F5FAFC' fill-opacity='.35'/%3E%3Cpath d='M0 45c100 0 100-20 200-20s100 20 200 20 100-20 200-20 100 20 200 20 100-20 200-20 100 20 200 20v25H0Z' fill='%23F5FAFC'/%3E%3C/svg%3E") 0 0/100% 100%}
-.card{background:#fff;color:var(--ink);border-radius:20px;padding:24px;box-shadow:0 30px 60px -36px rgba(7,63,96,.7)}
-.card h2{font-size:1.15rem;color:var(--sea)}
-.card .sub{color:var(--ink2);font-size:.95rem;margin:4px 0 14px}
-.eve{list-style:none;display:grid;gap:8px}
-.eve li{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:12px;background:var(--foam)}
-.eve b{font-weight:500}
-.eve span{color:var(--sea);font-weight:700;white-space:nowrap}
-section{padding:clamp(56px,8vw,100px) 0}
-.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:26px}
-.sh h2{font-size:clamp(2rem,4vw,3rem);color:var(--seaD)}
-.sh p{color:var(--ink2);max-width:28em}
-.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-.co{background:#fff;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:8px;box-shadow:inset 0 0 0 1px var(--line)}
-.co .ic{width:44px;height:44px;border-radius:12px;background:var(--seaL);color:var(--sea);display:grid;place-items:center}
-.co .ic svg{width:24px;height:24px}
-.co h3{font-size:1.1rem}
-.co p{color:var(--ink2);font-size:.92rem}
-.co .meta{margin-top:auto;display:flex;justify-content:space-between;gap:8px;padding-top:10px;border-top:1px dashed var(--line);font-size:.9rem}
-.co .meta b{color:var(--sea)}
-/* placement test */
-.test{background:var(--seaD);color:#fff}
-.test .sh h2{color:#fff}.test .sh p{color:#CFE3EE}
-.qbox{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
-.q{background:rgba(255,255,255,.06);border-radius:20px;padding:clamp(20px,3vw,32px)}
-.bar{height:6px;border-radius:9px;background:rgba(255,255,255,.15);overflow:hidden;margin-bottom:20px}
-.bar i{display:block;height:100%;background:var(--coral);transform-origin:0 50%;transition:transform .4s}
-[dir="rtl"] .bar i{transform-origin:100% 50%}
-.q h3{font-size:1.3rem;margin-bottom:16px}
-.opts{display:grid;gap:8px}
-.opts button{min-height:48px;padding:10px 16px;border-radius:12px;background:#fff;color:var(--ink);text-align:start;font-weight:500}
-.opts button:hover{background:var(--seaL)}
-.res{background:#fff;color:var(--ink);border-radius:20px;padding:clamp(20px,3vw,32px)}
-.res h3{font-size:1.5rem;color:var(--sea)}
-.res p{color:var(--ink2);margin-top:8px}
-.res .btn{margin-top:16px}
-.form{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,60px);align-items:start}
-form{background:#fff;border-radius:20px;padding:clamp(20px,3vw,32px);display:grid;gap:14px;box-shadow:inset 0 0 0 1px var(--line)}
-label{display:grid;gap:6px;font-weight:500}
-input,select{min-height:48px;padding:0 14px;border:1px solid #BCD2DE;border-radius:12px;background:#fff}
-input:focus,select:focus{outline:2px solid var(--sea);outline-offset:0}
-.msg{min-height:1.6em;color:var(--sea);font-weight:700}
-footer{background:var(--seaD);color:#CFE3EE;padding:26px 0;font-size:.92rem}
-footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-footer a{color:#fff;text-decoration:underline}
-@media(max-width:980px){.hero .w,.form,.qbox{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}}
-@media(max-width:720px){.nav nav{display:none}.lang{margin-inline-start:auto}}
-@media(max-width:520px){.grid{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;transition:transform .25s var(--ease),background .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.sea{background:var(--sea);color:#fff;box-shadow:0 14px 30px -14px var(--sea)}.btn.sea:hover{background:var(--deep)}
+.btn.soft{background:var(--foam);color:var(--sea)}.btn.soft:hover{background:#DDE8FF}
+.btn.coral{background:var(--coral);color:#fff}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:var(--sand);color:#B4462F;font-weight:700;font-size:.9rem}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--coral)}
+
+/* floating pill nav */
+.hd{position:fixed;top:14px;inset-inline:0;z-index:50;display:flex;justify-content:center;padding:0 12px;pointer-events:none}
+.nav{pointer-events:auto;display:flex;align-items:center;gap:6px;padding:6px 6px 6px 18px;border-radius:999px;background:rgba(255,255,255,.92);box-shadow:0 10px 40px -18px rgba(8,42,107,.45),0 0 0 1px var(--line);max-width:min(100%,920px);width:100%}
+[dir="rtl"] .nav{padding:6px 18px 6px 6px}
+.logo{display:flex;align-items:center;gap:8px;font-family:var(--h);font-weight:800;font-size:1.15rem;color:var(--deep);white-space:nowrap}
+.logo svg{width:28px;height:28px}
+.nav nav{display:flex;gap:2px;margin-inline-start:auto}
+.nav nav a{padding:10px 14px;border-radius:999px;font-weight:600;font-size:.93rem;color:var(--ink2)}
+.nav nav a:hover{background:var(--foam);color:var(--sea)}
+.lang{display:flex;gap:2px;padding:3px;border-radius:999px;background:var(--foam)}
+.lang button{min-width:38px;height:36px;padding:0 9px;border-radius:999px;font-weight:700;font-size:.82rem;color:var(--ink2)}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--sea);box-shadow:0 2px 8px -2px rgba(8,42,107,.3)}
+.nav .btn{min-height:42px;padding:0 18px}
+
+/* hero: centred, with a rolling word and a strip of Annaba */
+.hero{padding-top:clamp(130px,16vh,170px);text-align:center;overflow:hidden;background:radial-gradient(120% 70% at 50% 0%,var(--foam),var(--white) 70%)}
+.hero h1{font-size:clamp(2.6rem,6.6vw,6rem);max-width:15ch;margin:22px auto 0}
+.roll{display:inline-block;position:relative;height:1.1em;overflow:hidden;vertical-align:bottom;color:var(--sea)}
+.roll span{display:block;height:1.1em;white-space:nowrap;width:max-content}
+[dir="rtl"] .roll,[dir="rtl"] .roll span{height:1.35em}
+.roll .tr{display:block}
+.hero p{max-width:36em;margin:22px auto 0;color:var(--ink2);font-size:clamp(1.02rem,1.3vw,1.15rem)}
+.acts{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}
+.strip{margin-top:clamp(40px,6vw,70px);padding-bottom:clamp(60px,8vw,100px)}
+.strip .tr{display:flex;gap:22px;width:max-content;animation:st 50s linear infinite}
+.strip:hover .tr{animation-play-state:paused}
+[dir="rtl"] .strip .tr{animation-name:str}
+@keyframes st{to{transform:translateX(-50%)}}@keyframes str{to{transform:translateX(50%)}}
+.static .strip .tr{animation:none}
+.card{flex:none;width:clamp(220px,24vw,320px);aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;position:relative;box-shadow:0 30px 50px -30px rgba(8,42,107,.5)}
+.card:nth-child(odd){transform:translateY(26px) rotate(-1.5deg)}
+.card:nth-child(even){transform:rotate(1.5deg)}
+.card img{width:100%;height:100%;object-fit:cover}
+.card span{position:absolute;inset:auto 12px 12px 12px;padding:8px 12px;border-radius:14px;background:rgba(255,255,255,.92);font-weight:700;font-size:.85rem;color:var(--deep);text-align:start}
+
+/* bento with filter */
+.pad{padding:clamp(70px,10vw,130px) 0}
+.sh{text-align:center;max-width:44em;margin:0 auto 34px}
+.sh h2{font-size:clamp(2.2rem,4.8vw,4rem)}
+.sh p{margin-top:12px;color:var(--ink2)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:30px}
+.chips button{min-height:44px;padding:0 18px;border-radius:999px;background:var(--foam);color:var(--ink2);font-weight:700;font-size:.92rem;transition:background .2s,color .2s}
+.chips button[aria-pressed="true"]{background:var(--sea);color:#fff}
+.bento{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:220px;grid-auto-flow:dense;gap:16px}
+.tile{position:relative;border-radius:var(--r);overflow:hidden;background:var(--foam);display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:#fff}
+.tile.big{grid-column:span 2;grid-row:span 2}
+.tile.wide{grid-column:span 2}
+.tile.hide{display:none}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.tile:hover img{transform:scale(1.06)}
+.tile::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(8,42,107,.05) 15%,rgba(8,42,107,.55) 45%,rgba(8,42,107,.94))}
+.tile > *:not(img){position:relative;z-index:2}
+.tile.solid{background:var(--coral)}.tile.solid::before{display:none}
+.tile.sand{background:var(--sand);color:var(--ink)}.tile.sand::before{display:none}
+.tile .tag{align-self:flex-start;margin-bottom:auto;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.92);color:var(--sea);font-weight:700;font-size:.78rem}
+.tile h3{font-size:1.45rem;letter-spacing:-.02em}
+.tile.big h3{font-size:clamp(1.8rem,2.6vw,2.4rem)}
+.tile p{font-size:.92rem;opacity:.92;margin-top:4px}
+.tile .meta{display:flex;justify-content:space-between;gap:10px;margin-top:10px;font-weight:700;font-size:.9rem}
+.tile .ic{width:54px;height:54px;border-radius:18px;background:rgba(255,255,255,.2);display:grid;place-items:center;margin-bottom:auto}
+.tile.sand .ic{background:#fff;color:var(--coral)}
+.tile .ic svg{width:28px;height:28px}
+
+/* chat test */
+.chatsec{background:var(--deep);color:#fff;border-radius:48px 48px 0 0}
+.chatsec .sh p{color:#B7C6E8}
+.chat{max-width:720px;margin:0 auto;background:#0E3580;border-radius:var(--r);padding:clamp(16px,3vw,26px);box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
+.chat .top{display:flex;align-items:center;gap:12px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:16px}
+.chat .av{width:42px;height:42px;border-radius:14px;background:var(--coral);display:grid;place-items:center;font-weight:800}
+.chat .top b{display:block}
+.chat .top small{color:#9FB3E0}
+.log{display:flex;flex-direction:column;gap:10px;min-height:300px;max-height:420px;overflow-y:auto;padding:4px}
+.msg{max-width:80%;padding:12px 16px;border-radius:20px;line-height:1.45}
+.msg.bot{align-self:flex-start;background:#fff;color:var(--ink);border-end-start-radius:6px}
+.msg.me{align-self:flex-end;background:var(--coral);color:#fff;border-end-end-radius:6px}
+.msg.res{background:var(--sand);color:var(--ink)}
+.msg.res b{display:block;font-size:1.2rem;color:var(--sea)}
+.typing{align-self:flex-start;background:#fff;border-radius:20px;padding:14px 16px;display:flex;gap:5px}
+.typing i{width:8px;height:8px;border-radius:50%;background:#9FB3E0;animation:tb 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes tb{50%{transform:translateY(-4px);background:var(--sea)}}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;min-height:48px}
+.opts button{min-height:44px;padding:0 16px;border-radius:999px;background:rgba(255,255,255,.12);color:#fff;font-weight:600;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.opts button:hover{background:rgba(255,255,255,.22)}
+
+/* tonight */
+.night{background:var(--deep);color:#fff;padding-bottom:clamp(70px,10vw,120px)}
+.tline{max-width:960px;margin:0 auto;position:relative;padding-top:20px}
+.tline .rail{height:6px;border-radius:9px;background:rgba(255,255,255,.15);overflow:hidden}
+.tline .rail i{display:block;height:100%;width:100%;background:var(--coral);transform-origin:0 50%;transform:scaleX(0)}
+[dir="rtl"] .tline .rail i{transform-origin:100% 50%}
+.static .tline .rail i,html:not(.js) .tline .rail i{transform:none}
+.hours{display:flex;justify-content:space-between;margin-top:10px;color:#9FB3E0;font-weight:700;font-size:.9rem}
+.slots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px}
+.slot{background:#0E3580;border-radius:22px;padding:20px}
+.slot b{color:var(--coral);font-size:1.4rem;display:block}
+.slot h3{font-size:1.2rem;margin-top:4px;letter-spacing:-.01em}
+.slot p{color:#B7C6E8;font-size:.92rem;margin-top:4px}
+
+/* Annaba: the circle opens */
+.city{position:relative;height:200svh;background:var(--white)}
+.city .stick{position:sticky;top:0;height:100svh;display:grid;place-items:center;overflow:hidden}
+.city .disc{position:absolute;inset:0;clip-path:circle(18% at 50% 50%)}
+.static .city .disc,html:not(.js) .city .disc{clip-path:none}
+.city .disc img{width:100%;height:100%;object-fit:cover}
+.city .disc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,42,107,.25),rgba(8,42,107,.7))}
+.city .tx{position:relative;z-index:2;text-align:center;color:#fff;padding:0 16px}
+.city h2{font-size:clamp(2.6rem,7vw,6.4rem);text-shadow:0 6px 30px rgba(0,0,0,.35)}
+.city .facts{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:22px}
+.city .facts span{padding:10px 18px;border-radius:999px;background:rgba(255,255,255,.92);color:var(--deep);font-weight:700;font-size:.92rem}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.duo figure{border-radius:var(--r);overflow:hidden;aspect-ratio:3/2;position:relative}
+.duo img{width:100%;height:100%;object-fit:cover}
+.duo figcaption{position:absolute;inset:auto 14px 14px auto;padding:8px 14px;border-radius:14px;background:rgba(255,255,255,.92);font-weight:700;font-size:.85rem;color:var(--deep)}
+[dir="rtl"] .duo figcaption{inset:auto auto 14px 14px}
+
+/* form */
+.formbox{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:36px;overflow:hidden;background:var(--foam)}
+.formbox figure{min-height:460px;position:relative}
+.formbox figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.formbox > div{padding:clamp(24px,4vw,48px)}
+.formbox h2{font-size:clamp(2rem,3.6vw,3rem)}
+.formbox .lead{margin:10px 0 22px;color:var(--ink2)}
+form{display:grid;gap:14px}
+label{display:grid;gap:6px;font-weight:700;font-size:.92rem}
+input,select{min-height:54px;padding:0 18px;border:2px solid transparent;border-radius:18px;background:#fff;font-weight:400;box-shadow:0 1px 0 var(--line)}
+input:focus,select:focus{outline:0;border-color:var(--sea)}
+.note{min-height:1.5em;color:var(--sea);font-weight:700}
+
+footer{background:var(--deep);color:#B7C6E8;font-size:.9rem}
+footer .w{padding-top:40px;padding-bottom:34px;display:grid;gap:18px}
+footer .top{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer .logo{color:#fff}
+footer a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.credits{font-size:.8rem;color:#8FA2CC;line-height:1.7}
+.credits a{color:#B7C6E8}
+
+html.js:not(.static) [data-up]{opacity:0;transform:translateY(34px)}
+@media(max-width:980px){.bento{grid-template-columns:1fr 1fr;grid-auto-rows:200px}.formbox{grid-template-columns:1fr}.formbox figure{min-height:260px}.slots{grid-template-columns:1fr}}
+@media(max-width:760px){.nav nav,.nav .btn{display:none}.lang{margin-inline-start:auto}.duo{grid-template-columns:1fr}}
+@media(max-width:520px){.bento{grid-template-columns:1fr}.tile.big,.tile.wide{grid-column:auto;grid-row:auto}.tile.big{min-height:300px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.typing i{animation:none}}
 </style>
 </head>
 <body>
-<header><div class="w nav">
-  <a class="logo" href="#"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0B5D8C"/><path d="M6 20c3 0 3-3 6-3s3 3 6 3 3-3 6-3" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><circle cx="22" cy="10" r="3" fill="#F26B4F"/></svg><span data-i="brand">Sahla Digital</span></a>
-  <nav><a href="#formations" data-i="n1">Formations</a><a href="#test" data-i="n2">Test de niveau</a><a href="#inscription" data-i="n3">Inscription</a></nav>
+<header class="hd"><div class="nav">
+  <a class="logo" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="10" fill="#0A4FD6"/><path d="M6 20c3 0 3-3 6-3s3 3 6 3 3-3 6-3" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><circle cx="22" cy="10" r="3" fill="#FF6B57"/></svg><span data-i="brand">Sahla Digital</span></a>
+  <nav><a href="#formations" data-i="n1">Formations</a><a href="#test" data-i="n2">Test gratuit</a><a href="#annaba" data-i="n3">Annaba</a></nav>
   <div class="lang" role="group" aria-label="Langue"><button type="button" data-l="fr" aria-pressed="true">FR</button><button type="button" data-l="ar" aria-pressed="false">عربي</button><button type="button" data-l="en" aria-pressed="false">EN</button></div>
+  <a class="btn sea" href="#inscription" data-i="cta1">S’inscrire</a>
 </div></header>
-<main>
-<section class="hero" style="padding:0"><div class="w">
-  <div>
-    <h1 data-i="h1">Les compétences qui recrutent, le soir après le travail.</h1>
-    <p data-i="lede">Bureautique, informatique, marketing digital, langues, transit et logistique, à Annaba. Commencez par un test de niveau gratuit.</p>
-    <div class="acts"><a class="btn coral" href="#test" data-i="cta1">Faire le test gratuit</a><a class="btn white" href="#formations" data-i="cta2">Voir les formations</a></div>
+
+<main id="top">
+<section class="hero">
+  <div class="w">
+    <span class="pill"><i aria-hidden="true"></i><span data-i="pill">Cours du soir à Annaba</span></span>
+    <h1><span data-i="h1a">Apprenez</span> <span class="roll" id="roll" aria-live="off"><span class="tr" id="rollTr"></span></span><br><span data-i="h1b">après le travail.</span></h1>
+    <p data-i="lede">Bureautique, informatique, marketing digital, langues, transit et logistique. Commencez par un test de niveau gratuit, en deux minutes.</p>
+    <div class="acts"><a class="btn sea" href="#test" data-i="cta2">Faire le test gratuit</a><a class="btn soft" href="#formations" data-i="cta3">Voir les formations</a></div>
   </div>
-  <div class="card"><h2 data-i="eH">Ce soir à l’école</h2><p class="sub" data-i="eS">Cours de 18 h à 20 h 30, du dimanche au jeudi.</p><ul class="eve" id="eve"></ul></div>
-</div><div class="waves" aria-hidden="true"></div></section>
+  <div class="strip" aria-hidden="true"><div class="tr" id="strip"></div></div>
+</section>
 
-<section id="formations" style="padding-top:clamp(40px,6vw,70px)"><div class="w">
-  <div class="sh"><h2 data-i="fH">Nos formations</h2><p data-i="fP">Des groupes de 15 au plus, un ordinateur par personne, une attestation à la fin.</p></div>
-  <div class="grid" id="grid"></div>
+<section class="pad" id="formations"><div class="w">
+  <div class="sh"><h2 data-up data-i="fH">Huit formations, un seul soir à bloquer.</h2><p data-up data-i="fP">Des groupes de 15 au plus, un ordinateur par personne, une attestation à la fin.</p></div>
+  <div class="chips" id="chips" role="group"></div>
+  <div class="bento" id="bento"></div>
 </div></section>
 
-<section class="test" id="test"><div class="w">
-  <div class="sh"><h2 data-i="tH">Test de niveau en bureautique</h2><p data-i="tP">Cinq questions, une minute. On vous dit par quelle formation commencer.</p></div>
-  <div class="qbox"><div class="q" id="q"></div><div class="res" id="res"></div></div>
+<section class="chatsec pad" id="test"><div class="w">
+  <div class="sh"><h2 data-up data-i="tH">Votre niveau en deux minutes</h2><p data-up data-i="tP">Répondez à cinq questions de bureautique. On vous dit par quelle formation commencer.</p></div>
+  <div class="chat" data-up>
+    <div class="top"><span class="av" aria-hidden="true">S</span><div><b data-i="bot">Sahla, test de niveau</b><small data-i="botS">répond en quelques secondes</small></div></div>
+    <div class="log" id="log" aria-live="polite"></div>
+    <div class="opts" id="opts"></div>
+  </div>
 </div></section>
 
-<section id="inscription"><div class="w form">
-  <div><h2 data-i="iH" style="font-size:clamp(2rem,4vw,3rem);color:var(--seaD)">Réservez votre place</h2><p data-i="iP" style="margin-top:12px;color:var(--ink2)">Laissez vos coordonnées : on vous rappelle pour la prochaine session du soir.</p></div>
-  <form id="f" novalidate data-endpoint="">
-    <label><span data-i="l1">Nom complet</span><input name="name" autocomplete="name" required></label>
-    <label><span data-i="l2">Téléphone</span><input name="tel" type="tel" inputmode="tel" autocomplete="tel" required placeholder="05 / 06 / 07 …"></label>
-    <label><span data-i="l3">Formation</span><select name="course" id="sel"></select></label>
-    <button class="btn coral" type="submit" data-i="send">Envoyer ma demande</button>
-    <p class="msg" id="msg" aria-live="polite"></p>
-  </form>
+<section class="night"><div class="w">
+  <div class="sh"><h2 data-up data-i="nH">Ce soir à l’école</h2><p data-up data-i="nP">De 18 h à 20 h 30, du dimanche au jeudi.</p></div>
+  <div class="tline"><div class="rail"><i id="rail"></i></div><div class="hours"><span>18:00</span><span>19:15</span><span>20:30</span></div><div class="slots" id="slots"></div></div>
+</div></section>
+
+<section class="city" id="annaba">
+  <div class="stick">
+    <div class="disc" id="disc"><img src="assets/img/sunset-1600.webp" srcset="assets/img/sunset-800.webp 800w, assets/img/sunset-1600.webp 1600w" sizes="100vw" width="1600" height="1067" alt="" loading="lazy" data-alt="sunsetAlt"></div>
+    <div class="tx" id="cityTx"><h2 data-i="cH">Annaba, ouverte sur la mer.</h2><div class="facts"><span data-i="c1">Centre-ville, près du Cours de la Révolution</span><span data-i="c2">Accueil de 9 h à 20 h 30</span></div></div>
+  </div>
+</section>
+<section style="padding:0 0 clamp(70px,10vw,120px)"><div class="w duo">
+  <figure data-up><img src="assets/img/basilica-800.webp" srcset="assets/img/basilica-800.webp 800w, assets/img/basilica-1600.webp 1600w" sizes="(min-width:760px) 45vw, 90vw" width="1600" height="1060" alt="" loading="lazy" data-alt="basilicaAlt"><figcaption data-i="d1">Basilique Saint-Augustin</figcaption></figure>
+  <figure data-up><img src="assets/img/cours-800.webp" srcset="assets/img/cours-800.webp 800w, assets/img/cours-1600.webp 1600w" sizes="(min-width:760px) 45vw, 90vw" width="1600" height="1063" alt="" loading="lazy" data-alt="coursAlt"><figcaption data-i="d2">Cours de la Révolution</figcaption></figure>
+</div></section>
+
+<section style="padding:0 0 clamp(70px,10vw,120px)" id="inscription"><div class="w">
+  <div class="formbox" data-up>
+    <figure><img src="assets/img/beach2-800.webp" srcset="assets/img/beach2-800.webp 800w, assets/img/beach2-1600.webp 1600w" sizes="(min-width:980px) 45vw, 90vw" width="1600" height="1200" alt="" loading="lazy" data-alt="beach2Alt"></figure>
+    <div>
+      <h2 data-i="iH">Réservez votre place</h2>
+      <p class="lead" data-i="iP">Laissez vos coordonnées : on vous rappelle pour la prochaine session du soir.</p>
+      <form id="f" novalidate data-endpoint="">
+        <label><span data-i="l1">Nom complet</span><input name="name" autocomplete="name" required></label>
+        <label><span data-i="l2">Téléphone</span><input name="tel" type="tel" inputmode="tel" autocomplete="tel" required placeholder="05 / 06 / 07 …"></label>
+        <label><span data-i="l3">Formation</span><select name="course" id="sel"></select></label>
+        <button class="btn sea" type="submit" data-i="send">Envoyer ma demande</button>
+        <p class="note" id="msg" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
 </div></section>
 </main>
-<footer><div class="w"><span data-i="foot">© 2026 Sahla Digital, école d’informatique et de langues, Annaba</span><span><span data-i="by">Site réalisé par</span> <a href="https://afexad.app">AFEX Digital</a></span></div></footer>
 
-<script>
-var I={
-fr:{brand:"Sahla Digital",n1:"Formations",n2:"Test de niveau",n3:"Inscription",h1:"Les compétences qui recrutent, le soir après le travail.",lede:"Bureautique, informatique, marketing digital, langues, transit et logistique, à Annaba. Commencez par un test de niveau gratuit.",cta1:"Faire le test gratuit",cta2:"Voir les formations",eH:"Ce soir à l’école",eS:"Cours de 18 h à 20 h 30, du dimanche au jeudi.",fH:"Nos formations",fP:"Des groupes de 15 au plus, un ordinateur par personne, une attestation à la fin.",tH:"Test de niveau en bureautique",tP:"Cinq questions, une minute. On vous dit par quelle formation commencer.",iH:"Réservez votre place",iP:"Laissez vos coordonnées : on vous rappelle pour la prochaine session du soir.",l1:"Nom complet",l2:"Téléphone",l3:"Formation",send:"Envoyer ma demande",foot:"© 2026 Sahla Digital, école d’informatique et de langues, Annaba",by:"Site réalisé par",qn:"Question",of:"sur",wait:"Votre résultat apparaîtra ici.",waitH:"Résultat",again:"Refaire le test",book:"Réserver cette formation",err:"Indiquez votre nom et un numéro de téléphone valide.",demo:"Démo AFEX Digital : aucune demande n’a été envoyée, ce formulaire n’est pas encore connecté.",lang:"Langue",title:"Sahla Digital, école d’informatique, de langues et de transit à Annaba",
- levels:[["Débutant","Commencez par « Bureautique de base » : Word, Excel et e-mails, pas à pas."],["Intermédiaire","« Excel avancé » est fait pour vous : tableaux croisés, formules et graphiques."],["Avancé","Passez à « Marketing digital » ou à « Transit et douane » pour viser un poste."]]},
-ar:{brand:"سهلة ديجيتال",n1:"التكوينات",n2:"اختبار المستوى",n3:"التسجيل",h1:"المهارات المطلوبة في سوق العمل، مساءً بعد الدوام.",lede:"المكتبية، الإعلام الآلي، التسويق الرقمي، اللغات، العبور واللوجستيك، بعنابة. ابدأ باختبار مستوى مجاني.",cta1:"قم بالاختبار المجاني",cta2:"اكتشف التكوينات",eH:"هذا المساء في المدرسة",eS:"دروس من 18:00 إلى 20:30، من الأحد إلى الخميس.",fH:"تكويناتنا",fP:"أفواج من 15 كحد أقصى، حاسوب لكل متكوّن، وشهادة في النهاية.",tH:"اختبار المستوى في المكتبية",tP:"خمسة أسئلة في دقيقة. نخبرك بأي تكوين تبدأ.",iH:"احجز مكانك",iP:"اترك معلوماتك: نتصل بك للدورة المسائية القادمة.",l1:"الاسم الكامل",l2:"الهاتف",l3:"التكوين",send:"أرسل طلبي",foot:"© 2026 سهلة ديجيتال، مدرسة الإعلام الآلي واللغات، عنابة",by:"موقع من إنجاز",qn:"السؤال",of:"من",wait:"ستظهر نتيجتك هنا.",waitH:"النتيجة",again:"أعد الاختبار",book:"احجز هذا التكوين",err:"أدخل اسمك ورقم هاتف صحيح.",demo:"عرض AFEX Digital: لم يُرسل أي طلب، هذا النموذج غير متصل بعد.",lang:"اللغة",title:"سهلة ديجيتال، مدرسة الإعلام الآلي واللغات والعبور بعنابة",
- levels:[["مبتدئ","ابدأ بـ «المكتبية الأساسية»: وورد، إكسل والبريد الإلكتروني خطوة بخطوة."],["متوسط","«إكسل المتقدم» يناسبك: الجداول المحورية، الصيغ والرسوم البيانية."],["متقدم","انتقل إلى «التسويق الرقمي» أو «العبور والجمارك» للحصول على منصب."]]},
-en:{brand:"Sahla Digital",n1:"Courses",n2:"Placement test",n3:"Enrol",h1:"The skills employers want, in the evening after work.",lede:"Office software, IT, digital marketing, languages, freight forwarding and logistics, in Annaba. Start with a free placement test.",cta1:"Take the free test",cta2:"See the courses",eH:"Tonight at the school",eS:"Classes from 18:00 to 20:30, Sunday to Thursday.",fH:"Our courses",fP:"Groups of 15 at most, one computer each, a certificate at the end.",tH:"Office skills placement test",tP:"Five questions, one minute. We tell you which course to start with.",iH:"Book your place",iP:"Leave your details: we call you back about the next evening session.",l1:"Full name",l2:"Phone",l3:"Course",send:"Send my request",foot:"© 2026 Sahla Digital, IT and language school, Annaba",by:"Website by",qn:"Question",of:"of",wait:"Your result will appear here.",waitH:"Result",again:"Take the test again",book:"Book this course",err:"Enter your name and a valid phone number.",demo:"AFEX Digital demo: no request was sent, this form is not connected yet.",lang:"Language",title:"Sahla Digital, IT, language and freight school in Annaba",
- levels:[["Beginner","Start with “Office basics”: Word, Excel and email, step by step."],["Intermediate","“Advanced Excel” is for you: pivot tables, formulas and charts."],["Advanced","Move on to “Digital marketing” or “Freight and customs” to aim for a job."]]}
-};
-var IC={doc:'<path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h8"/>',xl:'<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/>',pc:'<rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/>',web:'<path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/>',mk:'<path d="M3 11v2l11 5V6L3 11Z"/><path d="M14 9a4 4 0 0 1 0 6M7 13v5h3"/>',gr:'<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18M3 12h18"/>',tr:'<path d="M2 17h20l-2 4H4zM5 17V8h8v9M13 11h5l2 3v3"/>',lg:'<path d="M4 5h11M9.5 3v2M6 5c1 4 4 7 7 8M12 5c-1 4-4 7-7 8M13 21l4-9 4 9M14.5 18h5"/>'};
-var C=[
- {k:"doc",p:12000,t:{fr:"Bureautique de base",ar:"المكتبية الأساسية",en:"Office basics"},d:{fr:"Word, Excel et e-mails pour débuter.",ar:"وورد، إكسل والبريد الإلكتروني للمبتدئين.",en:"Word, Excel and email for beginners."},du:{fr:"4 semaines",ar:"4 أسابيع",en:"4 weeks"}},
- {k:"xl",p:15000,t:{fr:"Excel avancé",ar:"إكسل المتقدم",en:"Advanced Excel"},d:{fr:"Tableaux croisés, formules et tableaux de bord.",ar:"الجداول المحورية، الصيغ ولوحات القيادة.",en:"Pivot tables, formulas and dashboards."},du:{fr:"4 semaines",ar:"4 أسابيع",en:"4 weeks"}},
- {k:"pc",p:28000,t:{fr:"Maintenance informatique",ar:"صيانة الإعلام الآلي",en:"Computer maintenance"},d:{fr:"Montage, réseaux et dépannage des PC.",ar:"التركيب، الشبكات وإصلاح الحواسيب.",en:"Assembly, networks and PC repair."},du:{fr:"3 mois",ar:"3 أشهر",en:"3 months"}},
- {k:"web",p:45000,t:{fr:"Création de sites web",ar:"إنشاء مواقع الويب",en:"Building websites"},d:{fr:"HTML, CSS et WordPress pour commerces.",ar:"HTML وCSS ووردبريس للمحلات.",en:"HTML, CSS and WordPress for shops."},du:{fr:"3 mois",ar:"3 أشهر",en:"3 months"}},
- {k:"mk",p:30000,t:{fr:"Marketing digital",ar:"التسويق الرقمي",en:"Digital marketing"},d:{fr:"Facebook, Instagram, TikTok et publicité.",ar:"فيسبوك، إنستغرام، تيك توك والإشهار.",en:"Facebook, Instagram, TikTok and ads."},du:{fr:"2 mois",ar:"شهران",en:"2 months"}},
- {k:"gr",p:32000,t:{fr:"Infographie",ar:"التصميم الجرافيكي",en:"Graphic design"},d:{fr:"Photoshop, Illustrator et Canva.",ar:"فوتوشوب، إليستريتور وكانفا.",en:"Photoshop, Illustrator and Canva."},du:{fr:"2 mois",ar:"شهران",en:"2 months"}},
- {k:"tr",p:40000,t:{fr:"Transit et douane",ar:"العبور والجمارك",en:"Freight and customs"},d:{fr:"Dédouanement, incoterms et port d’Annaba.",ar:"التخليص الجمركي، الإنكوترمز وميناء عنابة.",en:"Customs clearance, Incoterms and the port of Annaba."},du:{fr:"3 mois",ar:"3 أشهر",en:"3 months"}},
- {k:"lg",p:18000,t:{fr:"Anglais et français professionnels",ar:"الإنجليزية والفرنسية المهنية",en:"Business English and French"},d:{fr:"E-mails, entretiens et réunions.",ar:"المراسلات، المقابلات والاجتماعات.",en:"Emails, interviews and meetings."},du:{fr:"2 mois",ar:"شهران",en:"2 months"}}
-];
-var Q=[
- {q:{fr:"Pour copier un texte, quel raccourci utilisez-vous ?",ar:"ما الاختصار الذي تستعمله لنسخ نص؟",en:"Which shortcut copies text?"},o:["Ctrl + V","Ctrl + C","Ctrl + Z"],a:1},
- {q:{fr:"Dans Excel, quelle formule additionne A1 à A10 ?",ar:"في إكسل، ما الصيغة التي تجمع من A1 إلى A10؟",en:"In Excel, which formula adds A1 to A10?"},o:["=SOMME(A1:A10)","=A1+A10","=TOTAL(A10)"],a:0},
- {q:{fr:"Un fichier .pdf s’ouvre plutôt avec…",ar:"ملف ‎.pdf يُفتح عادةً بـ…",en:"A .pdf file usually opens with…"},o:["Paint","Excel","Acrobat Reader"],a:2},
- {q:{fr:"À quoi sert la mise en forme conditionnelle ?",ar:"ما فائدة التنسيق الشرطي؟",en:"What is conditional formatting for?"},o:{fr:["Imprimer en couleur","Colorer des cellules selon leur valeur","Protéger un fichier"],ar:["الطباعة بالألوان","تلوين الخلايا حسب قيمتها","حماية ملف"],en:["Printing in colour","Colouring cells by their value","Protecting a file"]},a:1},
- {q:{fr:"Un tableau croisé dynamique permet de…",ar:"الجدول المحوري يسمح بـ…",en:"A pivot table lets you…"},o:{fr:["Dessiner un tableau","Envoyer un e-mail","Résumer et regrouper des données"],ar:["رسم جدول","إرسال بريد","تلخيص البيانات وتجميعها"],en:["Draw a table","Send an email","Summarise and group data"]},a:2}
-];
-var lang="fr",qi=0,score=0;
-try{var s=localStorage.getItem("sahla-lang");if(s&&I[s])lang=s}catch(e){}
-function $(q){return document.querySelector(q)}
-function fmt(n){return n.toLocaleString(lang==="ar"?"ar-DZ":"fr-FR")+(lang==="ar"?" دج":" DA")}
-function svg(k){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+IC[k]+'</svg>'}
-function quiz(){
-  var t=I[lang];
-  if(qi>=Q.length){var lv=score<=2?0:score<=3?1:2,r=t.levels[lv],target=[0,1,4][lv];
-    $("#q").innerHTML='<div class="bar"><i style="transform:scaleX(1)"></i></div><h3>'+score+' / '+Q.length+'</h3><button type="button" class="btn white" id="again">'+t.again+'</button>';
-    $("#res").innerHTML='<h3>'+r[0]+'</h3><p>'+r[1]+'</p><a class="btn coral" href="#inscription" data-k="'+target+'">'+t.book+'</a>';
-    $("#again").onclick=function(){qi=0;score=0;quiz()};return}
-  var q=Q[qi],opts=Array.isArray(q.o)?q.o:q.o[lang];
-  $("#q").innerHTML='<div class="bar"><i style="transform:scaleX('+(qi/Q.length)+')"></i></div><p style="color:#CFE3EE;margin-bottom:6px">'+t.qn+' '+(qi+1)+' '+t.of+' '+Q.length+'</p><h3>'+q.q[lang]+'</h3><div class="opts">'+opts.map(function(o,i){return '<button type="button" data-o="'+i+'">'+o+'</button>'}).join("")+'</div>';
-  if(qi===0)$("#res").innerHTML='<h3>'+t.waitH+'</h3><p>'+t.wait+'</p>';
-}
-function render(){
-  var t=I[lang];
-  $("#grid").innerHTML=C.map(function(c){return '<article class="co"><span class="ic">'+svg(c.k)+'</span><h3>'+c.t[lang]+'</h3><p>'+c.d[lang]+'</p><div class="meta"><span>'+c.du[lang]+'</span><b>'+fmt(c.p)+'</b></div></article>'}).join("");
-  $("#eve").innerHTML=[[1,"18:00"],[4,"18:00"],[7,"19:15"]].map(function(x){return '<li><b>'+C[x[0]].t[lang]+'</b><span>'+x[1]+'</span></li>'}).join("");
-  $("#sel").innerHTML=C.map(function(c,i){return '<option value="'+i+'">'+c.t[lang]+'</option>'}).join("");
-  quiz();
-}
-function setLang(l){
-  lang=l;var t=I[l];document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr";document.title=t.title;
-  document.querySelectorAll("[data-i]").forEach(function(e){e.textContent=t[e.dataset.i]});
-  document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.l===l)});
-  $(".lang").setAttribute("aria-label",t.lang);$("#msg").textContent="";
-  try{localStorage.setItem("sahla-lang",l)}catch(e){}
-  render();
-}
-document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){setLang(b.dataset.l)})});
-$("#q").addEventListener("click",function(e){var b=e.target.closest("[data-o]");if(!b)return;if(+b.dataset.o===Q[qi].a)score++;qi++;quiz()});
-$("#res").addEventListener("click",function(e){var a=e.target.closest("[data-k]");if(a)$("#sel").value=a.dataset.k});
-$("#f").addEventListener("submit",function(e){e.preventDefault();var t=I[lang],ok=this.name.value.trim()&&/^0[5-7]\d{8}$/.test(this.tel.value.replace(/\s/g,""));
-  if(!ok){$("#msg").textContent=t.err;(this.name.value.trim()?this.tel:this.name).focus();return}
-  $("#msg").textContent=t.demo});
-setLang(lang);
-</script>
+<footer><div class="w">
+  <div class="top"><span class="logo"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="10" fill="#fff"/><path d="M6 20c3 0 3-3 6-3s3 3 6 3 3-3 6-3" fill="none" stroke="#0A4FD6" stroke-width="2.4" stroke-linecap="round"/><circle cx="22" cy="10" r="3" fill="#FF6B57"/></svg><span data-i="brand">Sahla Digital</span></span><span><span data-i="foot">© 2026 Sahla Digital, école d’informatique et de langues, Annaba.</span> <span data-i="by">Site réalisé par</span> <a href="https://afexad.app">AFEX Digital</a></span></div>
+  <p class="credits" id="credits"></p>
+</div></footer>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/Flip.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
