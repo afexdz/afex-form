@@ -359,10 +359,10 @@
   ScrollTrigger.create({ trigger: "#ramassage", start: "top 60%", once: true, onEnter: function () { showZone(false); } });
 
   function bindDynamic() {
-    dyn.forEach(function (x) { if (x.scrollTrigger) x.scrollTrigger.kill(); if (x.kill) x.kill(); }); dyn = [];
+    [].concat.apply([], dyn).forEach(function (x) { if (x.targets || x.getChildren) x.revert(); else if (x.kill) x.kill(); }); dyn = [];
     dyn.push(gsap.from(".out", { y: 60, rotation: 2, opacity: 0, duration: 1, ease: "back.out(1.3)", scrollTrigger: { trigger: ".plan", start: "top 70%" } }));
-    dyn.push(gsap.from("#zones button", { y: 20, opacity: 0, scale: .8, duration: .5, stagger: .05, ease: "back.out(2)", scrollTrigger: { trigger: "#zones", start: "top 85%" } }));
-    dyn.push(gsap.from("#groups .gc", { y: 100, rotation: function (i) { return (i - 1) * 8; }, opacity: 0, duration: 1.1, stagger: .12, ease: "back.out(1.3)", scrollTrigger: { trigger: "#groups", start: "top 82%" } }));
+    dyn.push(gsap.fromTo("#zones button", { y: 20, opacity: 0, scale: .8 }, { y: 0, opacity: 1, scale: 1, clearProps: "transform,opacity", duration: .5, stagger: .05, ease: "back.out(2)", scrollTrigger: { trigger: "#zones", start: "top 85%" } }));
+    dyn.push(gsap.fromTo("#groups .gc", { y: 100, rotation: function (i) { return (i - 1) * 8; }, opacity: 0 }, { y: 0, rotation: function (i) { return [-2, 0, 2][i]; }, opacity: 1, clearProps: "transform,opacity", duration: 1.1, stagger: .12, ease: "back.out(1.3)", scrollTrigger: { trigger: "#groups", start: "top 82%" } }));
     dyn.push(gsap.from("#bubbles .bub", { scale: 0, rotation: -40, duration: .7, stagger: .08, ease: "back.out(2.2)", scrollTrigger: { trigger: "#bubbles", start: "top 85%" } }));
     dyn.push(gsap.from("#mosaic > div", { clipPath: "circle(0% at 50% 50%)", duration: 1.2, stagger: .1, ease: "power3.out", scrollTrigger: { trigger: "#mosaic", start: "top 80%" } }));
     dyn.push(gsap.from("#ag .ev", { y: 80, opacity: 0, duration: .9, stagger: .1, ease: "power3.out", scrollTrigger: { trigger: "#ag", start: "top 82%" } }));

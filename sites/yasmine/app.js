@@ -289,7 +289,7 @@
   ScrollTrigger.batch("[data-up]", { start: "top 88%", once: true, onEnter: function (els) { gsap.to(els, { opacity: 1, y: 0, duration: 1, stagger: .1, ease: "power3.out" }); } });
 
   function bindDynamic() {
-    dyn.forEach(function (x) { if (x.scrollTrigger) x.scrollTrigger.kill(); if (x.kill) x.kill(); }); dyn = [];
+    [].concat.apply([], dyn).forEach(function (x) { if (x.targets || x.getChildren) x.revert(); else if (x.kill) x.kill(); }); dyn = [];
     var wide = matchMedia("(min-width: 901px)").matches;
     dyn.push(gsap.fromTo(".fimg img", { scale: 1.25 }, { scale: 1, ease: "none", scrollTrigger: { trigger: ".finder", start: "top bottom", end: "bottom top", scrub: true } }));
     dyn.push(gsap.fromTo("#amb .mos div", { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 1.2, stagger: .12, ease: "expo.inOut", scrollTrigger: { trigger: "#amb", start: "top 75%" } }));

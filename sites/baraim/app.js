@@ -381,10 +381,10 @@
   ScrollTrigger.batch("[data-up]", { start: "top 88%", once: true, onEnter: function (els) { gsap.to(els, { opacity: 1, y: 0, duration: 1, stagger: .1, ease: "power3.out" }); } });
 
   function bindDynamic() {
-    dyn.forEach(function (x) { if (x.scrollTrigger) x.scrollTrigger.kill(); if (x.kill) x.kill(); }); dyn = [];
+    [].concat.apply([], dyn).forEach(function (x) { if (x.targets || x.getChildren) x.revert(); else if (x.kill) x.kill(); }); dyn = [];
     dyn.push(gsap.from("#cards .pc", { y: 90, opacity: 0, duration: 1, stagger: .1, ease: "power3.out", scrollTrigger: { trigger: "#cards", start: "top 82%" } }));
     dyn.push(gsap.from("#cards .seats i.f", { scale: 0, duration: .3, stagger: .02, ease: "back.out(3)", scrollTrigger: { trigger: "#cards", start: "top 60%" } }));
-    dyn.push(gsap.from("#qSec .opt, #qForm .opt, #qDays .opt, #qOpt .opt", { y: 30, opacity: 0, duration: .6, stagger: .04, ease: "power3.out", scrollTrigger: { trigger: "#tarifs", start: "top 70%" } }));
+    dyn.push(gsap.fromTo("#qSec .opt, #qForm .opt, #qDays .opt, #qOpt .opt", { y: 30, opacity: 0 }, { y: 0, opacity: 1, clearProps: "transform,opacity", duration: .6, stagger: .04, ease: "power3.out", scrollTrigger: { trigger: "#tarifs", start: "top 70%" } }));
     dyn.push(ScrollTrigger.batch("#grid .gi", { start: "top 92%", once: true, onEnter: function (els) { gsap.fromTo(els, { clipPath: "inset(100% 0 0 0)", y: 30 }, { clipPath: "inset(0% 0 0 0)", y: 0, duration: 1, stagger: .06, ease: "expo.out" }); } }));
     dyn.push(gsap.from("#rail .dc", { x: function () { return doc.dir === "rtl" ? -120 : 120; }, opacity: 0, duration: 1, stagger: .08, ease: "power3.out", scrollTrigger: { trigger: "#rail", start: "top 80%" } }));
     dyn.push(gsap.from("#chat .msg", { y: 30, opacity: 0, scale: .94, duration: .6, stagger: .35, ease: "back.out(1.8)", scrollTrigger: { trigger: "#chat", start: "top 75%" } }));
