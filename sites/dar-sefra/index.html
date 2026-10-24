@@ -87,7 +87,7 @@ section{position:relative}
 .man h2{font-size:clamp(2.1rem,4.6vw,4rem);line-height:1.1}
 .man h2 .w8{opacity:.16}
 .static .man h2 .w8,html:not(.js) .man h2 .w8{opacity:1}
-.man figure{aspect-ratio:4/5;border-radius:220px 220px 18px 18px;overflow:hidden}
+.man figure{aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:0 0 0 10px var(--sand),0 0 0 12px var(--saffron)}
 .man figure img{width:100%;height:100%;object-fit:cover}
 .man p{margin-top:22px;color:var(--ink2);font-size:1.12rem;max-width:30em}
 
@@ -166,8 +166,7 @@ section{position:relative}
 
 /* form */
 .form{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(30px,6vw,80px);align-items:center}
-.form figure{aspect-ratio:4/5;border-radius:18px 220px 18px 18px;overflow:hidden}
-[dir="rtl"] .form figure{border-radius:220px 18px 18px 18px}
+.form figure{aspect-ratio:4/5;border-radius:18px;overflow:hidden}
 .form figure img{width:100%;height:100%;object-fit:cover}
 .form h2{font-size:clamp(2.2rem,4.6vw,3.8rem);color:var(--terraD)}
 .form > div > p{margin:14px 0 26px;color:var(--ink2);font-size:1.08rem}

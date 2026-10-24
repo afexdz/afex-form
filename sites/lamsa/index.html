@@ -74,7 +74,7 @@ h1,h2,h3{font-family:var(--h);font-weight:500;line-height:1.02;letter-spacing:-.
 .fil dl{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:34px}
 .fil dt{font-family:var(--h);font-size:1.6rem;color:var(--gold)}
 .fil dd{color:#E3CBD3;font-size:.98rem}
-.fil figure{position:relative;height:min(80svh,760px);border-radius:300px 300px 20px 20px;overflow:hidden;box-shadow:0 0 0 1px rgba(201,162,74,.5),0 0 0 10px var(--velvet),0 0 0 11px rgba(201,162,74,.35)}
+.fil figure{position:relative;height:min(80svh,760px);border-radius:6px;overflow:hidden;box-shadow:0 0 0 1px rgba(201,162,74,.5),0 0 0 10px var(--velvet),0 0 0 11px rgba(201,162,74,.35)}
 .fil figure img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
 .fil .thread{inset:0;width:100%;height:100%;opacity:.55}
 
@@ -137,8 +137,7 @@ h1,h2,h3{font-family:var(--h);font-weight:500;line-height:1.02;letter-spacing:-.
 
 /* form */
 .form{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px);align-items:center}
-.form figure{aspect-ratio:4/5;border-radius:20px 300px 20px 20px;overflow:hidden}
-[dir="rtl"] .form figure{border-radius:300px 20px 20px 20px}
+.form figure{aspect-ratio:4/5;border-radius:6px;overflow:hidden}
 .form figure img{width:100%;height:100%;object-fit:cover}
 .form h2{font-size:clamp(2.6rem,5vw,4.4rem);color:var(--plum)}
 .form .lead{margin:14px 0 26px;color:var(--ink2);font-size:1.08rem}

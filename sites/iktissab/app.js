@@ -168,8 +168,8 @@
   }
 
   /* ---------- hero: the arch opens onto Algiers ---------- */
-  gsap.set("#arch", { clipPath: "inset(14% 33% 0% 33% round 400px 400px 0px 0px)" });
-  gsap.to("#arch", { clipPath: "inset(0% 0% 0% 0% round 0px 0px 0px 0px)", duration: 1.9, ease: "power3.inOut", delay: .15 });
+  gsap.set("#arch", { clipPath: "inset(18% 30% 18% 30%)" });
+  gsap.to("#arch", { clipPath: "inset(0% 0% 0% 0%)", duration: 1.6, ease: "power3.inOut", delay: .15 });
   gsap.from("#arch img", { scale: 1.25, duration: 2.4, ease: "power2.out" });
   gsap.set("#h1", { autoAlpha: 0 });
   document.fonts.ready.then(function () {
