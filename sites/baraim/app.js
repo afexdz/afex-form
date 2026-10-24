@@ -11,6 +11,7 @@
     var big = n === "peinture" || n === "rire" || n === "table" || n === "atelier";
     return '<img' + (cls ? ' class="' + cls + '"' : "") + ' src="assets/img/' + n + '-640.webp" srcset="assets/img/' + n + '-640.webp 640w, assets/img/' + n + '-1280.webp 1280w' + (big ? ", assets/img/" + n + "-1920.webp 1920w" : "") + '" sizes="' + (sizes || "33vw") + '" width="1280" height="' + P[n][0] + '" alt=""' + (eager ? "" : ' loading="lazy"') + ' decoding="async">';
   }
+  function cur() { return lang === "ar" ? "دج" : "DA"; }
   function da(n) { return "\u2066" + n.toLocaleString("fr-FR").replace(/\u202f|\u00a0/g, " ") + "\u2069"; }
 
   var I = {
@@ -202,7 +203,7 @@
     $("#cards").innerHTML = SECS.map(function (s, i) {
       var left = s.total - s.taken, st = left === 0 ? "full" : left <= 2 ? "few" : "ok";
       var seats = ""; for (var k = 0; k < s.total; k++) seats += '<i class="' + (k < s.taken ? "f" : "") + '"></i>';
-      return '<article class="pc"><div class="ph">' + img(s.img, "(min-width:1080px) 25vw, (min-width:600px) 50vw, 92vw") + '<span class="tag t-' + st + '">' + t[st] + '</span></div><div class="bd"><span class="age">' + s.a[lang] + '</span><h3>' + s.t[lang] + '</h3><p class="meta">' + s.total + " " + t.kids + ", " + s.carers + " " + t.carers + '</p><div class="seats" aria-hidden="true">' + seats + '</div><p class="cnt">' + (left ? "<b>" + left + "</b> " + t.left + " " + s.total : "<b>0</b> " + t.leftFull) + '</p><div class="from"><span><small>' + t.from + "</small><b>" + da(s.price) + " DA</b></span>" + '<a class="go" href="#visite" data-sec="' + i + '" aria-label="' + t.cta2 + ", " + s.t[lang] + '"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></article>';
+      return '<article class="pc"><div class="ph">' + img(s.img, "(min-width:1080px) 25vw, (min-width:600px) 50vw, 92vw") + '<span class="tag t-' + st + '">' + t[st] + '</span></div><div class="bd"><span class="age">' + s.a[lang] + '</span><h3>' + s.t[lang] + '</h3><p class="meta">' + s.total + " " + t.kids + ", " + s.carers + " " + t.carers + '</p><div class="seats" aria-hidden="true">' + seats + '</div><p class="cnt">' + (left ? "<b>" + left + "</b> " + t.left + " " + s.total : "<b>0</b> " + t.leftFull) + '</p><div class="from"><span><small>' + t.from + "</small><b>" + da(s.price) + " " + cur() + "</b></span>" + '<a class="go" href="#visite" data-sec="' + i + '" aria-label="' + t.cta2 + ", " + s.t[lang] + '"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></article>';
     }).join("");
   }
   function radio(name, i, on, html, cls) { return '<label class="opt' + (cls ? " " + cls : "") + '"><input type="radio" name="' + name + '" value="' + i + '"' + (on ? " checked" : "") + '><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span>' + html + "</label>"; }
@@ -211,7 +212,7 @@
     $("#qSec").innerHTML = SECS.map(function (s, i) { return radio("sec", i, sim.sec === i, img(s.img, "160px") + "<strong>" + s.t[lang] + "</strong><small>" + s.a[lang] + "</small>"); }).join("");
     $("#qForm").innerHTML = t.forms.map(function (f, i) { return radio("form", i, sim.form === i, "<strong>" + f[0] + "</strong><small>" + f[1] + "</small>"); }).join("");
     $("#qDays").innerHTML = t.dayso.map(function (f, i) { return radio("days", i, sim.days === i, "<strong>" + f[0] + "</strong><small>" + f[1] + "</small>"); }).join("");
-    $("#qOpt").innerHTML = t.opts.map(function (o, i) { return '<label class="opt ln"><input type="checkbox" name="o' + i + '"' + (sim.opt[i] ? " checked" : "") + '><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><span><strong>' + o[0] + "</strong><small>" + o[1] + '</small></span><span class="px">' + (OPT[i] > 0 ? "+ " + da(OPT[i]) + " DA" : "− 10 %") + "</span></label>"; }).join("");
+    $("#qOpt").innerHTML = t.opts.map(function (o, i) { return '<label class="opt ln"><input type="checkbox" name="o' + i + '"' + (sim.opt[i] ? " checked" : "") + '><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><span><strong>' + o[0] + "</strong><small>" + o[1] + '</small></span><span class="px">' + (OPT[i] > 0 ? "+ " + da(OPT[i]) + " " + cur() : "− 10 %") + "</span></label>"; }).join("");
     calc();
   }
   function calc() {
@@ -220,7 +221,7 @@
     if (sim.days === 1) { var r2 = -Math.round(sub * .32 / 500) * 500; lines.push([t.rDays, r2]); sub += r2; }
     for (var i = 0; i < 3; i++) if (sim.opt[i]) { lines.push([t.opts[i][0], OPT[i]]); sub += OPT[i]; }
     if (sim.opt[3]) { var r3 = -Math.round(sub * .1 / 100) * 100; lines.push([t.rSib, r3]); sub += r3; }
-    $("#lines").innerHTML = lines.map(function (l) { return '<li class="' + (l[1] < 0 ? "neg" : "") + '"><span>' + l[0] + "</span><span>" + (l[1] < 0 ? "− " : "") + da(Math.abs(l[1])) + " DA</span></li>"; }).join("");
+    $("#lines").innerHTML = lines.map(function (l) { return '<li class="' + (l[1] < 0 ? "neg" : "") + '"><span>' + l[0] + "</span><span>" + (l[1] < 0 ? "− " : "") + da(Math.abs(l[1])) + " " + cur() + "</span></li>"; }).join("");
     $("#rSub").textContent = s.a[lang] + ", " + t.forms[sim.form][0].toLowerCase() + ", " + t.dayso[sim.days][0];
     $("#incl").innerHTML = t.incl.concat(sim.sec < 2 ? [t.inclB] : []).map(function (x) { return "<span>" + x + "</span>"; }).join("");
     var el = $("#tot");
