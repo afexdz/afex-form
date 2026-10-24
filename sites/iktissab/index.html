@@ -5,196 +5,284 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Iktissab, école de gestion et GRH à Alger</title>
 <meta name="description" content="Iktissab : formations en GRH, paie, comptabilité et fiscalité algérienne à Alger. Sessions de jour, du soir et du week-end, attestation de formation.">
-<meta name="theme-color" content="#13294B">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2313294B'/%3E%3Cpath d='M9 25V14a7 7 0 0 1 14 0v11' fill='none' stroke='%23C8A24B' stroke-width='2.6'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#08162B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F2340'/%3E%3Cpath d='M8 27V15a8 8 0 0 1 16 0v12' fill='none' stroke='%23C8A24B' stroke-width='2.6'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="assets/img/night-1600.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Cormorant+Garamond:wght@500;600;700&family=Reem+Kufi:wght@500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('static');</script>
 <style>
-:root{--navy:#13294B;--navy2:#0C1C35;--gold:#C8A24B;--goldL:#F3E9D2;--paper:#F7F4EE;--card:#FFFFFF;--ink:#15202E;--ink2:#54606F;--line:#E4DED2;--f:"Cairo",system-ui,sans-serif}
+:root{--navy:#0F2340;--navy2:#08162B;--gold:#C8A24B;--goldL:#EBDDB8;--blanche:#F7F5F0;--card:#FFFFFF;--ink:#13202F;--ink2:#566273;--line:#E2DCCF;--plaque:#1F4E9C;
+  --h:"Cormorant Garamond","Reem Kufi",Georgia,serif;--t:"Cairo",system-ui,sans-serif;--ease:cubic-bezier(.2,.8,.2,1)}
+[dir="rtl"]{--h:"Reem Kufi","Cormorant Garamond",serif}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;overflow-x:clip}
-body{font-family:var(--f);background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:clip}
+html{overflow-x:clip}
+html.lenis,html.lenis body{height:auto}
+body{font-family:var(--t);background:var(--blanche);color:var(--ink);line-height:1.65;overflow-x:clip;font-size:17px}
 a{color:inherit;text-decoration:none}
 button,input,select{font:inherit;color:inherit}
 button{cursor:pointer;border:0;background:none}
+img{display:block;max-width:100%}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-.w{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
-h1,h2,h3{line-height:1.15;font-weight:800}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:8px;font-weight:700;transition:background .2s,color .2s}
-.btn.gold{background:var(--gold);color:var(--navy2)}.btn.gold:hover{background:#B38E3B}
-.btn.line{box-shadow:inset 0 0 0 1.5px currentColor}.btn.line:hover{background:rgba(255,255,255,.08)}
+.w{max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+h1,h2,h3{font-family:var(--h);font-weight:600;line-height:1.02;letter-spacing:-.01em}
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3{line-height:1.35;letter-spacing:0;font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:6px;font-weight:700;transition:background .25s,color .25s}
+.btn.gold{background:var(--gold);color:var(--navy2)}.btn.gold:hover{background:#D9B566}
+.btn.line{box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.75);color:#fff}.btn.line:hover{background:rgba(255,255,255,.1)}
+.btn.navy{background:var(--navy);color:#fff}.btn.navy:hover{background:var(--navy2)}
+/* plaque de rue algérienne : bleu émaillé, liseré blanc, français et arabe */
+.plaque{display:inline-flex;flex-direction:column;align-items:center;gap:0;padding:6px 18px 7px;background:var(--plaque);color:#fff;border-radius:6px;box-shadow:inset 0 0 0 3px var(--plaque),inset 0 0 0 5px #fff;line-height:1.15;margin-bottom:18px}
+.plaque b{font-family:"Reem Kufi",serif;font-size:1rem;font-weight:500}
+.plaque span{font-size:.78rem;font-weight:700;letter-spacing:.04em}
+
 /* header */
-header{position:sticky;top:0;z-index:20;background:var(--navy);color:#fff}
-.nav{display:flex;align-items:center;gap:24px;height:68px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.3rem}
-.logo svg{width:28px;height:28px}
-.nav nav{display:flex;gap:4px;margin-inline-start:auto}
-.nav nav a{padding:8px 12px;border-radius:6px;color:#C9D2E0;font-weight:600;font-size:.95rem}
-.nav nav a:hover{color:#fff;background:rgba(255,255,255,.08)}
-.lang{display:flex;gap:2px;padding:3px;border-radius:8px;background:rgba(255,255,255,.08)}
-.lang button{min-width:38px;height:34px;padding:0 8px;border-radius:6px;font-weight:700;font-size:.85rem;color:#C9D2E0}
-.lang button[aria-pressed="true"]{background:var(--gold);color:var(--navy2)}
-/* hero with Casbah arches */
-.hero{background:var(--navy);color:#fff;padding:clamp(48px,7vw,96px) 0 clamp(56px,8vw,110px);position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:28px;background:radial-gradient(circle at 14px 0,transparent 13px,var(--paper) 14px) 0 0/28px 28px repeat-x}
-.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,64px);align-items:center}
-.hero h1{font-size:clamp(2.4rem,5.4vw,4.2rem)}
-.hero p{margin-top:18px;color:#C9D2E0;font-size:clamp(1.05rem,1.4vw,1.2rem);max-width:34em}
-.acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.arch{background:var(--goldL);color:var(--ink);border-radius:999px 999px 18px 18px;padding:clamp(70px,9vw,110px) clamp(20px,3vw,34px) 26px;box-shadow:0 0 0 10px rgba(200,162,75,.18)}
-.arch h2{font-size:1.05rem;color:var(--navy);margin-bottom:12px;text-align:center}
-.next{display:grid;gap:8px}
-.next li{list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;background:#fff;border-radius:10px;padding:12px 14px}
-.next b{display:block;font-size:.98rem}
-.next small{color:var(--ink2);font-size:.85rem}
-.next .d{flex:none;text-align:center;background:var(--navy);color:#fff;border-radius:8px;padding:6px 10px;font-weight:800;line-height:1.1}
-.next .d small{display:block;color:var(--gold);font-weight:600}
-/* sections */
-section{padding:clamp(56px,8vw,100px) 0}
-.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
-.sh h2{font-size:clamp(1.9rem,3.6vw,2.8rem);color:var(--navy)}
-.sh p{color:var(--ink2);max-width:30em}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
-.chips button{min-height:42px;padding:0 16px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px var(--line);font-weight:700;font-size:.92rem}
-.chips button[aria-pressed="true"]{background:var(--navy);color:#fff;box-shadow:none}
-.courses{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.course{background:var(--card);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px;border-top:4px solid var(--gold)}
-.course .dom{font-size:.82rem;font-weight:700;color:var(--gold)}
-.course h3{font-size:1.2rem;color:var(--navy)}
-.course dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:.92rem;color:var(--ink2);margin-top:auto}
-.course dt{font-weight:700;color:var(--ink)}
-.course .pr{font-size:1.25rem;font-weight:800;color:var(--navy)}
-.course .btn{margin-top:8px;background:var(--paper);color:var(--navy);min-height:44px}
-.course .btn:hover{background:var(--goldL)}
-.why{background:#fff}
-.whys{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
-.whys div{border-inline-start:3px solid var(--gold);padding-inline-start:18px}
-.whys h3{font-size:1.15rem;color:var(--navy);margin-bottom:6px}
-.whys p{color:var(--ink2)}
-.form{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,60px);align-items:start}
-form{background:#fff;border-radius:16px;padding:clamp(20px,3vw,32px);display:grid;gap:14px}
-label{display:grid;gap:6px;font-weight:700;font-size:.92rem}
-input,select{min-height:48px;padding:0 14px;border:1px solid #CFC7B6;border-radius:8px;background:#fff;font-weight:400}
-input:focus,select:focus{outline:2px solid var(--gold);outline-offset:0;border-color:var(--gold)}
-.msg{min-height:1.6em;font-size:.95rem;color:var(--navy);font-weight:600}
-details{border-bottom:1px solid var(--line);padding:16px 0}
-summary{cursor:pointer;font-weight:800;color:var(--navy);font-size:1.08rem}
-details p{margin-top:8px;color:var(--ink2)}
-footer{background:var(--navy2);color:#C9D2E0;padding:28px 0;font-size:.92rem}
-footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-footer a{color:#fff;text-decoration:underline}
-@media(max-width:960px){.hero .w,.form{grid-template-columns:1fr}.courses,.whys{grid-template-columns:1fr 1fr}.arch{max-width:420px;width:100%;margin:0 auto}}
-@media(max-width:720px){.nav nav{display:none}.lang{margin-inline-start:auto}}
-@media(max-width:560px){.courses,.whys{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.hd{position:fixed;inset:0 0 auto;z-index:50;color:#fff;transition:background .35s,box-shadow .35s}
+.hd.solid{background:rgba(8,22,43,.94);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.nav{display:flex;align-items:center;gap:22px;height:76px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--h);font-weight:700;font-size:1.65rem}
+.logo svg{width:30px;height:30px;flex:none}
+.nav nav{display:flex;gap:2px;margin-inline-start:auto}
+.nav nav a{padding:8px 14px;border-radius:6px;font-weight:600;opacity:.85}
+.nav nav a:hover{opacity:1;background:rgba(255,255,255,.1)}
+.lang{display:flex;gap:2px;padding:3px;border-radius:7px;background:rgba(255,255,255,.1)}
+.lang button{min-width:40px;height:34px;padding:0 9px;border-radius:5px;font-weight:700;font-size:.85rem;opacity:.85}
+.lang button[aria-pressed="true"]{background:var(--gold);color:var(--navy2);opacity:1}
+.hd .btn{min-height:42px;padding:0 18px}
+
+/* hero: an arch that opens onto Algiers at night */
+.hero{position:relative;height:100svh;min-height:660px;background:var(--navy2);color:#fff;overflow:hidden}
+.hero .arch{position:absolute;inset:0;clip-path:inset(0 0 0 0 round 0)}
+.js:not(.static) .hero .arch{clip-path:inset(14% 33% 0 33% round 400px 400px 0 0)}
+.hero .arch img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.hero .arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,22,43,.55),rgba(8,22,43,.2) 40%,rgba(8,22,43,.88))}
+.hero .in{position:relative;z-index:2;height:100%;display:grid;align-content:end;padding-bottom:clamp(50px,9vh,110px)}
+.hero h1{font-size:clamp(3.2rem,8.6vw,8rem);max-width:12ch;line-height:.95}
+[dir="rtl"] .hero h1{line-height:1.3;max-width:15ch}
+.hero .ch{display:inline-block}
+.hero .row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px;margin-top:26px}
+.hero p{max-width:34em;font-size:clamp(1.05rem,1.4vw,1.22rem);color:#D3DCE9}
+.acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.next{display:grid;gap:8px;min-width:min(100%,330px)}
+.next div{display:flex;align-items:center;gap:14px;padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.08);backdrop-filter:blur(8px)}
+.next time{flex:none;text-align:center;line-height:1;font-family:var(--h);font-size:1.6rem;color:var(--gold);min-width:46px}
+.next time small{display:block;font-family:var(--t);font-size:.72rem;color:#D3DCE9;margin-top:3px}
+.next b{display:block;font-weight:600;font-size:.98rem}
+.next span{color:#AFC0D6;font-size:.86rem}
+
+/* intro */
+.pad{padding:clamp(80px,12vw,160px) 0}
+.intro{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(30px,6vw,90px);align-items:center}
+.intro figure{aspect-ratio:4/5;border-radius:400px 400px 12px 12px;overflow:hidden}
+.intro figure img{width:100%;height:118%;object-fit:cover}
+.intro h2{font-size:clamp(2.4rem,5vw,4.4rem);color:var(--navy)}
+.intro p{margin-top:20px;color:var(--ink2);font-size:1.12rem;max-width:32em}
+.marks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:36px}
+.marks div{border-top:2px solid var(--gold);padding-top:14px}
+.marks b{display:block;font-family:var(--h);font-size:1.5rem;color:var(--navy);line-height:1.1}
+.marks span{color:var(--ink2);font-size:.95rem}
+
+/* domains: expanding panels */
+.dom{background:var(--navy2);color:#fff}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.sh h2{font-size:clamp(2.4rem,4.8vw,4.2rem)}
+.sh p{max-width:28em;color:var(--ink2)}
+.dom .sh p{color:#AFC0D6}
+.panels{display:flex;gap:12px;height:clamp(420px,62svh,560px)}
+.panel{position:relative;flex:1;min-width:0;border-radius:16px;overflow:hidden;transition:flex .8s var(--ease);text-align:start;color:#fff;cursor:pointer}
+.panel.on{flex:4}
+.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.panel.on img{transform:scale(1.04)}
+.panel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,22,43,.15),rgba(8,22,43,.9))}
+.panel .tx{position:absolute;inset:auto 0 0;z-index:2;padding:22px}
+.panel h3{font-size:clamp(1.5rem,2.4vw,2.2rem);white-space:nowrap}
+.panel .more{max-height:0;overflow:hidden;opacity:0;transition:opacity .5s,max-height .6s var(--ease)}
+.panel.on .more{max-height:260px;opacity:1}
+.panel .more p{color:#D3DCE9;margin:8px 0 12px;max-width:32em}
+.panel .more ul{list-style:none;display:grid;gap:6px}
+.panel .more li{display:flex;justify-content:space-between;gap:16px;border-top:1px solid rgba(255,255,255,.18);padding-top:6px;font-size:.95rem}
+.panel .more li b{color:var(--gold);white-space:nowrap}
+.panel .n{position:absolute;top:18px;inset-inline-start:22px;z-index:2;font-family:var(--h);font-size:1.4rem;color:var(--gold)}
+
+/* payslip */
+.slip-sec{background:var(--blanche)}
+.slipwrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,6vw,90px);align-items:center}
+.slipwrap h2{font-size:clamp(2.4rem,4.6vw,4rem);color:var(--navy)}
+.slipwrap > div > p{margin-top:16px;color:var(--ink2);font-size:1.1rem;max-width:30em}
+.slip{background:var(--card);border-radius:14px;box-shadow:0 40px 80px -40px rgba(15,35,64,.45),0 0 0 1px var(--line);padding:clamp(20px,3vw,34px);font-variant-numeric:tabular-nums}
+.slip header{display:flex;justify-content:space-between;gap:12px;border-bottom:2px solid var(--navy);padding-bottom:12px;margin-bottom:8px}
+.slip header b{font-family:var(--h);font-size:1.5rem;color:var(--navy)}
+.slip header span{color:var(--ink2);font-size:.9rem;text-align:end}
+.slip .ln{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.slip .ln span{color:var(--ink2)}
+.slip .ln b{font-weight:700}
+.slip .ln.minus b{color:#A23B2A}
+.slip .ln.net{border:0;margin-top:8px;padding:16px;border-radius:10px;background:var(--navy);color:#fff}
+.slip .ln.net span{color:#D3DCE9}
+.slip .ln.net b{color:var(--gold);font-family:var(--h);font-size:1.7rem}
+.slip .note{margin-top:12px;font-size:.82rem;color:var(--ink2)}
+
+/* method: stacked cards */
+.stack{display:grid;gap:26px}
+.sc{position:sticky;top:110px;display:grid;grid-template-columns:1fr 1fr;min-height:clamp(380px,56svh,520px);border-radius:20px;overflow:hidden;background:var(--navy);color:#fff;box-shadow:0 -20px 50px -30px rgba(8,22,43,.6)}
+.sc:nth-child(2){top:130px;background:#163058}.sc:nth-child(3){top:150px;background:#1E3C6B}
+.sc .tx{padding:clamp(26px,4vw,50px);display:flex;flex-direction:column;justify-content:center}
+.sc b{font-family:var(--h);font-size:3.4rem;color:var(--gold);line-height:1}
+.sc h3{font-size:clamp(2rem,3.4vw,3rem);margin:10px 0 12px}
+.sc p{color:#D3DCE9;font-size:1.08rem;max-width:28em}
+.sc img{width:100%;height:100%;object-fit:cover}
+
+/* sessions */
+.cal{list-style:none;border-top:2px solid var(--navy)}
+.cal li{display:grid;grid-template-columns:110px minmax(0,1fr) minmax(0,.6fr) auto;gap:20px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+.cal time{font-family:var(--h);font-size:2.2rem;color:var(--navy);line-height:1}
+.cal time small{display:block;font-family:var(--t);font-size:.82rem;color:var(--ink2);margin-top:4px}
+.cal h3{font-size:1.45rem;color:var(--navy)}
+.cal .m{color:var(--ink2)}
+.cal a{min-height:44px;display:inline-flex;align-items:center;padding:0 18px;border-radius:6px;background:var(--goldL);color:var(--navy2);font-weight:700;white-space:nowrap}
+.cal a:hover{background:var(--gold)}
+
+/* Algiers */
+.city{background:var(--navy2);color:#fff;overflow:hidden}
+.cgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(20px,3vw,32px);align-items:end}
+.cgrid figure{border-radius:16px;overflow:hidden;position:relative}
+.cgrid .big{aspect-ratio:4/3}
+.cgrid .col{display:grid;gap:clamp(20px,3vw,32px)}
+.cgrid .tall{aspect-ratio:4/3}
+.cgrid img{width:100%;height:115%;object-fit:cover}
+.city h2{font-size:clamp(2.6rem,6vw,5.4rem);max-width:11ch}
+.city .addr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:40px}
+.city .addr dt{color:#AFC0D6;font-size:.9rem}
+.city .addr dd{font-weight:700;font-size:1.08rem}
+
+/* form */
+.form{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px);align-items:center}
+.form figure{aspect-ratio:4/3;border-radius:16px;overflow:hidden}
+.form figure img{width:100%;height:100%;object-fit:cover}
+.form h2{font-size:clamp(2.4rem,4.6vw,4rem);color:var(--navy)}
+.form .lead{margin:14px 0 26px;color:var(--ink2);font-size:1.08rem}
+form{display:grid;gap:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:grid;gap:6px;font-weight:600}
+input,select{min-height:54px;padding:0 16px;border:1px solid #CDC5B4;border-radius:8px;background:var(--card);font-weight:400}
+input:focus,select:focus{outline:2px solid var(--navy);outline-offset:0;border-color:var(--navy)}
+.msg{min-height:1.6em;color:var(--navy);font-weight:700}
+
+footer{background:var(--navy2);color:#AFC0D6;font-size:.92rem;border-top:3px solid var(--gold)}
+footer .w{padding-top:44px;padding-bottom:36px;display:grid;gap:20px}
+footer .top{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer .logo{color:#fff}
+footer a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.credits{font-size:.8rem;color:#8193AB;line-height:1.7}
+.credits a{color:#AFC0D6}
+
+html.js:not(.static) [data-up]{opacity:0;transform:translateY(40px)}
+@media(max-width:960px){.intro,.slipwrap,.form,.cgrid{grid-template-columns:1fr}.panels{flex-direction:column;height:auto}.panel{min-height:120px;flex:none}.panel.on{min-height:440px}.sc{grid-template-columns:1fr;position:relative;top:auto!important}.sc img{aspect-ratio:16/9;height:auto}.cal li{grid-template-columns:80px 1fr;gap:6px 16px}.cal li > *:nth-child(3),.cal li > *:nth-child(4){grid-column:2}.intro figure{max-width:420px}.city .addr{grid-template-columns:1fr}}
+@media(max-width:720px){.nav nav,.hd .btn{display:none}.lang{margin-inline-start:auto}.hero .row{flex-direction:column;align-items:flex-start}.marks{grid-template-columns:1fr}.two{grid-template-columns:1fr}.panel h3{white-space:normal}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
-<header><div class="w nav">
-  <a class="logo" href="#"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 28V14a9 9 0 0 1 18 0v14" fill="none" stroke="#C8A24B" stroke-width="3"/><path d="M12 28v-9a4 4 0 0 1 8 0v9" fill="none" stroke="#fff" stroke-width="2.4"/></svg><span data-i="brand">Iktissab</span></a>
-  <nav><a href="#formations" data-i="n1">Formations</a><a href="#sessions" data-i="n2">Sessions</a><a href="#inscription" data-i="n3">Inscription</a><a href="#faq" data-i="n4">Questions</a></nav>
+<header class="hd" id="hd"><div class="w nav">
+  <a class="logo" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 29V15a10 10 0 0 1 20 0v14" fill="none" stroke="#C8A24B" stroke-width="2.6"/><path d="M12 29v-9a4 4 0 0 1 8 0v9" fill="none" stroke="currentColor" stroke-width="2.2"/></svg><span data-i="brand">Iktissab</span></a>
+  <nav><a href="#domaines" data-i="n1">Domaines</a><a href="#paie" data-i="n2">La paie</a><a href="#sessions" data-i="n3">Sessions</a></nav>
   <div class="lang" role="group" aria-label="Langue"><button type="button" data-l="fr" aria-pressed="true">FR</button><button type="button" data-l="ar" aria-pressed="false">عربي</button><button type="button" data-l="en" aria-pressed="false">EN</button></div>
+  <a class="btn gold" href="#inscription" data-i="cta1">S’inscrire</a>
 </div></header>
 
-<main>
-<section class="hero"><div class="w">
+<main id="top">
+<section class="hero">
+  <div class="arch" id="arch"><img src="assets/img/night-1600.webp" srcset="assets/img/night-800.webp 800w, assets/img/night-1600.webp 1600w" sizes="100vw" width="1600" height="1067" alt="" fetchpriority="high"></div>
+  <div class="w in">
+    <h1 id="h1" data-i="h1">Les métiers de la gestion, appris à Alger.</h1>
+    <div class="row">
+      <div>
+        <p data-i="lede">GRH, paie, comptabilité et fiscalité algérienne, enseignées par des praticiens. Une attestation à la fin de chaque formation.</p>
+        <div class="acts"><a class="btn gold" href="#inscription" data-i="cta1">S’inscrire</a><a class="btn line" href="#domaines" data-i="cta2">Voir les formations</a></div>
+      </div>
+      <div class="next" id="next" aria-label="Prochaines sessions"></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad"><div class="w intro">
+  <figure data-up><img id="introImg" src="assets/img/tutor-800.webp" srcset="assets/img/tutor-800.webp 800w, assets/img/tutor-1600.webp 1600w" sizes="(min-width:960px) 36vw, 90vw" width="1600" height="1067" alt="" loading="lazy" data-alt="tutorAlt"></figure>
   <div>
-    <h1 data-i="h1">Formez-vous aux métiers de la gestion.</h1>
-    <p data-i="lede">GRH, paie, comptabilité et fiscalité algérienne, enseignées par des praticiens. Une attestation à la fin de chaque formation.</p>
-    <div class="acts"><a class="btn gold" href="#inscription" data-i="cta1">S’inscrire</a><a class="btn line" href="#formations" data-i="cta2">Voir les formations</a></div>
-  </div>
-  <div class="arch" id="sessions">
-    <h2 data-i="nextH">Prochaines sessions</h2>
-    <ul class="next" id="next"></ul>
-  </div>
-</div></section>
-
-<section id="formations"><div class="w">
-  <div class="sh"><h2 data-i="fH">Nos formations</h2><p data-i="fP">Choisissez un domaine : chaque formation suit la réglementation algérienne en vigueur.</p></div>
-  <div class="chips" id="chips" role="group"></div>
-  <div class="courses" id="courses"></div>
-</div></section>
-
-<section class="why"><div class="w">
-  <div class="sh"><h2 data-i="wH">Pourquoi Iktissab</h2></div>
-  <div class="whys">
-    <div><h3 data-i="w1">Des formateurs praticiens</h3><p data-i="w1p">Responsables RH, comptables et fiscalistes en exercice, qui enseignent ce qu’ils font chaque jour.</p></div>
-    <div><h3 data-i="w2">Des cas d’entreprises algériennes</h3><p data-i="w2p">Bulletins de paie, déclarations CNAS et G50 réels, anonymisés, traités en classe.</p></div>
-    <div><h3 data-i="w3">Des horaires pour ceux qui travaillent</h3><p data-i="w3p">Sessions en journée, le soir de 18 h à 20 h 30, ou le vendredi et le samedi.</p></div>
+    <span class="plaque" aria-hidden="true"><b>شارع التكوين</b><span>RUE DE LA FORMATION</span></span>
+    <h2 data-up data-i="iTitle">Ce que l’entreprise attend de vous lundi matin.</h2>
+    <p data-up data-i="iText">Chaque formation part des documents réels d’une entreprise algérienne : bulletins de paie, déclarations CNAS, liasses fiscales, contrats de travail. Vous repartez en sachant les faire.</p>
+    <div class="marks" data-up>
+      <div><b data-i="m1">Jour, soir ou week-end</b><span data-i="m1p">trois rythmes au choix</span></div>
+      <div><b data-i="m2">20 places</b><span data-i="m2p">par session, au plus</span></div>
+      <div><b data-i="m3">Attestation</b><span data-i="m3p">à la fin de chaque formation</span></div>
+    </div>
   </div>
 </div></section>
 
-<section id="inscription"><div class="w form">
-  <div><h2 data-i="iH" style="font-size:clamp(1.9rem,3.6vw,2.8rem);color:var(--navy)">Réservez votre place</h2><p data-i="iP" style="margin-top:12px;color:var(--ink2)">Laissez vos coordonnées : un conseiller vous rappelle pour confirmer la session et le mode de paiement.</p></div>
-  <form id="f" novalidate data-endpoint="">
-    <label><span data-i="l1">Nom complet</span><input name="name" autocomplete="name" required></label>
-    <label><span data-i="l2">Téléphone</span><input name="tel" type="tel" inputmode="tel" autocomplete="tel" required placeholder="05 / 06 / 07 …"></label>
-    <label><span data-i="l3">Formation</span><select name="course" id="sel"></select></label>
-    <label><span data-i="l4">Horaire souhaité</span><select name="slot" id="slot"></select></label>
-    <button class="btn gold" type="submit" data-i="send">Envoyer ma demande</button>
-    <p class="msg" id="msg" aria-live="polite"></p>
-  </form>
+<section class="dom pad" id="domaines"><div class="w">
+  <div class="sh"><h2 data-up data-i="dH">Cinq domaines</h2><p data-up data-i="dP">Survolez ou touchez un domaine pour voir ses formations et leurs tarifs.</p></div>
+  <div class="panels" id="panels"></div>
 </div></section>
 
-<section id="faq" style="padding-top:0"><div class="w" style="max-width:820px">
-  <h2 data-i="qH" style="font-size:clamp(1.9rem,3.6vw,2.6rem);color:var(--navy);margin-bottom:10px">Questions fréquentes</h2>
-  <details><summary data-i="q1">Faut-il un diplôme pour s’inscrire ?</summary><p data-i="a1">Non pour l’initiation. Pour la comptabilité et la fiscalité, un niveau terminale est conseillé.</p></details>
-  <details><summary data-i="q2">Peut-on payer en plusieurs fois ?</summary><p data-i="a2">Oui, en deux ou trois versements pour les formations de plus d’un mois.</p></details>
-  <details><summary data-i="q3">L’entreprise peut-elle financer ma formation ?</summary><p data-i="a3">Oui, nous établissons une convention et une facture au nom de votre employeur.</p></details>
+<section class="slip-sec pad" id="paie"><div class="w slipwrap">
+  <div>
+    <h2 data-up data-i="pH">Une fiche de paie, ligne par ligne.</h2>
+    <p data-up data-i="pP">En formation paie, vous calculez chaque ligne : du salaire de base aux cotisations CNAS, puis à l’IRG et au net à payer.</p>
+  </div>
+  <div class="slip" id="slip"></div>
+</div></section>
+
+<section class="pad" style="padding-top:0"><div class="w">
+  <div class="sh"><h2 data-up data-i="sH2" style="color:var(--navy)">La méthode Iktissab</h2></div>
+  <div class="stack" id="stack"></div>
+</div></section>
+
+<section class="pad" id="sessions" style="padding-top:0"><div class="w">
+  <div class="sh"><h2 data-up data-i="cH" style="color:var(--navy)">Prochaines sessions</h2><p data-up data-i="cP">Les dates de démarrage des six prochains mois.</p></div>
+  <ol class="cal" id="cal"></ol>
+</div></section>
+
+<section class="city pad"><div class="w">
+  <div class="cgrid">
+    <figure class="big" data-up><img class="px" src="assets/img/poste-800.webp" srcset="assets/img/poste-800.webp 800w, assets/img/poste-1600.webp 1600w" sizes="(min-width:960px) 55vw, 90vw" width="1600" height="1600" alt="" loading="lazy" data-alt="posteAlt"></figure>
+    <div class="col">
+      <h2 data-up data-i="aH">Au cœur d’Alger la Blanche.</h2>
+      <figure class="tall" data-up><img class="px" src="assets/img/casbah-800.webp" srcset="assets/img/casbah-800.webp 800w, assets/img/casbah-1600.webp 1600w" sizes="(min-width:960px) 40vw, 90vw" width="1600" height="1200" alt="" loading="lazy" data-alt="casbahAlt"></figure>
+    </div>
+  </div>
+  <dl class="addr" data-up>
+    <div><dt data-i="a1">Adresse</dt><dd data-i="a1v">Alger centre, à deux rues de la Grande Poste</dd></div>
+    <div><dt data-i="a2">Accès</dt><dd data-i="a2v">Métro Grande Poste et tramway</dd></div>
+    <div><dt data-i="a3">Accueil</dt><dd data-i="a3v">Du dimanche au jeudi, de 8 h 30 à 20 h 30</dd></div>
+  </dl>
+</div></section>
+
+<section class="pad" id="inscription"><div class="w form">
+  <figure data-up><img src="assets/img/didouche-800.webp" srcset="assets/img/didouche-800.webp 800w, assets/img/didouche-1600.webp 1600w" sizes="(min-width:960px) 45vw, 90vw" width="1600" height="1143" alt="" loading="lazy" data-alt="didoucheAlt"></figure>
+  <div>
+    <h2 data-up data-i="fH">Réservez votre place</h2>
+    <p class="lead" data-up data-i="fP">Laissez vos coordonnées : un conseiller vous rappelle pour confirmer la session et le mode de paiement.</p>
+    <form id="f" novalidate data-endpoint="" data-up>
+      <div class="two"><label><span data-i="l1">Nom complet</span><input name="name" autocomplete="name" required></label>
+      <label><span data-i="l2">Téléphone</span><input name="tel" type="tel" inputmode="tel" autocomplete="tel" required placeholder="05 / 06 / 07 …"></label></div>
+      <label><span data-i="l3">Formation</span><select name="course" id="sel"></select></label>
+      <label><span data-i="l4">Rythme</span><select name="slot" id="slot"></select></label>
+      <button class="btn navy" type="submit" data-i="send">Envoyer ma demande</button>
+      <p class="msg" id="msg" aria-live="polite"></p>
+    </form>
+  </div>
 </div></section>
 </main>
-<footer><div class="w"><span data-i="foot">© 2026 Iktissab, école de gestion, Alger</span><span><span data-i="by">Site réalisé par</span> <a href="https://afexad.app">AFEX Digital</a></span></div></footer>
 
-<script>
-var I={
-fr:{brand:"Iktissab",n1:"Formations",n2:"Sessions",n3:"Inscription",n4:"Questions",h1:"Formez-vous aux métiers de la gestion.",lede:"GRH, paie, comptabilité et fiscalité algérienne, enseignées par des praticiens. Une attestation à la fin de chaque formation.",cta1:"S’inscrire",cta2:"Voir les formations",nextH:"Prochaines sessions",fH:"Nos formations",fP:"Choisissez un domaine : chaque formation suit la réglementation algérienne en vigueur.",wH:"Pourquoi Iktissab",w1:"Des formateurs praticiens",w1p:"Responsables RH, comptables et fiscalistes en exercice, qui enseignent ce qu’ils font chaque jour.",w2:"Des cas d’entreprises algériennes",w2p:"Bulletins de paie, déclarations CNAS et G50 réels, anonymisés, traités en classe.",w3:"Des horaires pour ceux qui travaillent",w3p:"Sessions en journée, le soir de 18 h à 20 h 30, ou le vendredi et le samedi.",iH:"Réservez votre place",iP:"Laissez vos coordonnées : un conseiller vous rappelle pour confirmer la session et le mode de paiement.",l1:"Nom complet",l2:"Téléphone",l3:"Formation",l4:"Horaire souhaité",send:"Envoyer ma demande",qH:"Questions fréquentes",q1:"Faut-il un diplôme pour s’inscrire ?",a1:"Non pour l’initiation. Pour la comptabilité et la fiscalité, un niveau terminale est conseillé.",q2:"Peut-on payer en plusieurs fois ?",a2:"Oui, en deux ou trois versements pour les formations de plus d’un mois.",q3:"L’entreprise peut-elle financer ma formation ?",a3:"Oui, nous établissons une convention et une facture au nom de votre employeur.",foot:"© 2026 Iktissab, école de gestion, Alger",by:"Site réalisé par",all:"Tous",dur:"Durée",mode:"Rythme",price:"Tarif",choose:"Choisir",err:"Indiquez votre nom et un numéro de téléphone valide.",demo:"Démo AFEX Digital : aucune demande n’a été envoyée, ce formulaire n’est pas encore connecté.",lang:"Langue",filter:"Domaines",title:"Iktissab, école de gestion et GRH à Alger",
-  slots:["En journée","Le soir (18 h à 20 h 30)","Week-end (vendredi et samedi)"],doms:{grh:"GRH",paie:"Paie",compta:"Comptabilité",fisc:"Fiscalité",sec:"Secrétariat"}},
-ar:{brand:"اكتساب",n1:"التكوينات",n2:"الدورات",n3:"التسجيل",n4:"أسئلة",h1:"تكوّنوا في مهن التسيير.",lede:"الموارد البشرية، الأجور، المحاسبة والجباية الجزائرية، يدرّسها مختصون ممارسون. شهادة في نهاية كل تكوين.",cta1:"سجّل الآن",cta2:"اكتشف التكوينات",nextH:"الدورات القادمة",fH:"تكويناتنا",fP:"اختر مجالًا: كل تكوين يتبع التنظيم الجزائري الساري.",wH:"لماذا اكتساب",w1:"مكوّنون ممارسون",w1p:"مسؤولو موارد بشرية، محاسبون وخبراء جباية يمارسون المهنة ويدرّسون ما يعملونه يوميًا.",w2:"حالات من مؤسسات جزائرية",w2p:"كشوف أجور وتصريحات CNAS وG50 حقيقية، مجهولة الهوية، تُعالج في القسم.",w3:"مواعيد للعاملين",w3p:"دورات نهارية، مسائية من 18:00 إلى 20:30، أو يومي الجمعة والسبت.",iH:"احجز مكانك",iP:"اترك معلوماتك: يتصل بك مستشار لتأكيد الدورة وطريقة الدفع.",l1:"الاسم الكامل",l2:"الهاتف",l3:"التكوين",l4:"التوقيت المفضل",send:"أرسل طلبي",qH:"أسئلة شائعة",q1:"هل تحتاج شهادة للتسجيل؟",a1:"لا للمستوى التمهيدي. للمحاسبة والجباية يُنصح بمستوى نهائي.",q2:"هل يمكن الدفع بالتقسيط؟",a2:"نعم، على دفعتين أو ثلاث للتكوينات التي تتجاوز شهرًا.",q3:"هل يمكن للمؤسسة تمويل تكويني؟",a3:"نعم، نعدّ اتفاقية وفاتورة باسم المستخدم.",foot:"© 2026 اكتساب، مدرسة التسيير، الجزائر",by:"موقع من إنجاز",all:"الكل",dur:"المدة",mode:"الإيقاع",price:"السعر",choose:"اختر",err:"أدخل اسمك ورقم هاتف صحيح.",demo:"عرض AFEX Digital: لم يُرسل أي طلب، هذا النموذج غير متصل بعد.",lang:"اللغة",filter:"المجالات",title:"اكتساب، مدرسة التسيير والموارد البشرية بالجزائر",
-  slots:["نهارًا","مساءً (18:00 إلى 20:30)","نهاية الأسبوع (الجمعة والسبت)"],doms:{grh:"الموارد البشرية",paie:"الأجور",compta:"المحاسبة",fisc:"الجباية",sec:"السكرتارية"}},
-en:{brand:"Iktissab",n1:"Courses",n2:"Sessions",n3:"Enrol",n4:"Questions",h1:"Train for careers in management.",lede:"HR, payroll, Algerian accounting and tax, taught by practitioners. A certificate at the end of every course.",cta1:"Enrol now",cta2:"See the courses",nextH:"Next sessions",fH:"Our courses",fP:"Pick a field: every course follows current Algerian regulations.",wH:"Why Iktissab",w1:"Practising trainers",w1p:"Working HR managers, accountants and tax advisers who teach what they do every day.",w2:"Cases from Algerian companies",w2p:"Real, anonymised payslips and CNAS and G50 filings, worked through in class.",w3:"Hours for people who work",w3p:"Daytime sessions, evenings from 18:00 to 20:30, or Fridays and Saturdays.",iH:"Book your place",iP:"Leave your details: an adviser calls you back to confirm the session and payment.",l1:"Full name",l2:"Phone",l3:"Course",l4:"Preferred schedule",send:"Send my request",qH:"Frequently asked questions",q1:"Do I need a diploma to enrol?",a1:"Not for introductory courses. For accounting and tax, a final-year secondary level is advised.",q2:"Can I pay in instalments?",a2:"Yes, in two or three payments for courses longer than a month.",q3:"Can my employer pay for the course?",a3:"Yes, we issue an agreement and an invoice in your employer’s name.",foot:"© 2026 Iktissab, management school, Algiers",by:"Website by",all:"All",dur:"Length",mode:"Schedule",price:"Fee",choose:"Choose",err:"Enter your name and a valid phone number.",demo:"AFEX Digital demo: no request was sent, this form is not connected yet.",lang:"Language",filter:"Fields",title:"Iktissab, management and HR school in Algiers",
-  slots:["Daytime","Evening (18:00 to 20:30)","Weekend (Friday and Saturday)"],doms:{grh:"HR",paie:"Payroll",compta:"Accounting",fisc:"Tax",sec:"Secretarial"}}
-};
-var C=[
- {d:"grh",p:45000,t:{fr:"Gestion des ressources humaines",ar:"تسيير الموارد البشرية",en:"Human resources management"},du:{fr:"3 mois",ar:"3 أشهر",en:"3 months"},m:{fr:"Jour ou soir",ar:"نهارًا أو مساءً",en:"Day or evening"}},
- {d:"paie",p:28000,t:{fr:"Paie et déclarations CNAS et CASNOS",ar:"الأجور وتصريحات CNAS وCASNOS",en:"Payroll and CNAS and CASNOS filings"},du:{fr:"6 semaines",ar:"6 أسابيع",en:"6 weeks"},m:{fr:"Soir",ar:"مساءً",en:"Evening"}},
- {d:"compta",p:52000,t:{fr:"Comptabilité générale (SCF)",ar:"المحاسبة العامة (SCF)",en:"General accounting (SCF)"},du:{fr:"4 mois",ar:"4 أشهر",en:"4 months"},m:{fr:"Jour",ar:"نهارًا",en:"Daytime"}},
- {d:"fisc",p:22000,t:{fr:"Fiscalité et déclaration G50",ar:"الجباية والتصريح G50",en:"Tax and G50 returns"},du:{fr:"1 mois",ar:"شهر واحد",en:"1 month"},m:{fr:"Week-end",ar:"نهاية الأسبوع",en:"Weekend"}},
- {d:"compta",p:18000,t:{fr:"Logiciels de paie et de comptabilité",ar:"برامج الأجور والمحاسبة",en:"Payroll and accounting software"},du:{fr:"1 mois",ar:"شهر واحد",en:"1 month"},m:{fr:"Soir",ar:"مساءً",en:"Evening"}},
- {d:"grh",p:16000,t:{fr:"Droit du travail algérien (loi 90-11)",ar:"قانون العمل الجزائري (القانون 90-11)",en:"Algerian labour law (Law 90-11)"},du:{fr:"3 semaines",ar:"3 أسابيع",en:"3 weeks"},m:{fr:"Week-end",ar:"نهاية الأسبوع",en:"Weekend"}},
- {d:"sec",p:38000,t:{fr:"Secrétariat de direction",ar:"سكرتارية المديرية",en:"Executive assistant"},du:{fr:"3 mois",ar:"3 أشهر",en:"3 months"},m:{fr:"Jour",ar:"نهارًا",en:"Daytime"}},
- {d:"grh",p:14000,t:{fr:"Recrutement et entretiens",ar:"التوظيف والمقابلات",en:"Recruitment and interviews"},du:{fr:"2 semaines",ar:"أسبوعان",en:"2 weeks"},m:{fr:"Soir",ar:"مساءً",en:"Evening"}},
- {d:"fisc",p:20000,t:{fr:"Déclarations fiscales des PME",ar:"التصريحات الجبائية للمؤسسات الصغيرة",en:"Tax filings for small businesses"},du:{fr:"3 semaines",ar:"3 أسابيع",en:"3 weeks"},m:{fr:"Soir",ar:"مساءً",en:"Evening"}}
-];
-var lang="fr",dom="all";
-try{var s=localStorage.getItem("iktissab-lang");if(s&&I[s])lang=s}catch(e){}
-function $(q){return document.querySelector(q)}
-function fmt(n){return n.toLocaleString(lang==="ar"?"ar-DZ":"fr-FR")+(lang==="ar"?" دج":" DA")}
-function render(){
-  var t=I[lang];
-  var doms=["all"].concat(Object.keys(t.doms));
-  $("#chips").setAttribute("aria-label",t.filter);
-  $("#chips").innerHTML=doms.map(function(k){return '<button type="button" data-d="'+k+'" aria-pressed="'+(k===dom)+'">'+(k==="all"?t.all:t.doms[k])+'</button>'}).join("");
-  $("#courses").innerHTML=C.filter(function(c){return dom==="all"||c.d===dom}).map(function(c){var i=C.indexOf(c);return '<article class="course"><span class="dom">'+t.doms[c.d]+'</span><h3>'+c.t[lang]+'</h3><dl><dt>'+t.dur+'</dt><dd>'+c.du[lang]+'</dd><dt>'+t.mode+'</dt><dd>'+c.m[lang]+'</dd></dl><span class="pr">'+fmt(c.p)+'</span><a class="btn" href="#inscription" data-c="'+i+'">'+t.choose+'</a></article>'}).join("");
-  $("#sel").innerHTML=C.map(function(c,i){return '<option value="'+i+'">'+c.t[lang]+'</option>'}).join("");
-  $("#slot").innerHTML=t.slots.map(function(x){return '<option>'+x+'</option>'}).join("");
-  var now=new Date(),loc=lang==="ar"?"ar-DZ":lang==="en"?"en-GB":"fr-FR";
-  $("#next").innerHTML=[0,1,3].map(function(ci,k){var d=new Date(now.getFullYear(),now.getMonth()+k+1,[4,11,18][k]);return '<li><div><b>'+C[ci].t[lang]+'</b><small>'+C[ci].m[lang]+'</small></div><span class="d">'+d.getDate()+'<small>'+d.toLocaleDateString(loc,{month:"short"})+'</small></span></li>'}).join("");
-}
-function setLang(l){
-  lang=l;var t=I[l];document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr";document.title=t.title;
-  document.querySelectorAll("[data-i]").forEach(function(e){e.textContent=t[e.dataset.i]});
-  document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.l===l)});
-  $(".lang").setAttribute("aria-label",t.lang);$("#msg").textContent="";
-  try{localStorage.setItem("iktissab-lang",l)}catch(e){}
-  render();
-}
-document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){setLang(b.dataset.l)})});
-$("#chips").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;dom=b.dataset.d;render()});
-$("#courses").addEventListener("click",function(e){var a=e.target.closest("[data-c]");if(a)$("#sel").value=a.dataset.c});
-$("#f").addEventListener("submit",function(e){e.preventDefault();var t=I[lang],ok=this.name.value.trim()&&/^0[5-7]\d{8}$/.test(this.tel.value.replace(/\s/g,""));
-  if(!ok){$("#msg").textContent=t.err;(this.name.value.trim()?this.tel:this.name).focus();return}
-  $("#msg").textContent=t.demo});
-setLang(lang);
-</script>
+<footer><div class="w">
+  <div class="top"><span class="logo"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 29V15a10 10 0 0 1 20 0v14" fill="none" stroke="#C8A24B" stroke-width="2.6"/><path d="M12 29v-9a4 4 0 0 1 8 0v9" fill="none" stroke="currentColor" stroke-width="2.2"/></svg><span data-i="brand">Iktissab</span></span><span><span data-i="foot">© 2026 Iktissab, école de gestion, Alger.</span> <span data-i="by">Site réalisé par</span> <a href="https://afexad.app">AFEX Digital</a></span></div>
+  <p class="credits" id="credits"></p>
+</div></footer>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/SplitText.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
