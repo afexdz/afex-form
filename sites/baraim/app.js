@@ -11,7 +11,7 @@
     var big = n === "peinture" || n === "rire" || n === "table" || n === "atelier";
     return '<img' + (cls ? ' class="' + cls + '"' : "") + ' src="assets/img/' + n + '-640.webp" srcset="assets/img/' + n + '-640.webp 640w, assets/img/' + n + '-1280.webp 1280w' + (big ? ", assets/img/" + n + "-1920.webp 1920w" : "") + '" sizes="' + (sizes || "33vw") + '" width="1280" height="' + P[n][0] + '" alt=""' + (eager ? "" : ' loading="lazy"') + ' decoding="async">';
   }
-  function da(n) { return n.toLocaleString("fr-FR").replace(/ | /g, " "); }
+  function da(n) { return "\u2066" + n.toLocaleString("fr-FR").replace(/\u202f|\u00a0/g, " ") + "\u2069"; }
 
   var I = {
     fr: { demo0: "Site de démonstration : crèche fictive, tarifs et places donnés à titre d’exemple.", demo1: "Voir les autres modèles",
