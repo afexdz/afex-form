@@ -272,16 +272,41 @@ html.js:not(.static) [data-up]{opacity:0;transform:translateY(40px) rotate(-1deg
   .info .w{grid-template-columns:minmax(0,1fr)}.info div,.info div+div{padding:18px 0;border:0;border-bottom:2px dashed rgba(42,18,54,.25)}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+/* v2 */
+.bar{flex-wrap:wrap}
+.demof{order:9;width:100%;font-size:.74rem;line-height:1.3;color:var(--ink2);text-align:center;border-top:1px dashed var(--line);padding:6px 4px 0}
+.demof a{color:var(--rasp);text-decoration:underline}
+.faq .w{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);align-items:start}
+.faq h2{font-size:clamp(2rem,3.6vw,3.4rem)}
+#faqL{background:#fff;border-radius:30px;padding:22px;display:grid;gap:18px;box-shadow:0 30px 60px -45px rgba(42,18,54,.6)}
+.qchips{display:flex;flex-wrap:wrap;gap:8px}
+.qchips button{border:2px solid var(--line);border-radius:14px;padding:8px 12px;font-weight:500;font-size:.88rem;text-align:start;transition:background-color .2s,border-color .2s}
+.qchips button[aria-pressed="true"]{background:var(--plum);color:#fff;border-color:var(--plum)}
+.convo{background:var(--bg);border-radius:22px;padding:18px;display:grid;gap:10px;min-height:190px;align-content:start}
+.convo p{max-width:82%;padding:12px 16px;border-radius:18px;line-height:1.5}
+.convo .me{justify-self:end;background:var(--rasp);color:#fff;border-end-end-radius:4px;font-weight:500}
+.convo .them{justify-self:start;background:#fff;border-end-start-radius:4px}
+.typing{justify-self:start;display:flex;gap:4px;background:#fff;border-radius:18px;padding:14px 16px}
+.typing i{width:7px;height:7px;border-radius:50%;background:var(--ink2)}
+footer{padding-top:0}
+.bigcta{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px;background:var(--rasp);color:#fff;border-radius:0 0 40px 40px;padding:clamp(30px,5vw,56px);margin-bottom:56px}
+.bigcta h3{font-size:clamp(2rem,4.4vw,3.6rem);color:#fff;margin:0}
+.bigcta p{color:#FFE3EA;margin-top:8px}
+.bigcta .acts{display:flex;flex-wrap:wrap;gap:12px}
+.bigcta .btn.r{background:#fff;color:var(--rasp);box-shadow:0 6px 0 rgba(0,0,0,.18)}
+@media(max-width:900px){.faq .w{grid-template-columns:minmax(0,1fr)}}
+
 </style>
 </head>
 <body>
-<p class="demo"><span data-i="demo0">Site de démonstration : garderie fictive, tarifs et places donnés à titre d’exemple.</span> <a href="https://form.afexad.app/" data-i="demo1">Voir les autres modèles</a></p>
+
 <header>
   <div class="w"><div class="bar">
     <a class="logo" href="#top" aria-label="Dar El Farah">
       <svg width="40" height="40" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="12" fill="#F0386B"/><path d="M9 18c2 4 12 4 14 0" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="11.5" cy="12.5" r="2" fill="#fff"/><circle cx="20.5" cy="12.5" r="2" fill="#fff"/></svg>
       <span data-i="brand">Dar El Farah</span>
     </a>
+    <p class="demof"><span data-i="demo0">Site de démonstration : garderie fictive, tarifs et places donnés à titre d’exemple.</span> <a href="https://form.afexad.app/" data-i="demo1">Voir les autres modèles</a></p>
     <nav>
       <a href="#horaires" data-i="n1">Horaires et prix</a>
       <a href="#ramassage" data-i="n2">Ramassage</a>
@@ -446,6 +471,7 @@ html.js:not(.static) [data-up]{opacity:0;transform:translateY(40px) rotate(-1deg
 
 <footer>
   <div class="w">
+    <div class="bigcta"><div><h3 data-i="fqCta">Une place pour votre enfant ?</h3><p data-i="fqCtaP">Le dossier se remplit en ligne en cinq minutes.</p></div><div class="acts"><a class="btn r" href="#inscription" data-i="cta0">Inscrire mon enfant</a><button type="button" class="btn m" id="footWa" data-i="fqWa">Écrire sur WhatsApp</button></div></div>
     <div class="cols">
       <div><h3 data-i="brand">Dar El Farah</h3><p data-i="foA">Garderie fictive à horaires étendus, Constantine.</p></div>
       <div><b data-i="iK2">Semaine</b><p data-i="i2">Dim. au jeu. 6 h 30 – 19 h</p></div>

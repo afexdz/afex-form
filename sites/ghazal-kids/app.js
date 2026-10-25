@@ -243,8 +243,9 @@
     ageOut();
   }
   function ageOut() { var t = I[lang], n = +$("#ageR").value; $("#ageO").textContent = t.ageO.replace("{n}", n).replace("{g}", n <= 3 ? t.gS : t.gB); }
+  /* questions pinned in a row like notes in the field notebook */
   function renderFaq() {
-    $("#faqL").innerHTML = FAQ.map(function (f, i) { return "<details" + (i === 0 ? " open" : "") + "><summary>" + L(f[0]) + '<i aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>' + L(f[1]) + "</p></details>"; }).join("");
+    $("#faqL").innerHTML = '<div class="qcards">' + FAQ.map(function (f, i) { return '<article class="qc tape" style="--r:' + [-2, 1.5, -1, 2, -1.5, 1][i] + 'deg"><h3>' + L(f[0]) + "</h3><p>" + L(f[1]) + "</p></article>"; }).join("") + "</div>";
   }
   function render() {
     var t = I[lang];

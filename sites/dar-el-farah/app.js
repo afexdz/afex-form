@@ -12,7 +12,7 @@
   function hm(m) { var h = Math.floor(m / 60), mm = m % 60; return (h < 10 ? "0" : "") + h + ":" + (mm < 10 ? "0" : "") + mm; }
 
   var I = {
-    fr: { demo0: "Site de démonstration : garderie fictive, tarifs et places donnés à titre d’exemple.", demo1: "Voir les autres modèles",
+    fr: { fqCta: "Une place pour votre enfant ?", fqCtaP: "Le dossier se remplit en ligne en cinq minutes.", fqWa: "Écrire sur WhatsApp", demo0: "Site de démonstration : garderie fictive, tarifs et places donnés à titre d’exemple.", demo1: "Voir les autres modèles",
       brand: "Dar El Farah", n1: "Horaires et prix", n2: "Ramassage", n3: "Les groupes", n4: "En images", n5: "Inscription", cta0: "Inscrire mon enfant",
       kick: "Garderie à Constantine, 4 mois à 5 ans", h1a: "Vous travaillez,", h1b: "on s’occupe", h1c: "de tout.", lede: "Ouverte de 6 h 30 à 19 h et le samedi matin. Ramassage dans toute la ville, petit déjeuner et dîner léger compris, et des photos de la journée sur WhatsApp.",
       cta1: "Calculer ma formule", cta2: "Inscription en ligne", pl1: "ouverture", pl2: "fermeture", pl3: "quartiers desservis", ring: "OUVERT 6H30 – 19H • SAMEDI AUSSI • ", stick: "6h30 19h", hint: "Glissez la photo pour voir la suivante",
@@ -39,7 +39,7 @@
       foot: "© 2026 Dar El Farah, garderie fictive.", by: "Site réalisé par", photos: "Photos : Unsplash,", lang: "Langue", waDemo: "Démo AFEX Digital : le numéro WhatsApp de la garderie n’est pas encore connecté.",
       close: "Fermer", prev: "Précédent", next2: "Suivant", depotAlt: "Un parent accompagne son enfant à la garderie le matin", cstAlt: "Le pont suspendu Sidi M’Cid au-dessus des gorges de Constantine",
       title: "Dar El Farah, garderie de 6 h 30 à 19 h à Constantine", loc: "fr-FR" },
-    ar: { demo0: "موقع تجريبي: حضانة وهمية، الأسعار والأماكن للتوضيح فقط.", demo1: "شاهد النماذج الأخرى",
+    ar: { fqCta: "مكان لطفلك؟", fqCtaP: "يُملأ الملف عبر الإنترنت في خمس دقائق.", fqWa: "راسلنا على واتساب", demo0: "موقع تجريبي: حضانة وهمية، الأسعار والأماكن للتوضيح فقط.", demo1: "شاهد النماذج الأخرى",
       brand: "دار الفرح", n1: "المواعيد والأسعار", n2: "النقل", n3: "الأفواج", n4: "بالصور", n5: "التسجيل", cta0: "سجّل طفلك",
       kick: "حضانة في قسنطينة، من 4 أشهر إلى 5 سنوات", h1a: "أنتم تعملون،", h1b: "ونحن نتكفّل", h1c: "بكل شيء.", lede: "مفتوحة من 6:30 إلى 19:00 وصباح السبت. نقل في كل أحياء المدينة، فطور وعشاء خفيف مشمولان، وصور اليوم على واتساب.",
       cta1: "احسب صيغتي", cta2: "التسجيل عبر الإنترنت", pl1: "الافتتاح", pl2: "الإغلاق", pl3: "أحياء مخدومة", ring: "مفتوحة 6:30 – 19:00 • والسبت أيضًا • ", stick: "6:30 19:00", hint: "اسحب الصورة لرؤية التالية",
@@ -66,7 +66,7 @@
       foot: "© 2026 دار الفرح، حضانة وهمية.", by: "موقع من إنجاز", photos: "الصور: Unsplash،", lang: "اللغة", waDemo: "عرض AFEX Digital: رقم واتساب الحضانة غير متصل بعد.",
       close: "إغلاق", prev: "السابق", next2: "التالي", depotAlt: "وليّ يرافق طفله إلى الحضانة صباحًا", cstAlt: "جسر سيدي مسيد المعلّق فوق خوانق قسنطينة",
       title: "دار الفرح، حضانة من 6:30 إلى 19:00 في قسنطينة", loc: "ar-DZ" },
-    en: { demo0: "Demo website: a fictional childcare centre, prices and places are examples.", demo1: "See the other templates",
+    en: { fqCta: "A place for your child?", fqCtaP: "The file takes five minutes online.", fqWa: "Message us on WhatsApp", demo0: "Demo website: a fictional childcare centre, prices and places are examples.", demo1: "See the other templates",
       brand: "Dar El Farah", n1: "Hours and fees", n2: "Pick-up", n3: "Groups", n4: "In pictures", n5: "Enrol", cta0: "Enrol my child",
       kick: "Childcare in Constantine, 4 months to 5 years", h1a: "You work,", h1b: "we handle", h1c: "the rest.", lede: "Open 6:30 to 19:00 and Saturday mornings. Pick-up across the city, breakfast and a light dinner included, and photos of the day on WhatsApp.",
       cta1: "Work out my plan", cta2: "Enrol online", pl1: "opening", pl2: "closing", pl3: "areas covered", ring: "OPEN 6:30 – 19:00 • SATURDAYS TOO • ", stick: "6:30 19:00", hint: "Swipe the photo to see the next one",
@@ -283,8 +283,22 @@
   }
   function summary() { var t = I[lang], f = $("#f"), g = grp(); $("#sum").innerHTML = t.sum.replace("{k}", f.kid.value.trim().replace(/[<>&]/g, "")).replace("{g}", g ? g.t[lang] : "–").replace("{s}", $("#startSel").selectedOptions[0] ? $("#startSel").selectedOptions[0].textContent : "").replace("{n}", $$("#docs input").filter(function (c) { return c.checked; }).length); }
 
+  /* questions as a chat: tap a question, the answer comes back as a message */
+  var faqI = 0;
   function renderFaq() {
-    $("#faqL").innerHTML = FAQ.map(function (f, i) { return "<details" + (i === 0 ? " open" : "") + "><summary>" + f[0][lang] + '<i aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>' + f[1][lang] + "</p></details>"; }).join("");
+    $("#faqL").innerHTML = '<div class="qchips" role="group">' + FAQ.map(function (f, i) { return '<button type="button" data-q="' + i + '" aria-pressed="' + (i === faqI) + '">' + f[0][lang] + "</button>"; }).join("") + '</div><div class="convo" id="convo" aria-live="polite"></div>';
+    showFaq(false);
+  }
+  function showFaq(anim) {
+    var f = FAQ[faqI];
+    $$("#faqL .qchips button").forEach(function (b, i) { b.setAttribute("aria-pressed", i === faqI); });
+    $("#convo").innerHTML = '<p class="me">' + f[0][lang] + '</p><p class="typing" aria-hidden="true"><i></i><i></i><i></i></p><p class="them">' + f[1][lang] + "</p>";
+    if (!anim || STATIC) { $(".typing").remove(); return; }
+    gsap.set("#convo .them", { opacity: 0, y: 10 });
+    gsap.from("#convo .me", { x: doc.dir === "rtl" ? -30 : 30, opacity: 0, duration: .35 });
+    gsap.from(".typing i", { y: -4, duration: .3, stagger: .1, repeat: 2, yoyo: true });
+    gsap.to(".typing", { opacity: 0, height: 0, padding: 0, margin: 0, delay: .9, duration: .2 });
+    gsap.to("#convo .them", { opacity: 1, y: 0, delay: 1, duration: .4, ease: "back.out(2)" });
   }
   function render() {
     var t = I[lang];
@@ -336,6 +350,8 @@
   $("#docs").addEventListener("change", summary);
   $("#f").addEventListener("submit", function (e) { e.preventDefault(); $("#next").click(); });
   $("#waf").addEventListener("click", function () { toast(I[lang].waDemo); });
+  $("#faqL").addEventListener("click", function (e) { var b = e.target.closest(".qchips button"); if (!b) return; faqI = +b.dataset.q; showFaq(true); });
+  $("#footWa").addEventListener("click", function () { toast(I[lang].waDemo); });
 
   var lenis = null;
   render();

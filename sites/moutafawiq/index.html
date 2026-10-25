@@ -274,16 +274,44 @@ html.js:not(.static) [data-up]{opacity:0;transform:translateY(36px)}
   .badge{top:90px}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+/* v2 */
+.democ{font-size:.72rem;line-height:1.3;color:var(--ink2);background:var(--white);border:1px solid var(--line);border-radius:10px;padding:5px 10px;max-width:270px}
+.democ a{color:var(--blue);text-decoration:underline}
+/* help centre */
+.faq .w{grid-template-columns:minmax(0,1fr);max-width:880px}
+.faq .w>div:first-child{text-align:center}
+.search{display:flex;align-items:center;gap:12px;background:var(--white);border:2px solid var(--blue);border-radius:18px;padding:0 18px;margin-bottom:16px;color:var(--blue)}
+.search input{flex:1;min-width:0;height:62px;border:0;background:none;font-size:1.05rem;outline:none}
+.search:focus-within{box-shadow:0 0 0 4px var(--blueL)}
+details[hidden]{display:none}
+.none{text-align:center;color:var(--ink2);padding:20px}
+/* footer with link columns */
+.fgrid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,2fr);gap:40px;margin-bottom:36px}
+.fcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.fcols b{display:block;color:#fff;margin-bottom:10px}
+.fcols a{display:block;color:#B8BEE6;text-decoration:none;padding:4px 0}
+.fcols a:hover{color:var(--lime)}
+.fb p{margin-top:8px}
+.fl a{text-decoration:underline}
+/* help bubble instead of a round button */
+.waf{width:auto;height:56px;border-radius:18px 18px 4px 18px;padding:0 16px 0 8px;background:var(--white);color:var(--ink);display:flex;align-items:center;gap:10px;font-weight:700;box-shadow:0 14px 30px -12px rgba(15,20,66,.45);border:1px solid var(--line)}
+[dir="rtl"] .waf{border-radius:18px 18px 18px 4px;padding:0 8px 0 16px}
+.waf .av{width:40px;height:40px;border-radius:12px;background:var(--blue);color:var(--lime);display:grid;place-items:center;font-family:var(--h);font-weight:900}
+header .w{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:8px}.democ{order:9;width:100%;max-width:none;text-align:center;border:0;border-top:1px solid var(--line);border-radius:0;background:none;padding:6px 0 0}
+@media(max-width:900px){.fgrid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.fcols{grid-template-columns:repeat(2,minmax(0,1fr))}.waf #wafT{display:none}.waf{padding:0 8px}}
+
 </style>
 </head>
 <body>
-<p class="demo"><span data-i="demo0">Site de démonstration : plateforme fictive, tarifs et places donnés à titre d’exemple.</span> <a href="https://form.afexad.app/" data-i="demo1">Voir les autres modèles</a></p>
+
 <header>
   <div class="w">
     <a class="logo" href="#top" aria-label="Moutafawiq">
       <svg width="38" height="38" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#3346D3"/><path d="M8 22l5-12 3 7 3-5 5 10" stroke="#D7F75B" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span data-i="brand">Moutafawiq</span>
     </a>
+    <p class="democ"><span data-i="demo0">Site de démonstration : plateforme fictive, tarifs et places donnés à titre d’exemple.</span> <a href="https://form.afexad.app/" data-i="demo1">Voir les autres modèles</a></p>
     <nav>
       <a href="#niveaux" data-i="n1">Niveaux</a>
       <a href="#moyenne" data-i="n2">Simulateur</a>
@@ -427,17 +455,16 @@ html.js:not(.static) [data-up]{opacity:0;transform:translateY(36px)}
 
 <footer>
   <div class="w">
-    <div class="cols">
-      <div><h3 data-i="brand">Moutafawiq</h3><p data-i="foA">Plateforme fictive de soutien scolaire en ligne, Algérie.</p></div>
-      <div><b data-i="foH">Assistance</b><p data-i="foHV">Tous les jours, 9 h à 21 h</p></div>
-      <div><b data-i="foC">Contact</b><p data-i="foCV">WhatsApp et téléphone : numéro de démonstration</p></div>
+    <div class="fgrid">
+      <div class="fb"><h3 data-i="brand">Moutafawiq</h3><p data-i="foA">Plateforme fictive de soutien scolaire en ligne, Algérie.</p><p><b data-i="foH">Assistance</b> <span data-i="foHV">Tous les jours, 9 h à 21 h</span></p></div>
+      <div class="fcols" id="fcols"></div>
     </div>
-    <p><span data-i="foot">© 2026 Moutafawiq, plateforme fictive.</span> <span data-i="by">Site réalisé par</span> <a href="https://afexad.app" target="_blank" rel="noopener">AFEX Digital</a></p>
+    <p class="fl"><span data-i="foot">© 2026 Moutafawiq, plateforme fictive.</span> <span data-i="by">Site réalisé par</span> <a href="https://afexad.app" target="_blank" rel="noopener">AFEX Digital</a></p>
     <p id="credits"></p>
   </div>
 </footer>
 
-<button class="waf" type="button" id="waf" aria-label="WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></button>
+<button class="waf" type="button" id="waf"><span class="av">M</span><span id="wafT">Besoin d’aide ?</span><svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg></button>
 <div class="toast" id="toast" role="status"></div>
 
 <script src="vendor/gsap.min.js"></script>

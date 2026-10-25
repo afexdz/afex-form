@@ -270,10 +270,30 @@ html.js:not(.static) [data-up]{opacity:0;transform:translateY(40px) rotate(-1.5d
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
 @media print{header,.demo,.waf,.toast,section:not(.bag),footer,.hero{display:none !important}.bag .w{grid-template-columns:1fr}.pick{display:none}}
+/* v2 */
+.demog{margin-top:22px;display:inline-block;font-size:.8rem;border:2px dashed var(--bark);color:var(--bark);padding:6px 12px;border-radius:8px;transform:rotate(-1.5deg)}
+.demog a{color:var(--orange);text-decoration:underline}
+/* FAQ: notes pinned in a scrolling row */
+.faq .w{grid-template-columns:minmax(0,1fr)}
+.qcards{display:flex;gap:22px;overflow-x:auto;padding:30px 6px 26px;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.qc{flex:0 0 min(320px,80vw);scroll-snap-align:start;background:var(--paper);border:2.5px solid var(--forest);border-radius:6px;padding:26px 22px 22px;box-shadow:6px 6px 0 var(--forest);transform:rotate(var(--r))}
+.qc h3{font-family:var(--hand);font-weight:600;font-size:1.7rem;line-height:1.1;color:var(--orange);margin-bottom:10px}
+[dir="rtl"] .qc h3{font-size:1.15rem;font-family:var(--t);font-weight:700}
+.qc p{color:var(--ink2);font-size:.95rem}
+/* footer: a kraft page with a stamp */
+footer{background:var(--kraft);color:var(--ink2);border-top:2.5px dashed var(--forest)}
+footer .w{position:relative}
+footer h3{color:var(--forest)}
+footer b{color:var(--forest)}
+#credits{color:var(--ink2);border-color:var(--line)}
+.fstamp{position:absolute;top:-130px;inset-inline-end:clamp(16px,3.6vw,44px);width:150px;height:150px;border-radius:50%;border:3px solid var(--orange);color:var(--orange);display:grid;place-content:center;text-align:center;transform:rotate(-12deg);line-height:1.1;font-weight:700;font-size:.8rem}
+.fstamp b{font-family:"Bagel Fat One",var(--h);font-weight:400;font-size:1.4rem;margin:4px 0}
+@media(max-width:900px){.fstamp{position:static;margin:0 0 20px;width:120px;height:120px}}
+
 </style>
 </head>
 <body>
-<p class="demo"><span data-i="demo0">Site de démonstration : crèche fictive, tarifs et places donnés à titre d’exemple.</span> <a href="https://form.afexad.app/" data-i="demo1">Voir les autres modèles</a></p>
+
 <header>
   <div class="w">
     <a class="logo" href="#top" aria-label="Ghazal Kids">
@@ -308,6 +328,7 @@ html.js:not(.static) [data-up]{opacity:0;transform:translateY(40px) rotate(-1.5d
         <a class="btn o" href="#decouverte" data-i="cta1">Réserver une matinée découverte</a>
         <a class="btn p" href="#sac" data-i="cta2">Préparer le sac</a>
       </div>
+      <p class="demog"><span data-i="demo0">Site de démonstration : crèche fictive, tarifs et places donnés à titre d’exemple.</span> <a href="https://form.afexad.app/" data-i="demo1">Voir les autres modèles</a></p>
       <div class="stats">
         <div class="stamp"><span><b>4 h</b><span data-i="st1">dehors chaque jour</span></span></div>
         <div class="stamp"><span><b>1:6</b><span data-i="st2">un adulte pour six</span></span></div>
@@ -428,6 +449,7 @@ html.js:not(.static) [data-up]{opacity:0;transform:translateY(40px) rotate(-1.5d
 
 <footer>
   <div class="w">
+    <div class="fstamp" aria-hidden="true"><span>Tlemcen</span><b>Ghazal Kids</b><span>2 – 6</span></div>
     <div class="cols">
       <div><h3 data-i="brand">Ghazal Kids</h3><p data-i="foA">Crèche nature fictive, Tlemcen, de 2 à 6 ans.</p></div>
       <div><b data-i="foH">Horaires</b><p data-i="foHV">Dimanche au jeudi, 7 h 30 à 17 h</p></div>

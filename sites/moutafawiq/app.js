@@ -14,7 +14,7 @@
   var CK = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg>';
 
   var I = {
-    fr: { demo0: "Site de démonstration : plateforme fictive, tarifs et places donnés à titre d’exemple.", demo1: "Voir les autres modèles",
+    fr: { fqPh: "Rechercher une question (paiement, téléphone, profs…)", fqNone: "Aucune question ne correspond. Écrivez-nous sur WhatsApp.", help: "Besoin d’aide ?", fcol: ["Niveaux", "Outils", "Aide"], flinks: [["Primaire", "#niveaux"], ["5e année", "#niveaux"], ["BEM", "#niveaux"], ["Simulateur de moyenne", "#moyenne"], ["Espace parents", "#parents"], ["Cours en direct", "#direct"], ["Questions fréquentes", "#faq"], ["Tarifs", "#tarifs"], ["Essai gratuit", "#essai"]], demo0: "Site de démonstration : plateforme fictive, tarifs et places donnés à titre d’exemple.", demo1: "Voir les autres modèles",
       brand: "Moutafawiq", n1: "Niveaux", n2: "Simulateur", n3: "Parents", n4: "En direct", n5: "Tarifs", cta0: "7 jours gratuits",
       kick: "Programme algérien, du primaire au BEM", h1a: "15 minutes par jour", h1b: "pour réussir.", lede: "Des exercices qui se corrigent tout seuls, des vidéos courtes, le suivi des notes pour les parents et des cours en direct le week-end. Pour le primaire, l’examen de 5e et le BEM.",
       cta1: "Essayer 7 jours gratuits", cta2: "Simuler ma moyenne", streakL: "Série de jours",
@@ -31,7 +31,7 @@
       fqK: "Questions", fqH: "Les parents nous demandent", foA: "Plateforme fictive de soutien scolaire en ligne, Algérie.", foH: "Assistance", foHV: "Tous les jours, 9 h à 21 h", foC: "Contact", foCV: "WhatsApp et téléphone : numéro de démonstration",
       foot: "© 2026 Moutafawiq, plateforme fictive.", by: "Site réalisé par", photos: "Photos : Unsplash,", lang: "Langue", waDemo: "Démo AFEX Digital : le numéro WhatsApp n’est pas encore connecté.",
       duoAlt: "Deux élèves lisent ensemble un cahier", parentAlt: "Un père aide son fils devant l’ordinateur", title: "Moutafawiq, soutien scolaire en ligne du primaire au BEM" },
-    ar: { demo0: "موقع تجريبي: منصة وهمية، الأسعار والأماكن للتوضيح فقط.", demo1: "شاهد النماذج الأخرى",
+    ar: { fqPh: "ابحث عن سؤال (الدفع، الهاتف، الأساتذة…)", fqNone: "لا يوجد سؤال مطابق. راسلنا على واتساب.", help: "تحتاج مساعدة؟", fcol: ["المستويات", "الأدوات", "المساعدة"], flinks: [["الابتدائي", "#niveaux"], ["السنة الخامسة", "#niveaux"], ["الشهادة", "#niveaux"], ["محاكي المعدّل", "#moyenne"], ["فضاء الأولياء", "#parents"], ["الدروس المباشرة", "#direct"], ["الأسئلة الشائعة", "#faq"], ["الأسعار", "#tarifs"], ["التجربة المجانية", "#essai"]], demo0: "موقع تجريبي: منصة وهمية، الأسعار والأماكن للتوضيح فقط.", demo1: "شاهد النماذج الأخرى",
       brand: "متفوّق", n1: "المستويات", n2: "المحاكي", n3: "الأولياء", n4: "مباشر", n5: "الأسعار", cta0: "7 أيام مجانًا",
       kick: "البرنامج الجزائري، من الابتدائي إلى شهادة التعليم المتوسط", h1a: "15 دقيقة يوميًا", h1b: "للنجاح.", lede: "تمارين تُصحَّح تلقائيًا، فيديوهات قصيرة، متابعة النقاط للأولياء ودروس مباشرة نهاية الأسبوع. للابتدائي وامتحان السنة الخامسة وشهادة التعليم المتوسط.",
       cta1: "جرّب 7 أيام مجانًا", cta2: "احسب معدّلي", streakL: "أيام متتالية",
@@ -48,7 +48,7 @@
       fqK: "أسئلة", fqH: "يسألنا الأولياء", foA: "منصة وهمية للدعم المدرسي عبر الإنترنت، الجزائر.", foH: "المساعدة", foHV: "كل يوم، من 9:00 إلى 21:00", foC: "الاتصال", foCV: "واتساب والهاتف: رقم تجريبي",
       foot: "© 2026 متفوّق، منصة وهمية.", by: "موقع من إنجاز", photos: "الصور: Unsplash،", lang: "اللغة", waDemo: "عرض AFEX Digital: رقم واتساب غير متصل بعد.",
       duoAlt: "تلميذتان تقرآن دفترًا معًا", parentAlt: "أب يساعد ابنه أمام الحاسوب", title: "متفوّق، الدعم المدرسي عبر الإنترنت من الابتدائي إلى الشهادة" },
-    en: { demo0: "Demo website: a fictional platform, prices and places are examples.", demo1: "See the other templates",
+    en: { fqPh: "Search a question (payment, phone, teachers…)", fqNone: "No matching question. Message us on WhatsApp.", help: "Need help?", fcol: ["Levels", "Tools", "Help"], flinks: [["Primary", "#niveaux"], ["5th year", "#niveaux"], ["BEM", "#niveaux"], ["Average simulator", "#moyenne"], ["Parents’ space", "#parents"], ["Live classes", "#direct"], ["FAQ", "#faq"], ["Pricing", "#tarifs"], ["Free trial", "#essai"]], demo0: "Demo website: a fictional platform, prices and places are examples.", demo1: "See the other templates",
       brand: "Moutafawiq", n1: "Levels", n2: "Simulator", n3: "Parents", n4: "Live", n5: "Pricing", cta0: "7 days free",
       kick: "Algerian curriculum, primary to BEM", h1a: "15 minutes a day", h1b: "to succeed.", lede: "Self-marking exercises, short videos, grade tracking for parents and live weekend classes. For primary school, the 5th-year exam and the BEM.",
       cta1: "Try 7 days free", cta2: "Simulate my average", streakL: "Day streak",
@@ -228,11 +228,17 @@
     $("#who").innerHTML = t.who.map(function (w, i) { return '<button type="button" data-w="' + i + '" aria-pressed="' + (i === who) + '">' + w + "</button>"; }).join("");
     sel.innerHTML = LV.map(function (l, i) { return '<option value="' + i + '"' + (String(i) === (v || "8") ? " selected" : "") + ">" + l + (i === 4 ? " · " + t.ex5 : i === 8 ? " · BEM" : "") + "</option>"; }).join("");
   }
+  /* help centre: type to filter the questions */
   function renderFaq() {
-    $("#faqL").innerHTML = FAQ.map(function (f, i) { return "<details" + (i === 0 ? " open" : "") + "><summary>" + L(f[0]) + '<i aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>' + L(f[1]) + "</p></details>"; }).join("");
+    var t = I[lang], q = ($("#fqS") && $("#fqS").value) || "";
+    $("#faqL").innerHTML = '<label class="search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="fqS" type="search" placeholder="' + t.fqPh + '" aria-label="' + t.fqPh + '"></label><div id="fqList">' + FAQ.map(function (f, i) { return "<details" + (i === 0 ? " open" : "") + "><summary>" + L(f[0]) + '<i aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>' + L(f[1]) + "</p></details>"; }).join("") + '</div><p class="none" id="fqNone" hidden>' + t.fqNone + "</p>";
+    $("#fqS").value = q; filterFaq();
   }
+  function filterFaq() { var q = $("#fqS").value.trim().toLowerCase(), n = 0; $$("#fqList details").forEach(function (d) { var hit = !q || d.textContent.toLowerCase().indexOf(q) > -1; d.hidden = !hit; if (hit) n++; if (q && hit) d.open = true; }); $("#fqNone").hidden = n > 0; }
   function render() {
     var t = I[lang];
+    $("#fcols").innerHTML = t.fcol.map(function (c, i) { return "<div><b>" + c + "</b>" + t.flinks.slice(i * 3, i * 3 + 3).map(function (l) { return '<a href="' + l[1] + '">' + l[0] + "</a>"; }).join("") + "</div>"; }).join("");
+    $("#wafT").textContent = t.help;
     renderQuiz(); renderLevels(); renderSim(); renderDash(); renderLive(); renderPlans(); renderForm(); renderFaq();
     var names = []; Object.keys(P).forEach(function (k) { if (names.indexOf(P[k][1]) < 0) names.push(P[k][1]); });
     $("#credits").textContent = t.photos + " " + names.join(", ") + ".";
@@ -268,6 +274,7 @@
     $("#msg").textContent = t.demo;
   });
   $("#waf").addEventListener("click", function () { toast(I[lang].waDemo); });
+  $("#faqL").addEventListener("input", function (e) { if (e.target.id === "fqS") filterFaq(); });
 
   render();
   setInterval(tickExam, 30000);

@@ -239,17 +239,55 @@ html.js:not(.static) [data-up]{opacity:0;transform:translateY(30px);filter:blur(
   .pil .w{grid-template-columns:minmax(0,1fr)}.pil div{border-inline-end:0;border-bottom:1px solid rgba(226,176,74,.2)}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+/* v2 */
+/* header: logo, a gold call to action, and a menu that opens a night-sky page */
+header{backdrop-filter:none;background:var(--night)}
+header nav{position:fixed;inset:0;z-index:-1;background:var(--night);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;margin:0;font-family:var(--h);font-size:clamp(2.2rem,5vw,3.8rem);opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+header nav a{opacity:1;color:var(--parch)}
+header nav a:hover{color:var(--gold)}
+header.open nav{opacity:1;visibility:visible}
+header .lang{margin-inline-start:auto}
+.menu{width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(226,176,74,.5);display:grid;place-content:center;gap:7px;flex:none}
+.menu span{display:block;width:20px;height:1.5px;background:var(--gold);transition:transform .35s var(--ease)}
+header.open .menu span:first-child{transform:translateY(4px) rotate(45deg)}
+header.open .menu span:last-child{transform:translateY(-4px) rotate(-45deg)}
+/* hero: everything centred under the light */
+.hero .w{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center}
+.hero .orn{justify-content:center}
+.hero p{margin-inline:auto}
+.hero .acts{justify-content:center}
+.seal{justify-self:center;display:flex;width:auto;gap:0;padding:12px 8px}
+.seal div{flex-direction:column;align-items:center;border:0;border-inline-end:1px solid rgba(226,176,74,.25);padding:4px 26px}
+.seal div:last-child{border:0}
+.seal span{text-align:center}
+.demon{font-size:.78rem;color:#A9C2BE;margin-bottom:16px}
+.demon a{color:var(--gold);text-decoration:underline;text-underline-offset:2px}
+/* FAQ centred under its title */
+.faq .w{grid-template-columns:minmax(0,1fr);max-width:860px}
+.faq .w>div:first-child{text-align:center}
+.faq .orn{justify-content:center}
+/* footer: one centred column, like the end of a book */
+footer{text-align:center;background:var(--night);border-top:1px solid rgba(226,176,74,.25)}
+footer .cols{grid-template-columns:minmax(0,1fr);justify-items:center;gap:14px}
+footer .cols>div:first-child::before{content:"";display:block;width:34px;height:34px;margin:0 auto 14px;background:var(--gold);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
+footer h3{font-size:3rem}
+/* WhatsApp as a pill on the other side */
+.waf{inset-inline-end:auto;inset-inline-start:20px;width:auto;height:52px;border-radius:999px;padding:0 20px 0 14px;display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;box-shadow:0 0 0 1px rgba(226,176,74,.5),0 14px 30px -10px rgba(0,0,0,.5)}
+.waf svg{width:24px;height:24px}
+.toast{inset-inline-end:auto;inset-inline-start:20px}
+@media(max-width:600px){.seal div{padding:4px 12px}.seal b{font-size:1.5rem}.waf span{display:none}.waf{padding:0 14px}}
+
 </style>
 </head>
 <body>
-<p class="demo"><span data-i="demo0">Site de démonstration : jardin d’enfants fictif, tarifs et places donnés à titre d’exemple.</span> <a href="https://form.afexad.app/" data-i="demo1">Voir les autres modèles</a></p>
+
 <header>
   <div class="w">
     <a class="logo" href="#top" aria-label="Nour">
       <svg width="40" height="40" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#12403F"/><path d="M16 4l3.5 8.5L28 16l-8.5 3.5L16 28l-3.5-8.5L4 16l8.5-3.5z" fill="#E2B04A"/><circle cx="16" cy="16" r="3" fill="#12403F"/></svg>
       <span><b data-i="brand">Nour</b><small data-i="brandS">Éveil et Coran, Blida</small></span>
     </a>
-    <nav>
+    <nav id="mnav">
       <a href="#programme" data-i="n1">Emploi du temps</a>
       <a href="#coran" data-i="n2">Le Coran</a>
       <a href="#tarifs" data-i="n3">Tarifs</a>
@@ -262,6 +300,7 @@ html.js:not(.static) [data-up]{opacity:0;transform:translateY(30px);filter:blur(
       <button type="button" data-l="en" aria-pressed="false">EN</button>
     </div>
     <a class="btn g" href="#places" data-i="cta0">Vérifier une place</a>
+    <button type="button" class="menu" id="menuB" aria-expanded="false" aria-controls="mnav" aria-label="Menu"><span></span><span></span></button>
   </div>
 </header>
 
@@ -271,6 +310,7 @@ html.js:not(.static) [data-up]{opacity:0;transform:translateY(30px);filter:blur(
   <div class="shade" id="shade"></div><div class="fade"></div>
   <div class="w">
     <div>
+      <p class="demon"><span data-i="demo0">Site de démonstration : jardin d’enfants fictif, tarifs et places donnés à titre d’exemple.</span> <a href="https://form.afexad.app/" data-i="demo1">Voir les autres modèles</a></p>
       <p class="orn"><svg width="18" height="18" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="currentColor"/></svg><span data-i="kick">Jardin d’enfants, 3 à 6 ans, Blida</span></p>
       <h1><span data-i="h1a">Grandir</span> <em data-i="h1b">dans la lumière.</em></h1>
       <p data-i="lede">L’éveil, la langue arabe, le Coran et les bonnes manières, avec le français et les sciences. Des petits groupes, une équipe douce et patiente.</p>
@@ -396,7 +436,7 @@ html.js:not(.static) [data-up]{opacity:0;transform:translateY(30px);filter:blur(
   </div>
 </footer>
 
-<button class="waf" type="button" id="waf" aria-label="WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></button>
+<button class="waf" type="button" id="waf"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg><span>WhatsApp</span></button>
 <div class="toast" id="toast" role="status"></div>
 
 <script src="vendor/gsap.min.js"></script>

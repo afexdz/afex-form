@@ -231,6 +231,11 @@
     $("#msg").textContent = t.demo;
   });
   $("#waf").addEventListener("click", function () { toast(I[lang].waDemo); });
+  var hdr = document.querySelector("header");
+  function menu(open) { hdr.classList.toggle("open", open); $("#menuB").setAttribute("aria-expanded", open); if (window.lenis) { } }
+  $("#menuB").addEventListener("click", function () { menu(!hdr.classList.contains("open")); });
+  $$("#mnav a").forEach(function (a) { a.addEventListener("click", function () { menu(false); }); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && hdr.classList.contains("open")) { menu(false); $("#menuB").focus(); } });
 
   render();
   window.addEventListener("load", drawPath);

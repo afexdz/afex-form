@@ -159,6 +159,34 @@ html.js:not(.static) [data-up]{opacity:0;transform:translateY(40px)}
 @media(max-width:720px){.nav nav,.hd .btn{display:none}.lang{margin-inline-start:auto}.hero .row{flex-direction:column;align-items:flex-start}.at li{grid-template-columns:1fr auto}.at li a{grid-column:1/-1;justify-self:start}.tbl th:nth-child(4),.tbl td:nth-child(4){display:none}.fil dl{grid-template-columns:1fr}}
 @media(max-width:480px){.cols{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+/* v2 */
+/* centred masthead and a framed picture under the title */
+.hd{background:var(--velvet)}
+.nav{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:16px}
+.nav .logo{grid-column:2;grid-row:1;flex-direction:column;gap:2px;font-size:1.9rem;text-align:center}
+.nav nav{grid-column:1;grid-row:1;margin:0;justify-self:start}
+.nav .lang{grid-column:3;grid-row:1;justify-self:end;margin-inline-end:120px}
+.nav .btn{grid-column:3;grid-row:1;justify-self:end}
+.hero{height:auto;min-height:0;display:flex;flex-direction:column;padding:130px 0 0;background:var(--velvet)}
+.hero::after{display:none}
+.hero .in{order:1;height:auto;justify-items:center;text-align:center;padding-bottom:0}
+.hero h1{max-width:13ch;margin-inline:auto}
+.hero .row{flex-direction:column;align-items:center;text-align:center}
+.hero .row p{margin-inline:auto}
+.hero .acts{justify-content:center}
+.hero .bg{order:2;position:relative;inset:auto;height:min(64svh,620px);margin:44px clamp(16px,4vw,48px) 0;border-radius:6px 6px 0 0;overflow:hidden}
+.hero .thread{bottom:auto;top:calc(100% - 120px)}
+@media(max-width:720px){.nav{grid-template-columns:auto minmax(0,1fr)}.nav .logo{grid-column:1;flex-direction:row}.nav .lang{grid-column:2;margin:0}.hero{padding-top:100px}.hero .bg{height:44svh}}
+/* sign-up: the photo fills the section, the form floats on it */
+#inscription{position:relative;overflow:hidden}
+#inscription .form{grid-template-columns:minmax(0,1fr);justify-items:center}
+#inscription .form figure{position:absolute;inset:0;margin:0;z-index:0}
+#inscription .form figure::after{content:"";position:absolute;inset:0;background:rgba(46,11,28,.55)}
+#inscription .form figure img{width:100%;height:100%;object-fit:cover}
+#inscription .form>div{position:relative;z-index:1;max-width:560px;background:rgba(46,11,28,.9);color:#fff;border:1px solid rgba(201,162,74,.5);border-radius:6px;padding:clamp(24px,4vw,44px)}
+#inscription .lead{color:#EBD9DE}
+#inscription h2{color:var(--goldL)}
+
 </style>
 </head>
 <body>
@@ -200,6 +228,22 @@ html.js:not(.static) [data-up]{opacity:0;transform:translateY(40px)}
   </div>
 </section>
 
+<section class="city pad"><div class="w cg">
+  <div>
+    <h2 data-up data-i="cH">À Constantine, la ville des ponts.</h2>
+    <p data-up data-i="cP">L’institut est au centre-ville, à quelques minutes du pont Sidi M’Cid, entre la médina et le quartier des tailleurs.</p>
+    <dl data-up>
+      <div><dt data-i="c1">Accueil</dt><dd data-i="c1v">Du samedi au mercredi, de 8 h 30 à 17 h</dd></div>
+      <div><dt data-i="c2">Accès</dt><dd data-i="c2v">Tramway et téléphérique de Constantine</dd></div>
+    </dl>
+  </div>
+  <div class="pics">
+    <figure class="a"><img class="px" src="assets/img/bridge2-800.webp" srcset="assets/img/bridge2-800.webp 800w, assets/img/bridge2-1600.webp 1600w" sizes="(min-width:960px) 25vw, 45vw" width="1600" height="2046" alt="" loading="lazy" data-alt="bridge2Alt"></figure>
+    <figure class="b"><img class="px" src="assets/img/gorge-800.webp" srcset="assets/img/gorge-800.webp 800w, assets/img/gorge-1600.webp 1600w" sizes="(min-width:960px) 25vw, 45vw" width="1600" height="2133" alt="" loading="lazy" data-alt="gorgeAlt"></figure>
+    <figure class="c"><img class="px" src="assets/img/bridge-800.webp" srcset="assets/img/bridge-800.webp 800w, assets/img/bridge-1600.webp 1600w" sizes="(min-width:960px) 50vw, 90vw" width="1600" height="1067" alt="" loading="lazy" data-alt="bridgeAlt"></figure>
+  </div>
+</div></section>
+
 <section class="pad" id="ateliers"><div class="w">
   <div class="sh"><h2 data-up data-i="aH">Trois ateliers</h2><p data-up data-i="aP">Chaque atelier a ses formatrices, son matériel et ses modèles pour s’exercer.</p></div>
   <div id="ats"></div>
@@ -216,21 +260,7 @@ html.js:not(.static) [data-up]{opacity:0;transform:translateY(40px)}
   <p class="note" data-i="note">Tous les groupes sont encadrés par des formatrices. Garderie possible pour les enfants de 3 à 6 ans, sur demande.</p>
 </div></section>
 
-<section class="city pad"><div class="w cg">
-  <div>
-    <h2 data-up data-i="cH">À Constantine, la ville des ponts.</h2>
-    <p data-up data-i="cP">L’institut est au centre-ville, à quelques minutes du pont Sidi M’Cid, entre la médina et le quartier des tailleurs.</p>
-    <dl data-up>
-      <div><dt data-i="c1">Accueil</dt><dd data-i="c1v">Du samedi au mercredi, de 8 h 30 à 17 h</dd></div>
-      <div><dt data-i="c2">Accès</dt><dd data-i="c2v">Tramway et téléphérique de Constantine</dd></div>
-    </dl>
-  </div>
-  <div class="pics">
-    <figure class="a"><img class="px" src="assets/img/bridge2-800.webp" srcset="assets/img/bridge2-800.webp 800w, assets/img/bridge2-1600.webp 1600w" sizes="(min-width:960px) 25vw, 45vw" width="1600" height="2046" alt="" loading="lazy" data-alt="bridge2Alt"></figure>
-    <figure class="b"><img class="px" src="assets/img/gorge-800.webp" srcset="assets/img/gorge-800.webp 800w, assets/img/gorge-1600.webp 1600w" sizes="(min-width:960px) 25vw, 45vw" width="1600" height="2133" alt="" loading="lazy" data-alt="gorgeAlt"></figure>
-    <figure class="c"><img class="px" src="assets/img/bridge-800.webp" srcset="assets/img/bridge-800.webp 800w, assets/img/bridge-1600.webp 1600w" sizes="(min-width:960px) 50vw, 90vw" width="1600" height="1067" alt="" loading="lazy" data-alt="bridgeAlt"></figure>
-  </div>
-</div></section>
+
 
 <section class="pad" id="inscription"><div class="w form">
   <figure data-up><img src="assets/img/henna-800.webp" srcset="assets/img/henna-800.webp 800w, assets/img/henna-1600.webp 1600w" sizes="(min-width:960px) 45vw, 90vw" width="1600" height="1102" alt="" loading="lazy" data-alt="hennaAlt"></figure>

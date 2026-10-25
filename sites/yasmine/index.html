@@ -293,10 +293,54 @@ html.js:not(.static) [data-up]{opacity:0;transform:translateY(36px)}
   .tabs button{font-size:1.2rem;padding:14px 14px}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+/* v2 */
+header .w{display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;height:auto;padding-top:14px;column-gap:18px}
+header nav{grid-column:1/-1;grid-row:2;justify-content:center;margin:12px 0 0;padding:10px 0;border-top:1px solid var(--rule);gap:34px}
+header .lang{grid-column:3}
+header .btn{grid-column:4}
+.hero{height:auto;min-height:0;display:flex;flex-direction:column;background:var(--ivory);color:var(--ink);padding:36px 0 0}
+.hero .w{order:1;height:auto;align-items:center;text-align:center}
+.hero .bg{order:2;position:relative;inset:auto;height:min(60svh,580px);margin:36px clamp(16px,3.6vw,44px) 0;border-radius:4px}
+.hero .bg::after{background:linear-gradient(0deg,rgba(18,50,74,.35),transparent 50%)}
+.hero h1{font-size:clamp(3.4rem,8.4vw,8.4rem);max-width:none;line-height:.92}
+.hero h1 span{display:inline}
+.hero h1 .it{color:var(--terra);display:block}
+.hero .kicker{justify-content:center;color:var(--terra)}
+.hero p{color:var(--ink2);margin:18px auto 26px}
+.hero .acts{justify-content:center}
+.hero .btn.line{color:var(--ink);border-color:var(--ink)}
+.hero .btn.line:hover{background:var(--ink);color:var(--ivory)}
+.demob{display:inline-block;margin:0 auto 18px;font-size:.8rem;color:var(--ink2);border:1px solid var(--rule);border-radius:999px;padding:5px 14px}
+.demob a{color:var(--terra);text-decoration:underline;text-underline-offset:2px}
+.ticket{bottom:24px}
+.faq .w{grid-template-columns:minmax(0,1fr);max-width:900px;text-align:center}
+.faq .w>div:first-child .kicker{justify-content:center}
+#faqL{text-align:start;counter-reset:q}
+details{counter-increment:q}
+summary{justify-content:flex-start}
+summary::before{content:counter(q,decimal-leading-zero);font-family:var(--h);color:var(--terra);font-size:2.4rem;min-width:70px;line-height:1}
+summary i{margin-inline-start:auto}
+details p{padding-inline-start:86px}
+footer{background:var(--ivory);color:var(--ink2);border-top:1px solid var(--rule)}
+footer .cols{grid-template-columns:repeat(2,minmax(0,1fr))}
+footer .cols>div:first-child{grid-column:1/-1}
+footer h3{font-size:clamp(5rem,19vw,17rem);line-height:.82;color:var(--sea);margin-bottom:24px}
+footer b{color:var(--ink)}
+#credits{color:var(--ink2);border-color:var(--rule)}
+@media(min-width:901px){.demob{white-space:nowrap}}
+@media(max-width:900px){header .w{grid-template-columns:auto minmax(0,1fr) auto}header nav{display:flex;overflow-x:auto;justify-content:flex-start;gap:20px;font-size:.88rem}header .btn{display:none}.ticket{position:relative;bottom:auto;margin:-40px 16px 0}details p{padding-inline-start:0}footer .cols{grid-template-columns:minmax(0,1fr)}}
+
+/* v2 */
+.ticket{order:3}
+@media(max-width:900px){.ticket{margin:-40px 16px 0}}
+
+/* v2 */
+header nav a{white-space:nowrap}
+
 </style>
 </head>
 <body>
-<p class="demo"><span data-i="demo0">Site de démonstration : école fictive, tarifs et places donnés à titre d’exemple.</span> <a href="https://form.afexad.app/" data-i="demo1">Voir les autres modèles</a></p>
+
 <header>
   <div class="w">
     <a class="logo" href="#top" aria-label="Yasmine Montessori">
@@ -323,6 +367,7 @@ html.js:not(.static) [data-up]{opacity:0;transform:translateY(36px)}
 <section class="hero">
   <div class="bg" id="heroBg"><img src="assets/img/plateau-1280.webp" srcset="assets/img/plateau-640.webp 640w, assets/img/plateau-1280.webp 1280w, assets/img/plateau-1920.webp 1920w" sizes="100vw" width="1280" height="854" alt="" data-alt="heroAlt" fetchpriority="high"></div>
   <div class="w">
+    <p class="demob"><span data-i="demo0">Site de démonstration : école fictive, tarifs et places donnés à titre d’exemple.</span> <a href="https://form.afexad.app/" data-i="demo1">Voir les autres modèles</a></p>
     <p class="kicker" data-i="kick">Maison des enfants, de 18 mois à 6 ans</p>
     <h1><span data-i="h1a">Aide-moi</span> <span class="it" data-i="h1b">à faire seul.</span></h1>
     <p data-i="lede">Une école Montessori à Oran : des ambiances préparées, du vrai matériel en bois, trois langues, et des éducatrices formées à la pédagogie.</p>

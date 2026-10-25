@@ -274,8 +274,9 @@
     var t = I[lang];
     $("#recap").textContent = book.d >= 0 && book.s >= 0 ? t.recap.replace("{d}", fmt(OPEN[book.d], { weekday: "long", day: "numeric", month: "long" })).replace("{h}", SLOTS[book.s]) : t.recap0;
   }
+  /* every answer visible at once, on cards */
   function renderFaq() {
-    $("#faqL").innerHTML = FAQ.map(function (f, i) { return "<details" + (i === 0 ? " open" : "") + "><summary>" + f[0][lang] + '<i aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 5v14M5 12h14"/></svg></i></summary><p>' + f[1][lang] + "</p></details>"; }).join("");
+    $("#faqL").innerHTML = '<div class="fcards">' + FAQ.map(function (f, i) { return '<article class="fc"><span class="n">' + (i + 1) + "</span><h3>" + f[0][lang] + "</h3><p>" + f[1][lang] + "</p></article>"; }).join("") + "</div>";
   }
   function render() {
     var t = I[lang];
