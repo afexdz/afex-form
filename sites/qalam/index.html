@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Qalam, l’arabe et le Coran en visio pour les enfants de la diaspora</title>
+<meta name="description" content="Qalam : cours d’arabe et de Coran en visio pour les enfants de la diaspora, avec des professeurs en Algérie et des horaires à l’heure de votre ville. Écrivez son prénom en arabe, testez son niveau, réservez un cours d’essai.">
+<meta name="theme-color" content="#F6F3EC">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23121212'/%3E%3Cpath d='M9 24 23 8' stroke='%23F6F3EC' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='9.5' cy='23.5' r='3' fill='%23D2261C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Geist:wght@400;500;600&family=Katibeh&family=Noto+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('static');</script>
+<style>
+:root{--paper:#F6F3EC;--white:#FFFFFF;--ink:#121212;--ink2:#6E6A62;--red:#D2261C;--line:#DEDAD0;--soft:#ECE7DC;--wa:#25D366;
+  --h:"Syne","Noto Sans Arabic",system-ui,sans-serif;--t:"Geist","Noto Sans Arabic",system-ui,sans-serif;--ar:"Katibeh","Noto Sans Arabic",serif;--ease:cubic-bezier(.22,1,.36,1)}
+[dir="rtl"]{--h:"Noto Sans Arabic",system-ui,sans-serif;--t:"Noto Sans Arabic",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip}
+html.lenis,html.lenis body{height:auto}
+body{font-family:var(--t);background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:clip;font-size:16px}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+img{display:block;max-width:100%;height:auto}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+h1,h2,h3{font-family:var(--h);font-weight:800;line-height:.98;letter-spacing:-.03em;overflow-wrap:break-word;min-width:0}
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3{letter-spacing:0;line-height:1.35;font-weight:700}
+.ar{font-family:var(--ar);font-weight:400;letter-spacing:0}
+.mono{font-variant-numeric:tabular-nums}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;font-weight:600;font-size:.98rem;border-radius:0;transition:background-color .25s,color .25s;white-space:nowrap}
+.btn.k{background:var(--ink);color:var(--paper)}
+.btn.k:hover{background:var(--red)}
+.btn.r{background:var(--red);color:#fff}
+.btn.r:hover{background:var(--ink)}
+.btn.o{border:1.5px solid var(--ink)}
+.btn.o:hover{background:var(--ink);color:var(--paper)}
+
+/* the page is a spread: a fixed spine on one side, the content scrolls on the other */
+.app{display:grid;grid-template-columns:minmax(320px,36%) minmax(0,1fr);min-height:100vh}
+.spine{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:space-between;gap:20px;padding:28px clamp(22px,2.6vw,40px);border-inline-end:1px solid var(--line);overflow:hidden;background:var(--paper)}
+.spine .bigl{position:absolute;inset-inline-end:-6%;bottom:-8%;font-family:var(--ar);font-size:clamp(18rem,30vw,30rem);line-height:.8;color:var(--soft);pointer-events:none;user-select:none;z-index:0}
+.spine>*{position:relative;z-index:1}
+.top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.brand b{font-family:var(--h);font-weight:800;font-size:1.6rem;letter-spacing:-.04em}
+.brand .ar{font-size:2.2rem;color:var(--red);line-height:1}
+.lang{display:flex;gap:2px}
+.lang button{min-width:36px;height:32px;font-size:.82rem;font-weight:600;color:var(--ink2);border-bottom:2px solid transparent}
+.lang button[aria-pressed="true"]{color:var(--ink);border-color:var(--red)}
+.demo{font-size:.76rem;color:var(--ink2);margin-top:10px;max-width:40ch}
+.demo a{color:var(--red)}
+.now .k{font-size:.85rem;color:var(--ink2);display:flex;gap:8px;align-items:center}
+.now .k::before{content:"";width:22px;height:1.5px;background:var(--red)}
+.now h1{font-size:clamp(2.4rem,4.4vw,4.6rem);margin-top:12px;max-width:11ch}
+[dir="rtl"] .now h1{font-size:clamp(2rem,3.6vw,3.6rem)}
+.now p{color:var(--ink2);margin-top:14px;max-width:36ch}
+.where{display:grid;gap:10px;border-top:1px solid var(--line);padding-top:16px}
+.where label{display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--ink2)}
+.where select{appearance:none;background:transparent;border:0;border-bottom:1.5px solid var(--ink);font-family:var(--h);font-weight:800;font-size:1.25rem;color:var(--ink);padding:2px 22px 2px 0;cursor:pointer;background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-size:6px 6px;background-position:calc(100% - 8px) 55%,calc(100% - 2px) 55%;background-repeat:no-repeat}
+[dir="rtl"] .where select{padding:2px 0 2px 22px;background-position:8px 55%,2px 55%}
+.clocks{display:flex;gap:22px;font-size:.84rem;color:var(--ink2)}
+.clocks b{display:block;font-family:var(--h);font-size:1.5rem;color:var(--ink);letter-spacing:-.02em}
+.idx{list-style:none;display:grid;gap:2px;counter-reset:i}
+.idx a{display:grid;grid-template-columns:30px minmax(0,1fr);gap:8px;align-items:center;text-decoration:none;font-size:.92rem;padding:5px 0;color:var(--ink2);transition:color .2s}
+.idx a::before{counter-increment:i;content:counter(i,decimal-leading-zero);font-family:var(--h);font-size:.78rem}
+.idx a[aria-current="true"]{color:var(--ink);font-weight:600}
+.idx a[aria-current="true"]::before{color:var(--red)}
+.go{display:flex;gap:10px;flex-wrap:wrap}
+
+/* content column */
+main{min-width:0}
+.blk{padding:clamp(70px,9vw,120px) clamp(22px,4vw,72px);border-bottom:1px solid var(--line)}
+.blk:first-child{padding-top:28px}
+.blk h2{font-size:clamp(2rem,3.6vw,3.4rem);max-width:16ch}
+.blk>p.s{color:var(--ink2);max-width:52ch;margin-top:14px;font-size:1.04rem}
+.lab{display:flex;align-items:center;gap:10px;font-size:.82rem;color:var(--red);font-weight:600;margin-bottom:16px}
+.lab span{font-family:var(--h)}
+.ph{overflow:hidden;position:relative;background:var(--soft)}
+.ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter .8s var(--ease),transform 1s var(--ease)}
+.ph:hover img{filter:none;transform:scale(1.03)}
+
+/* intro */
+.intro .ph{aspect-ratio:16/10}
+.intro h2{font-size:clamp(2.6rem,5vw,5rem);max-width:13ch;margin-top:34px}
+.intro h2 em{font-style:normal;color:var(--red)}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1.5px solid var(--ink);margin-top:34px}
+.facts div{padding:16px 16px 0 0}
+[dir="rtl"] .facts div{padding:16px 0 0 16px}
+.facts b{display:block;font-family:var(--h);font-size:1.6rem;letter-spacing:-.02em}
+.facts span{font-size:.9rem;color:var(--ink2)}
+
+/* name in arabic */
+.namebox{margin-top:34px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:0;border:1.5px solid var(--ink)}
+.namebox .in{padding:24px;display:grid;gap:12px;align-content:start;border-inline-end:1.5px solid var(--ink)}
+.namebox label{font-size:.88rem;color:var(--ink2)}
+.namebox input{width:100%;min-width:0;border:0;border-bottom:1.5px solid var(--ink);background:none;font-family:var(--h);font-weight:800;font-size:2rem;padding:6px 0;outline:none}
+.namebox input:focus{border-color:var(--red)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips button{font-size:.82rem;border:1px solid var(--line);padding:4px 10px;transition:border-color .2s}
+.chips button:hover{border-color:var(--ink)}
+.namebox .out{position:relative;display:grid;place-items:center;min-height:300px;background:var(--white);padding:20px;overflow:hidden}
+.namebox .out .w{font-family:var(--ar);font-size:clamp(5rem,10vw,9rem);line-height:1.2;direction:rtl;text-align:center}
+.namebox .out .w span{display:inline-block}
+.namebox .out small{position:absolute;bottom:12px;inset-inline:16px;font-size:.78rem;color:var(--ink2);text-align:center}
+.namebox .out .dot{position:absolute;top:18px;inset-inline-end:18px;width:14px;height:14px;border-radius:50%;background:var(--red)}
+.spell{display:flex;flex-wrap:wrap;gap:6px;direction:rtl;justify-content:center;margin-top:6px}
+.spell i{font-style:normal;font-family:"Noto Sans Arabic",sans-serif;font-size:.95rem;border:1px solid var(--line);padding:2px 9px}
+
+/* letters */
+.letters{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px;margin-top:34px;align-items:start}
+.lg{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:0;border-top:1.5px solid var(--ink);border-inline-start:1.5px solid var(--ink);direction:rtl}
+.lg button{aspect-ratio:1;border-inline-end:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);font-family:var(--ar);font-size:clamp(1.8rem,3vw,2.6rem);line-height:1;transition:background-color .2s,color .2s}
+.lg button:hover{background:var(--soft)}
+.lg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.ld{border:1.5px solid var(--ink);background:var(--white)}
+.ld .big{font-family:var(--ar);font-size:9rem;line-height:1.1;text-align:center;padding:16px 0 0;color:var(--red)}
+.forms{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1.5px solid var(--ink);direction:rtl}
+.forms div{padding:12px 6px;text-align:center;border-inline-start:1px solid var(--line)}
+.forms div:first-child{border:0}
+.forms b{display:block;font-family:"Noto Sans Arabic",sans-serif;font-size:2rem;font-weight:500;line-height:1.3}
+.forms small{font-size:.74rem;color:var(--ink2)}
+.forms div.na b{color:var(--line)}
+.ld .ex{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1.5px solid var(--ink);padding:14px 16px}
+.ld .ex b{font-family:"Noto Sans Arabic",sans-serif;font-size:1.6rem;font-weight:700}
+.ld .ex span{color:var(--ink2)}
+
+/* level test */
+.quiz{margin-top:34px;display:grid;gap:0;border-top:1.5px solid var(--ink)}
+.qq{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.qq>span{font-family:var(--h);font-size:1.4rem;color:var(--red)}
+.qq p{font-weight:600;margin-bottom:10px}
+.qq .opts{display:flex;flex-wrap:wrap;gap:8px}
+.qq .opts button{border:1.5px solid var(--ink);padding:8px 14px;font-size:.92rem;transition:background-color .2s,color .2s}
+.qq .opts button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.lvl{display:grid;grid-template-columns:120px minmax(0,1fr);gap:22px;align-items:center;margin-top:24px;padding:22px;background:var(--ink);color:var(--paper)}
+.lvl[hidden]{display:none}
+.lvl .l{font-family:var(--ar);font-size:7rem;line-height:1;text-align:center;color:var(--red)}
+.lvl small{color:#B6B1A7;font-size:.84rem}
+.lvl h3{font-size:1.9rem;margin:4px 0 8px}
+.lvl p{color:#CFCAC0;font-size:.95rem}
+.lvl .tr{display:inline-block;margin-top:10px;border:1px solid #444;padding:4px 10px;font-size:.84rem}
+
+/* timetable in your time */
+.tz{margin-top:34px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1.5px solid var(--ink);border-inline-start:1.5px solid var(--ink)}
+.slot{border-inline-end:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);padding:14px;display:grid;gap:4px;text-align:start;transition:background-color .2s}
+.slot:hover{background:var(--white)}
+.slot small{font-size:.78rem;color:var(--ink2)}
+.slot b{font-family:var(--h);font-size:2rem;letter-spacing:-.03em;line-height:1}
+.slot .alg{font-size:.78rem;color:var(--ink2)}
+.slot .tag{justify-self:start;font-size:.72rem;font-weight:600;padding:2px 8px;background:var(--soft)}
+.slot .tag.good{background:var(--red);color:#fff}
+.slot.off{opacity:.38}
+.slot[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.slot[aria-pressed="true"] small,.slot[aria-pressed="true"] .alg{color:#B6B1A7}
+.tzn{font-size:.84rem;color:var(--ink2);margin-top:12px}
+
+/* price */
+.pr{margin-top:34px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border:1.5px solid var(--ink)}
+.pr .ctl{padding:24px;display:grid;gap:22px;border-inline-end:1.5px solid var(--ink)}
+.ctl .row{display:grid;gap:8px}
+.ctl .row>div:first-child{display:flex;justify-content:space-between;font-weight:600}
+.ctl output{font-family:var(--h);font-weight:800;color:var(--red)}
+.ctl input[type=range]{width:100%;accent-color:var(--red)}
+.seg{display:flex}
+.seg button{flex:1;height:46px;border:1.5px solid var(--ink);font-weight:600;font-size:.92rem}
+.seg button+button{border-inline-start:0}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.pr .sum{padding:24px;display:grid;align-content:space-between;gap:18px;background:var(--white)}
+.pr .tot{font-family:var(--h);font-weight:800;font-size:clamp(3rem,6vw,5.4rem);letter-spacing:-.04em;line-height:1}
+.pr .tot small{display:block;font-family:var(--t);font-weight:500;font-size:.9rem;letter-spacing:0;color:var(--ink2);margin-top:8px}
+.pr ul{list-style:none;display:grid;gap:6px;font-size:.92rem}
+.pr li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line);padding-bottom:6px}
+
+/* trial form */
+.trial{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:0;margin-top:34px;border:1.5px solid var(--ink)}
+form{padding:24px;display:grid;gap:16px;border-inline-end:1.5px solid var(--ink)}
+label.f{display:grid;gap:4px;font-size:.86rem;color:var(--ink2)}
+.f input,.f select{width:100%;min-width:0;border:0;border-bottom:1.5px solid var(--ink);background:none;height:44px;font-size:1.05rem;color:var(--ink);outline:none}
+.f input:focus,.f select:focus{border-color:var(--red)}
+.row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+#msg{min-height:1.4em;font-size:.92rem;color:var(--red)}
+.trial .ph{min-height:100%}
+footer{padding:40px clamp(22px,4vw,72px) 110px;font-size:.84rem;color:var(--ink2);display:grid;gap:10px}
+footer a{color:var(--ink)}
+#credits{font-size:.76rem}
+.wa{position:fixed;z-index:60;bottom:0;inset-inline-end:28px;background:var(--ink);color:var(--paper);display:flex;align-items:center;gap:10px;padding:12px 16px;font-weight:600;font-size:.9rem}
+.wa svg{color:var(--wa)}
+.toast{position:fixed;z-index:95;bottom:60px;inset-inline-end:28px;max-width:320px;background:var(--white);border:1.5px solid var(--ink);padding:12px 14px;font-size:.88rem;opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .3s,transform .3s}
+.toast.on{opacity:1;transform:none}
+.mbar{display:none}
+.mdemo{display:none}
+
+html.js:not(.static) [data-up]{opacity:0;transform:translateY(24px)}
+
+@media(max-width:1100px){.app{grid-template-columns:minmax(300px,40%) minmax(0,1fr)}.tz{grid-template-columns:repeat(2,minmax(0,1fr))}.letters,.namebox,.pr,.trial{grid-template-columns:minmax(0,1fr)}.namebox .in,.pr .ctl,form{border-inline-end:0;border-bottom:1.5px solid var(--ink)}.trial .ph{min-height:240px}}
+@media(max-width:820px){
+  .app{grid-template-columns:minmax(0,1fr)}
+  .spine{position:sticky;top:0;z-index:40;height:auto;flex-direction:row;flex-wrap:wrap;align-items:center;padding:12px 16px;border:0;border-bottom:1px solid var(--line)}
+  .spine .bigl,.spine .now,.spine .idx,.spine .go{display:none}
+  .top{flex:1;align-items:center}
+  .spine .demo{display:none}
+  .mdemo{display:block;margin:0 0 14px}
+  .where{border:0;padding:0;width:100%;grid-template-columns:auto 1fr;align-items:center}
+  .clocks{justify-content:flex-end}
+  .clocks b{font-size:1.05rem}
+  .mobileHead{display:block !important}
+  .mbar{display:flex;position:fixed;z-index:50;bottom:0;left:0;right:0;background:var(--ink);padding:10px 12px;gap:8px}
+  .mbar .btn{flex:1;min-height:46px}
+  .wa{display:none}
+  .facts{grid-template-columns:minmax(0,1fr)}
+  .lg{grid-template-columns:repeat(7,minmax(0,1fr))}
+  .lg button{font-size:1.6rem}
+  .row2{grid-template-columns:minmax(0,1fr)}
+  .lvl{grid-template-columns:70px minmax(0,1fr)}.lvl .l{font-size:4.5rem}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+/* v2 */
+.now h1{font-size:clamp(1.9rem,2.7vw,3rem);max-width:14ch}
+[dir="rtl"] .now h1{font-size:clamp(1.8rem,2.6vw,2.8rem)}
+.blk h2{font-size:clamp(1.8rem,3vw,3rem);max-width:20ch}
+.intro h2{font-size:clamp(2.2rem,4vw,4rem)}
+.idx a{padding:3px 0}
+@media(max-height:820px) and (min-width:821px){.now p,.demo{display:none}.idx{display:none}}
+@media(max-width:820px){.where{grid-template-columns:minmax(0,1fr)}.clocks{justify-content:flex-start;gap:16px;font-size:.72rem}.clocks span span{font-size:.7rem}}
+
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="spine" id="spine">
+    <div class="bigl" id="bigl" aria-hidden="true">ق</div>
+    <div>
+      <div class="top">
+        <a class="brand" href="#top" aria-label="Qalam"><b>Qalam</b><span class="ar">قلم</span></a>
+        <div class="lang" role="group" aria-label="Langue">
+          <button type="button" data-l="fr" aria-pressed="true">FR</button>
+          <button type="button" data-l="ar" aria-pressed="false" lang="ar">عربي</button>
+          <button type="button" data-l="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+      <p class="demo"><span data-i="demo0">Site de démonstration : école fictive, tarifs et horaires donnés à titre d’exemple.</span> <a href="https://form.afexad.app/" data-i="demo1">Voir les autres modèles</a></p>
+    </div>
+    <div class="now" aria-live="polite">
+      <p class="k" id="nowK"></p>
+      <h1 id="nowT"></h1>
+      <p id="nowP"></p>
+    </div>
+    <div>
+      <ol class="idx" id="idx"></ol>
+    </div>
+    <div class="where">
+      <label><span data-i="youAre">Vous êtes à</span>
+        <select id="city" aria-label="Ville"></select>
+      </label>
+      <div class="clocks"><span><b class="mono" id="ckHere">00:00</b><span id="ckHereL"></span></span><span><b class="mono" id="ckAlg">00:00</b><span data-i="ckAlgL">chez le prof, Alger</span></span></div>
+    </div>
+    <div class="go"><a class="btn r" href="#essai" data-i="cta1">Réserver un cours d’essai</a><a class="btn o" href="#niveau" data-i="cta2">Tester son niveau</a></div>
+  </aside>
+
+  <main id="top">
+    <section class="blk intro" data-sec="0">
+      <div class="ph" data-up><img src="assets/img/ecran-1280.webp" srcset="assets/img/ecran-640.webp 640w, assets/img/ecran-1280.webp 1280w, assets/img/ecran-1920.webp 1920w" sizes="(min-width:820px) 60vw, 100vw" width="1280" height="720" alt="" data-alt="ecranAlt" fetchpriority="high"></div>
+      <p class="demo mdemo"><span data-i="demo0">Site de démonstration : école fictive, tarifs et horaires donnés à titre d’exemple.</span> <a href="https://form.afexad.app/" data-i="demo1">Voir les autres modèles</a></p>
+      <h2 class="mobileHead" style="display:none" data-i="mH">L’arabe et le Coran, en visio, à l’heure de chez vous.</h2>
+      <h2 data-up><span data-i="inA">Une langue de famille,</span> <em data-i="inB">apprise à distance.</em></h2>
+      <p class="s" data-i="inP" data-up>Des professeurs en Algérie, un enfant à Paris, Montréal ou Londres : des cours en tête-à-tête ou en duo, à des horaires qui tiennent compte de l’école et du décalage.</p>
+      <div class="facts" data-up>
+        <div><b>1 : 1</b><span data-i="f1">ou en duo de frères et sœurs</span></div>
+        <div><b>30 / 45</b><span data-i="f2">minutes, selon l’âge</span></div>
+        <div><b>5 – 14</b><span data-i="f3">ans, de l’alphabet au Coran</span></div>
+      </div>
+    </section>
+
+    <section class="blk" id="prenom" data-sec="1">
+      <p class="lab"><span>01</span><span data-i="s1L">Pour commencer</span></p>
+      <h2 data-i="s1H" data-up>Écrivez son prénom, on l’écrit en arabe</h2>
+      <p class="s" data-i="s1P" data-up>C’est souvent la première chose que les enfants veulent savoir écrire. Tapez un prénom.</p>
+      <div class="namebox" data-up>
+        <div class="in">
+          <label for="nm" data-i="nmL">Prénom de l’enfant</label>
+          <input id="nm" autocomplete="off" maxlength="18" value="Yasmine">
+          <div class="chips" id="nmChips"></div>
+        </div>
+        <div class="out" aria-live="polite"><span class="dot" aria-hidden="true"></span><div class="w" id="nmOut" lang="ar"></div><div class="spell" id="nmSpell"></div><small id="nmNote"></small></div>
+      </div>
+    </section>
+
+    <section class="blk" id="lettres" data-sec="2">
+      <p class="lab"><span>02</span><span data-i="s2L">L’alphabet</span></p>
+      <h2 data-i="s2H" data-up>28 lettres, quatre visages chacune</h2>
+      <p class="s" data-i="s2P" data-up>En arabe, une lettre change de forme selon sa place dans le mot. Touchez une lettre pour voir ses formes.</p>
+      <div class="letters">
+        <div class="lg" id="lg" role="group" aria-label="Alphabet"></div>
+        <div class="ld" id="ld" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="blk" id="niveau" data-sec="3">
+      <p class="lab"><span>03</span><span data-i="s3L">Quatre questions</span></p>
+      <h2 data-i="s3H" data-up>Par où commencer avec votre enfant ?</h2>
+      <div class="quiz" id="quiz"></div>
+      <div class="lvl" id="lvl" aria-live="polite"></div>
+    </section>
+
+    <section class="blk" id="horaires" data-sec="4">
+      <p class="lab"><span>04</span><span data-i="s4L">À votre heure</span></p>
+      <h2 data-i="s4H" data-up>Les créneaux, convertis pour votre ville</h2>
+      <p class="s" data-i="s4P" data-up>Changez de ville dans la colonne : les heures se recalculent. Les créneaux trop tôt ou trop tard chez vous sont grisés.</p>
+      <div class="tz" id="tz" role="group"></div>
+      <p class="tzn" id="tzn"></p>
+    </section>
+
+    <section class="blk" id="prix" data-sec="5">
+      <p class="lab"><span>05</span><span data-i="s5L">Le prix</span></p>
+      <h2 data-i="s5H" data-up>Vous payez les séances, dans votre monnaie</h2>
+      <div class="pr">
+        <div class="ctl">
+          <div class="row"><div><span data-i="pS">Séances par semaine</span><output id="pSo">2</output></div><input type="range" id="pS" min="1" max="4" value="2"></div>
+          <div class="row"><div><span data-i="pD">Durée</span></div><div class="seg" id="pD" role="group"><button type="button" data-d="30" aria-pressed="true">30 min</button><button type="button" data-d="45" aria-pressed="false">45 min</button></div></div>
+          <div class="row"><div><span data-i="pK">Enfants</span><output id="pKo">1</output></div><input type="range" id="pK" min="1" max="3" value="1"></div>
+        </div>
+        <div class="sum" aria-live="polite"><p class="tot"><span id="pTot">0</span><small id="pTotS"></small></p><ul id="pLines"></ul></div>
+      </div>
+    </section>
+
+    <section class="blk" id="essai" data-sec="6">
+      <p class="lab"><span>06</span><span data-i="s6L">Gratuit</span></p>
+      <h2 data-i="s6H" data-up>Un premier cours, offert</h2>
+      <p class="s" data-i="s6P" data-up>30 minutes avec un professeur pour faire connaissance et confirmer le niveau. Sans paiement ni engagement.</p>
+      <div class="trial">
+        <form id="f" novalidate>
+          <div class="row2">
+            <label class="f"><span data-i="l1">Prénom de l’enfant</span><input name="kid" autocomplete="off"></label>
+            <label class="f"><span data-i="l2">Âge</span><select name="age" id="age"></select></label>
+          </div>
+          <label class="f"><span data-i="l3">Créneau (heure de chez vous)</span><select name="slot" id="slotSel"></select></label>
+          <label class="f"><span data-i="l4">E-mail ou WhatsApp avec indicatif</span><input name="contact" autocomplete="email" placeholder="+33 6 … ou nom@mail.com"></label>
+          <button class="btn k" type="submit" data-i="send">Réserver le cours d’essai</button>
+          <p id="msg" role="status"></p>
+        </form>
+        <div class="ph"><img src="assets/img/lecture2-640.webp" srcset="assets/img/lecture2-640.webp 640w, assets/img/lecture2-1280.webp 1280w" sizes="(min-width:1100px) 25vw, 100vw" width="1280" height="720" alt="" data-alt="lecAlt" loading="lazy" decoding="async"></div>
+      </div>
+    </section>
+
+    <footer>
+      <p><span data-i="foot">© 2026 Qalam, école fictive en ligne.</span> <span data-i="by">Site réalisé par</span> <a href="https://afexad.app" target="_blank" rel="noopener">AFEX Digital</a></p>
+      <p id="credits"></p>
+    </footer>
+  </main>
+</div>
+
+<button class="wa" type="button" id="wa"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg><span data-i="waT">Une question ? WhatsApp</span></button>
+<div class="mbar"><a class="btn r" href="#essai" data-i="cta1">Réserver un cours d’essai</a><button type="button" class="btn o" id="wa2" style="color:#F6F3EC;border-color:#F6F3EC" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg></button></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
