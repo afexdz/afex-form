@@ -6,7 +6,7 @@
   function $(s, c) { return (c || document).querySelector(s); }
   function $$(s, c) { return [].slice.call((c || document).querySelectorAll(s)); }
   function L(o) { return o[lang]; }
-  var P = { manuscrit: "Bernd Dittrich", page: "The Cleveland Museum of Art", ecran: "Vitaly Gariev", lecture2: "Vitaly Gariev" };
+  var P = { famille: "Hasan Almasi", prof: "Rendy Novantino" };
 
   var I = {
     fr: { demo0: "Site de démonstration : école fictive, tarifs et horaires donnés à titre d’exemple.", demo1: "Voir les autres modèles", youAre: "Vous êtes à", ckAlgL: "chez le prof, Alger", ckHere: "chez vous", cta1: "Réserver un cours d’essai", cta2: "Tester son niveau",
@@ -18,7 +18,7 @@
       s5L: "Le prix", s5H: "Vous payez les séances, dans votre monnaie", pS: "Séances par semaine", pD: "Durée", pK: "Enfants", perM: "par mois", unit: "Prix d’une séance", count: "{n} séances × 4 semaines", sib: "Frères et sœurs −20 %", free: "Sans engagement, arrêt possible chaque mois",
       s6L: "Gratuit", s6H: "Un premier cours, offert", s6P: "30 minutes avec un professeur pour faire connaissance et confirmer le niveau. Sans paiement ni engagement.", l1: "Prénom de l’enfant", l2: "Âge", l3: "Créneau (heure de chez vous)", l4: "E-mail ou WhatsApp avec indicatif", send: "Réserver le cours d’essai", years: "ans",
       err: "Indiquez le prénom et un e-mail ou un numéro avec indicatif (+33…).", demo: "Démo AFEX Digital : aucun cours n’a été réservé, ce formulaire n’est pas encore connecté.", waT: "Une question ? WhatsApp", waDemo: "Démo AFEX Digital : le numéro WhatsApp n’est pas encore connecté.",
-      foot: "© 2026 Qalam, école fictive en ligne.", by: "Site réalisé par", photos: "Photos : Unsplash,", lang: "Langue", ecranAlt: "Une mère et sa fille devant un ordinateur portable", lecAlt: "Une femme lit un livre avec une petite fille",
+      foot: "© 2026 Qalam, école fictive en ligne.", by: "Site réalisé par", photos: "Photos : Unsplash,", lang: "Langue", famAlt: "Un père lit le Coran avec sa fille, assis par terre", profAlt: "Une enseignante en hijab sourit devant son ordinateur",
       title: "Qalam, l’arabe et le Coran en visio pour les enfants de la diaspora", loc: "fr-FR",
       sec: [["Qalam · قلم", "L’arabe et le Coran, en visio, à l’heure de chez vous.", "Pour les enfants de 5 à 14 ans qui grandissent loin de l’Algérie."], ["01 · Le prénom", "Son prénom, en lettres arabes", "Le premier mot qu’on apprend à écrire."], ["02 · L’alphabet", "Vingt-huit lettres", "Chacune a jusqu’à quatre formes."], ["03 · Le niveau", "Trois niveaux et un parcours Coran", "Un test de quatre questions."], ["04 · Les horaires", "Des cours après l’école, pas la nuit", "Convertis pour votre ville."], ["05 · Le prix", "Pas d’abonnement à l’année", "Dans votre monnaie, au mois."], ["06 · L’essai", "Un premier cours offert", "Trente minutes pour se rencontrer."]],
       idx: ["Le prénom en arabe", "Les 28 lettres", "Le test de niveau", "Les horaires", "Le prix", "Le cours d’essai"] },
@@ -31,7 +31,7 @@
       s5L: "السعر", s5H: "تدفعون الحصص بعملتكم", pS: "حصص في الأسبوع", pD: "المدة", pK: "الأطفال", perM: "في الشهر", unit: "سعر الحصة", count: "{n} حصص × 4 أسابيع", sib: "الإخوة −20 %", free: "بلا التزام، التوقف ممكن كل شهر",
       s6L: "مجاني", s6H: "حصة أولى مجانية", s6P: "30 دقيقة مع أستاذ للتعارف وتأكيد المستوى. بلا دفع ولا التزام.", l1: "اسم الطفل", l2: "السن", l3: "الموعد (بتوقيتكم)", l4: "البريد أو واتساب مع رمز البلد", send: "احجز الحصة التجريبية", years: "سنة",
       err: "أدخلوا الاسم وبريدًا إلكترونيًا أو رقمًا مع رمز البلد (+33…).", demo: "عرض AFEX Digital: لم تُحجز أي حصة، هذا النموذج غير متصل بعد.", waT: "سؤال؟ واتساب", waDemo: "عرض AFEX Digital: رقم واتساب غير متصل بعد.",
-      foot: "© 2026 قلم، مدرسة وهمية عبر الإنترنت.", by: "موقع من إنجاز", photos: "الصور: Unsplash،", lang: "اللغة", ecranAlt: "أم وابنتها أمام حاسوب محمول", lecAlt: "امرأة تقرأ كتابًا مع طفلة",
+      foot: "© 2026 قلم، مدرسة وهمية عبر الإنترنت.", by: "موقع من إنجاز", photos: "الصور: Unsplash،", lang: "اللغة", famAlt: "أب يقرأ القرآن مع ابنته جالسَين على الأرض", profAlt: "معلّمة بالحجاب تبتسم أمام حاسوبها",
       title: "قلم، العربية والقرآن عبر الفيديو لأطفال الجالية", loc: "ar",
       sec: [["قلم · Qalam", "العربية والقرآن عبر الفيديو، بتوقيت مدينتكم.", "للأطفال من 5 إلى 14 سنة الذين يكبرون بعيدًا عن الجزائر."], ["01 · الاسم", "اسمه بالحروف العربية", "أول كلمة نتعلم كتابتها."], ["02 · الحروف", "ثمانية وعشرون حرفًا", "لكل منها حتى أربعة أشكال."], ["03 · المستوى", "ثلاثة مستويات ومسار للقرآن", "اختبار من أربعة أسئلة."], ["04 · المواعيد", "حصص بعد المدرسة لا في الليل", "محوّلة إلى مدينتكم."], ["05 · السعر", "بلا اشتراك سنوي", "بعملتكم، شهريًا."], ["06 · التجربة", "حصة أولى مجانية", "ثلاثون دقيقة للتعارف."]],
       idx: ["الاسم بالعربية", "الحروف الـ28", "اختبار المستوى", "المواعيد", "السعر", "الحصة التجريبية"] },
@@ -44,7 +44,7 @@
       s5L: "Pricing", s5H: "Pay per lesson, in your currency", pS: "Lessons per week", pD: "Length", pK: "Children", perM: "per month", unit: "Price per lesson", count: "{n} lessons × 4 weeks", sib: "Siblings −20%", free: "No commitment, stop any month",
       s6L: "Free", s6H: "A first lesson, on us", s6P: "30 minutes with a teacher to meet and confirm the level. No payment, no commitment.", l1: "Child’s first name", l2: "Age", l3: "Slot (your local time)", l4: "Email or WhatsApp with country code", send: "Book the trial lesson", years: "years",
       err: "Enter the first name and an email or a number with country code (+44…).", demo: "AFEX Digital demo: no lesson was booked, this form is not connected yet.", waT: "A question? WhatsApp", waDemo: "AFEX Digital demo: the WhatsApp number is not connected yet.",
-      foot: "© 2026 Qalam, a fictional online school.", by: "Website by", photos: "Photos: Unsplash,", lang: "Language", ecranAlt: "A mother and daughter at a laptop", lecAlt: "A woman reading a book with a little girl",
+      foot: "© 2026 Qalam, a fictional online school.", by: "Website by", photos: "Photos: Unsplash,", lang: "Language", famAlt: "A father reading the Quran with his daughter on the floor", profAlt: "A teacher in a hijab smiling at her laptop",
       title: "Qalam, Arabic and Quran on video for diaspora children", loc: "en-GB",
       sec: [["Qalam · قلم", "Arabic and the Quran on video, at your local time.", "For children aged 5 to 14 growing up far from Algeria."], ["01 · The name", "Their name in Arabic letters", "The first word you learn to write."], ["02 · The alphabet", "Twenty-eight letters", "Each with up to four forms."], ["03 · The level", "Three levels and a Quran track", "A four-question test."], ["04 · Times", "Lessons after school, not at night", "Converted to your city."], ["05 · Pricing", "No yearly contract", "In your currency, monthly."], ["06 · The trial", "A first lesson, free", "Thirty minutes to meet."]],
       idx: ["Their name in Arabic", "The 28 letters", "The level test", "Lesson times", "Pricing", "The trial lesson"] }
