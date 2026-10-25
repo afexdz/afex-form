@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wijha, langues pour étudier à l’étranger</title>
+<meta name="description" content="Wijha : plateforme en ligne pour préparer le TCF, l’IELTS et le Goethe-Zertifikat depuis l’Algérie. Choisissez votre destination, estimez votre niveau, entraînez-vous à l’écrit, cours en direct le soir et liste du dossier de visa.">
+<meta name="theme-color" content="#111111">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%23111'/%3E%3Cpath d='M9 20l14-8-5 12-2-5z' fill='%23FF5A1F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Kufam:wght@600;800&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('static');</script>
+<style>
+:root{--paper:#F3F1EC;--white:#FFFFFF;--ink:#111111;--ink2:#5B5954;--line:#DDD9D0;--tan:#FF5A1F;--acc:#2F5BFF;--accT:#FFFFFF;--wa:#25D366;
+  --h:"Epilogue","Kufam",system-ui,sans-serif;--t:"DM Sans","Noto Naskh Arabic",system-ui,sans-serif;--ease:cubic-bezier(.22,1,.36,1)}
+[dir="rtl"]{--h:"Kufam",system-ui,sans-serif;--t:"Noto Naskh Arabic",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip}
+html.lenis,html.lenis body{height:auto}
+body{font-family:var(--t);background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:clip;font-size:16.5px;transition:background-color .5s}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+img{display:block;max-width:100%;height:auto}
+:focus-visible{outline:3px solid var(--tan);outline-offset:3px}
+.w{max-width:1320px;margin:0 auto;padding:0 clamp(16px,3vw,40px)}
+h1,h2,h3{font-family:var(--h);font-weight:800;line-height:.98;letter-spacing:-.04em;overflow-wrap:break-word;min-width:0}
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3{letter-spacing:0;line-height:1.35}
+h2{font-size:clamp(2.4rem,5.4vw,4.8rem)}
+.lead{font-size:1.12rem;color:var(--ink2);max-width:54ch;margin-top:16px}
+section{padding:clamp(70px,9vw,130px) 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;transition:transform .2s var(--ease),background-color .3s,color .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:none}
+.btn.k{background:var(--ink);color:var(--white)}
+.btn.t{background:var(--tan);color:var(--white)}
+.btn.a{background:var(--acc);color:var(--accT)}
+.btn.o{border:2px solid var(--ink)}
+.btn.o:hover{background:var(--ink);color:var(--white)}
+.dot{display:inline-block;width:.5em;height:.5em;border-radius:50%;background:var(--acc);transition:background-color .5s}
+
+/* header */
+.demo{background:var(--ink);color:#CFCBC2;text-align:center;font-size:.84rem;padding:7px 16px}
+.demo a{color:var(--white);text-decoration:underline;font-weight:700}
+header{position:sticky;top:0;z-index:40;background:rgba(243,241,236,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .w{display:flex;align-items:center;gap:20px;height:72px}
+.logo{font-family:var(--h);font-weight:800;font-size:1.9rem;letter-spacing:-.05em;margin-inline-end:auto;display:flex;align-items:baseline;gap:2px}
+[dir="rtl"] .logo{letter-spacing:0}
+header nav{display:flex;gap:4px}
+header nav a{padding:8px 12px;border-radius:999px;font-weight:500;font-size:.94rem;transition:background-color .2s}
+header nav a:hover{background:var(--white)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--white)}
+.lang button{min-width:38px;height:34px;border-radius:999px;font-size:.84rem;font-weight:700;transition:background-color .2s,color .2s}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--white)}
+header .btn{min-height:44px;padding:0 18px}
+
+/* hero */
+.hero{padding:clamp(40px,6vw,80px) 0 clamp(50px,7vw,90px)}
+.htop{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:30px;align-items:end}
+.hero h1{font-size:clamp(3rem,8.6vw,8.2rem)}
+[dir="rtl"] .hero h1{font-size:clamp(2.6rem,6.6vw,6rem)}
+.hero h1 span{display:block}
+.hero h1 span:nth-child(2){color:var(--acc);transition:color .5s}
+.hero h1 span:nth-child(3){color:var(--tan)}
+.face{width:clamp(150px,18vw,250px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:6px solid var(--white);box-shadow:0 20px 50px -24px rgba(0,0,0,.5)}
+.face img{width:100%;height:100%;object-fit:cover}
+.hsub{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin:26px 0 30px;flex-wrap:wrap}
+.hsub p{font-size:1.18rem;max-width:50ch;color:var(--ink2)}
+.dests{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.dest{position:relative;aspect-ratio:3/4;border-radius:22px;overflow:hidden;color:var(--white);text-align:start;background:var(--ink);transition:transform .4s var(--ease)}
+.dest img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease),opacity .4s}
+.dest::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.75),rgba(0,0,0,0) 55%)}
+.dest:hover img{transform:scale(1.06)}
+.dest .tx{position:absolute;left:18px;right:18px;bottom:18px;z-index:2}
+.dest .tx b{display:block;font-family:var(--h);font-size:clamp(1.5rem,2.6vw,2.4rem);line-height:1;letter-spacing:-.03em}
+[dir="rtl"] .dest .tx b{letter-spacing:0}
+.dest .tx span{font-size:.92rem;opacity:.9}
+.dest .bar{position:absolute;top:14px;inset-inline-start:14px;z-index:2;display:flex;height:8px;width:54px;border-radius:4px;overflow:hidden}
+.dest .bar i{flex:1}
+.dest .ok{position:absolute;top:12px;inset-inline-end:12px;z-index:2;width:34px;height:34px;border-radius:50%;background:var(--white);color:var(--ink);display:grid;place-items:center;transform:scale(0);transition:transform .4s var(--ease)}
+.dest[aria-pressed="true"]{transform:translateY(-10px)}
+.dest[aria-pressed="true"] .ok{transform:scale(1)}
+.dest[aria-pressed="false"] img{opacity:.75}
+
+/* exam */
+#exam{background:var(--ink);color:var(--white)}
+#exam .lead{color:#BDB9B0}
+.exh{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end}
+.exname{font-family:var(--h);font-weight:800;font-size:clamp(4rem,12vw,11rem);line-height:.85;letter-spacing:-.06em;color:var(--acc);transition:color .5s}
+[dir="rtl"] .exname{letter-spacing:-.02em}
+.parts{display:flex;gap:4px;margin-top:44px;min-height:150px}
+.part{background:#232323;border-radius:16px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;gap:10px;min-width:0;transition:flex-grow .6s var(--ease)}
+.part b{font-family:var(--h);font-size:1.15rem;line-height:1.1}
+.part small{color:#A8A49B;font-size:.84rem}
+.part .mn{font-family:var(--h);font-size:2rem;color:var(--acc);line-height:1;transition:color .5s}
+.exinfo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+.exinfo div{border:1px solid #2E2E2E;border-radius:16px;padding:16px}
+.exinfo small{display:block;color:#A8A49B;font-size:.84rem}
+.exinfo b{font-size:1.06rem}
+.disc{font-size:.84rem;color:#8C887F;margin-top:14px}
+
+/* level */
+.lv{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;margin-top:44px;align-items:start}
+.sliders{background:var(--white);border-radius:26px;padding:26px;display:grid;gap:20px}
+.sl label{display:flex;justify-content:space-between;gap:12px;font-weight:700;margin-bottom:6px}
+.sl label output{font-family:var(--h);color:var(--acc);transition:color .5s}
+.sl input{width:100%;accent-color:var(--acc)}
+.sl small{display:block;color:var(--ink2);font-size:.86rem;min-height:1.4em}
+.ladder{background:var(--white);border-radius:26px;padding:26px;display:flex;flex-direction:column;gap:16px}
+.rungs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;align-items:end;height:220px;position:relative}
+.rung{border-radius:12px 12px 4px 4px;background:var(--paper);display:flex;align-items:flex-end;justify-content:center;padding-bottom:8px;font-family:var(--h);font-weight:800;color:var(--ink2);transition:background-color .4s,color .4s}
+.rung.me{background:var(--ink);color:var(--white)}
+.rung.tg{background:var(--acc);color:var(--accT)}
+.rung.me.tg{background:linear-gradient(90deg,var(--ink) 50%,var(--acc) 50%)}
+.lsum{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.lsum div{background:var(--paper);border-radius:16px;padding:14px}
+.lsum small{display:block;color:var(--ink2);font-size:.84rem}
+.lsum b{font-family:var(--h);font-size:1.5rem;letter-spacing:-.02em}
+.verdict{font-size:1.05rem;padding:14px 16px;border-radius:16px;background:var(--paper);border-inline-start:5px solid var(--tan)}
+
+/* writing */
+#ecrire{background:var(--white)}
+.wr{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:24px;margin-top:44px}
+.prompt{background:var(--paper);border-radius:22px;padding:22px;margin-bottom:12px}
+.prompt small{display:block;color:var(--tan);font-weight:700;margin-bottom:6px}
+.prompt p{font-family:var(--h);font-weight:700;font-size:1.25rem;line-height:1.3;letter-spacing:-.01em}
+textarea{width:100%;min-height:280px;border:2px solid var(--line);border-radius:22px;padding:20px;background:var(--white);font-size:1.05rem;line-height:1.7;resize:vertical}
+textarea:focus-visible{outline:none;border-color:var(--acc)}
+.wside{display:grid;gap:12px;align-content:start}
+.ring{position:relative;width:180px;height:180px;margin:0 auto}
+.ring svg{transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:14}
+.ring .bg{stroke:var(--paper)}
+.ring .fg{stroke:var(--acc);stroke-linecap:round;transition:stroke-dashoffset .3s,stroke .5s}
+.ring div{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.ring b{font-family:var(--h);font-size:2.6rem;line-height:1}
+.ring small{color:var(--ink2);font-size:.86rem}
+.wbox{background:var(--paper);border-radius:22px;padding:18px;display:grid;gap:10px}
+.wbox .tm{font-family:var(--h);font-size:2.2rem;letter-spacing:-.02em}
+.checks{list-style:none;display:grid;gap:6px;font-size:.94rem}
+.checks li{display:flex;gap:10px;align-items:center;color:var(--ink2)}
+.checks li i{width:18px;height:18px;border-radius:50%;border:2px solid var(--line);flex:none;display:grid;place-items:center;font-style:normal;font-size:.7rem;transition:background-color .3s,border-color .3s}
+.checks li.on{color:var(--ink)}
+.checks li.on i{background:var(--acc);border-color:var(--acc);color:var(--accT)}
+
+/* live */
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;margin-top:44px}
+.day{background:var(--white);border-radius:18px;padding:12px;min-height:170px;display:flex;flex-direction:column;gap:8px}
+.day>small{font-weight:700;color:var(--ink2)}
+.day.off{background:transparent;border:1px dashed var(--line)}
+.live{border-radius:12px;padding:10px;background:var(--acc);color:var(--accT);text-align:start;font-size:.86rem;line-height:1.3;transition:background-color .5s,transform .2s var(--ease)}
+.live:hover{transform:scale(1.03)}
+.live b{display:block;font-size:.95rem}
+.live.r{background:var(--ink);color:var(--white)}
+.wknote{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;font-size:.9rem;color:var(--ink2)}
+
+/* dossier */
+#dossier{background:var(--ink);color:var(--white)}
+#dossier .lead{color:#BDB9B0}
+.dos{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px;margin-top:44px}
+.dos .ph{border-radius:26px;overflow:hidden;position:relative;min-height:420px}
+.dos .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.prog{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.prog .tr{flex:1;height:10px;border-radius:10px;background:#2A2A2A;overflow:hidden}
+.prog .tr i{display:block;height:100%;background:var(--acc);transition:width .5s var(--ease),background-color .5s}
+.prog b{font-family:var(--h);font-size:1.4rem}
+.todo{list-style:none;display:grid;gap:8px}
+.todo label{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;border-radius:16px;background:#1C1C1C;cursor:pointer;transition:background-color .2s}
+.todo label:hover{background:#242424}
+.todo input{width:22px;height:22px;accent-color:var(--acc);flex:none;margin-top:2px}
+.todo span b{display:block}
+.todo span small{color:#A8A49B}
+.todo input:checked+span b{text-decoration:line-through;color:#8C887F}
+
+/* tarifs */
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:44px}
+.plan{border-radius:26px;padding:28px;background:var(--white);display:flex;flex-direction:column;gap:14px}
+.plan.hi{background:var(--acc);color:var(--accT);transition:background-color .5s}
+.plan small{font-weight:700}
+.plan h3{font-size:2.1rem}
+.plan .pr{font-family:var(--h);font-size:clamp(1.9rem,3vw,2.6rem);letter-spacing:-.03em}
+[dir="rtl"] .plan .pr{letter-spacing:0}
+.plan ul{list-style:none;display:grid;gap:8px}
+.plan li{display:flex;gap:10px}
+.plan li::before{content:"→";flex:none;color:var(--tan)}
+[dir="rtl"] .plan li::before{content:"←"}
+.plan.hi li::before{color:currentColor}
+.plan .btn{margin-top:auto}
+
+/* faq */
+.faq{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:40px;align-items:start}
+.qs{border-top:2px solid var(--ink)}
+.qs details{border-bottom:1px solid var(--line)}
+.qs summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;padding:20px 0;font-family:var(--h);font-weight:700;font-size:1.25rem;letter-spacing:-.01em}
+[dir="rtl"] .qs summary{letter-spacing:0}
+.qs summary::-webkit-details-marker{display:none}
+.qs summary::after{content:"+";font-size:1.6rem;line-height:1;color:var(--tan);transition:transform .3s var(--ease)}
+.qs details[open] summary::after{transform:rotate(45deg)}
+.qs p{padding:0 0 20px;color:var(--ink2);max-width:62ch}
+
+/* inscription */
+#test{background:var(--acc);color:var(--accT);transition:background-color .5s}
+#test .lead{color:inherit;opacity:.85}
+.tst{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px;align-items:start}
+form.f{background:var(--white);color:var(--ink);border-radius:26px;padding:clamp(22px,3.4vw,40px);display:grid;gap:14px}
+.f .r2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.f label{display:grid;gap:6px;font-weight:700;font-size:.94rem}
+.f input,.f select{height:52px;border-radius:14px;border:1px solid var(--line);background:var(--paper);padding:0 14px}
+.f input:focus-visible,.f select:focus-visible{outline:2px solid var(--ink);outline-offset:0}
+#msg{min-height:1.4em;font-weight:700}
+#msg.err{color:#C42B1C}
+.steps3{list-style:none;display:grid;gap:12px;margin-top:28px;counter-reset:s}
+.steps3 li{display:flex;gap:14px;align-items:flex-start;font-size:1.05rem}
+.steps3 li::before{counter-increment:s;content:counter(s);flex:none;width:34px;height:34px;border-radius:50%;background:var(--white);color:var(--ink);display:grid;place-items:center;font-family:var(--h);font-weight:800}
+
+/* footer */
+footer{background:var(--ink);color:#BDB9B0;overflow:hidden}
+.fh{position:relative;height:clamp(260px,38vw,480px);overflow:hidden}
+.fh img{width:100%;height:100%;object-fit:cover;opacity:.75}
+.fh h2{position:absolute;inset-inline-start:clamp(16px,3vw,40px);bottom:24px;color:var(--white);font-size:clamp(3.4rem,11vw,10rem)}
+.fc{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;padding:44px 0 0}
+.fc b{display:block;color:var(--white);margin-bottom:8px}
+.fc p{font-size:.94rem}
+.fb{margin-top:36px;padding:18px 0 40px;border-top:1px solid #2A2A2A;font-size:.86rem;display:grid;gap:8px}
+.fb a{color:var(--white);text-decoration:underline}
+#credits{font-size:.78rem;color:#8C887F}
+.waf{position:fixed;bottom:18px;inset-inline-end:18px;z-index:45;display:flex;align-items:center;gap:10px;background:var(--wa);color:#04361A;border-radius:999px;padding:0 18px 0 8px;height:54px;font-weight:700;box-shadow:0 14px 30px -12px rgba(0,0,0,.45);transition:transform .2s var(--ease)}
+.waf:hover{transform:translateY(-2px)}
+.waf i{width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center}
+#toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);background:var(--ink);color:var(--white);padding:14px 18px;border-radius:16px;z-index:60;opacity:0;visibility:hidden;transition:opacity .3s,transform .3s var(--ease),visibility .3s;max-width:min(92vw,440px);font-weight:700;font-size:.92rem}
+#toast.on{opacity:1;visibility:visible;transform:translate(-50%,0)}
+
+html.js:not(.static) [data-up]{opacity:0;transform:translateY(30px)}
+
+@media(max-width:1060px){
+  header nav{display:none}
+  .exh,.lv,.wr,.dos,.faq,.tst{grid-template-columns:minmax(0,1fr)}
+  .dests{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .parts{flex-wrap:wrap}
+  .part{flex:1 1 40% !important}
+  .week{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .plans{grid-template-columns:minmax(0,1fr)}
+  .fc{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+  body{font-size:16px}
+  header .w{height:62px;gap:10px}
+  header .btn{display:none}
+  .htop{grid-template-columns:minmax(0,1fr)}
+  .face{display:none}
+  .dest{aspect-ratio:4/5}
+  .exinfo,.lsum{grid-template-columns:minmax(0,1fr)}
+  .rungs{height:160px}
+  .week{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .f .r2{grid-template-columns:minmax(0,1fr)}
+  .fc{grid-template-columns:minmax(0,1fr)}
+  .waf span{display:none}
+  .waf{padding:0 7px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+/* v2 */
+@media(min-width:1061px){.dest{aspect-ratio:5/4}}
+
+/* v2 */
+
+/* v2 */
+.prompt [dir="ltr"]{text-align:left}
+
+</style>
+</head>
+<body>
+<div class="demo"><span data-i="demo0">Site de démonstration, plateforme fictive.</span> <a href="https://form.afexad.app/" data-i="demo1">Autres modèles</a></div>
+<header>
+  <div class="w">
+    <a class="logo" href="#top" aria-label="Wijha"><span data-i="brand">wijha</span><span class="dot" aria-hidden="true"></span></a>
+    <nav aria-label="Sections"><a href="#exam" data-i="n1">L’examen</a><a href="#niveau" data-i="n2">Mon niveau</a><a href="#ecrire" data-i="n3">S’entraîner</a><a href="#direct" data-i="n4">En direct</a><a href="#dossier" data-i="n5">Dossier</a><a href="#tarifs" data-i="n6">Tarifs</a></nav>
+    <div class="lang" role="group" aria-label="Langue"><button type="button" data-l="fr" aria-pressed="true">FR</button><button type="button" data-l="ar" aria-pressed="false">ع</button><button type="button" data-l="en" aria-pressed="false">EN</button></div>
+    <a class="btn k" href="#test" data-i="cta">Test de niveau gratuit</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="w">
+      <div class="htop">
+        <h1 id="h1"><span>Votre langue.</span><span>Votre visa.</span><span>Votre départ.</span></h1>
+        <div class="face"><img src="assets/img/etudiante-640.webp" srcset="assets/img/etudiante-640.webp 640w, assets/img/etudiante-1280.webp 1280w" sizes="250px" width="1280" height="1921" alt="" data-alt="faceAlt" fetchpriority="high"></div>
+      </div>
+      <div class="hsub"><p data-i="hP">Préparez le TCF, l’IELTS ou le Goethe-Zertifikat depuis chez vous, en cours du soir en direct. Choisissez d’abord où vous voulez étudier.</p><a class="btn t" href="#niveau" data-i="hB">Estimer mon niveau</a></div>
+      <div class="dests" id="dests" role="group"></div>
+    </div>
+  </section>
+
+  <section id="exam">
+    <div class="w">
+      <div class="exh">
+        <div><p class="lead" style="margin:0 0 10px" id="exFor"></p><div class="exname" id="exName">TCF</div></div>
+        <div><h2 data-i="eH" data-up style="font-size:clamp(2rem,4vw,3.4rem)">Ce qui vous attend le jour J.</h2><p class="lead" id="exDesc"></p></div>
+      </div>
+      <div class="parts" id="parts"></div>
+      <div class="exinfo" id="exinfo"></div>
+      <p class="disc" data-i="exDisc">Formats et niveaux donnés à titre indicatif. Vérifiez toujours les exigences de votre établissement et du centre d’examen.</p>
+    </div>
+  </section>
+
+  <section id="niveau">
+    <div class="w">
+      <h2 data-i="lH" data-up>Où en êtes-vous ?</h2>
+      <p class="lead" data-i="lP" data-up>Placez chaque curseur sur ce que vous savez faire aujourd’hui. On compare avec le niveau visé et on calcule le temps de préparation.</p>
+      <div class="lv">
+        <div class="sliders" id="sliders"></div>
+        <div class="ladder" id="ladder"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ecrire">
+    <div class="w">
+      <h2 data-i="wH" data-up>Entraînez-vous à l’écrit.</h2>
+      <p class="lead" data-i="wP" data-up>Un vrai sujet du format de votre examen. Lancez le chrono et écrivez : le compteur vous dit quand vous avez assez de mots.</p>
+      <div class="wr">
+        <div><div class="prompt" id="prompt"></div><textarea id="txt" aria-label="Votre texte" spellcheck="true"></textarea></div>
+        <div class="wside">
+          <div class="ring"><svg width="180" height="180" viewBox="0 0 180 180" aria-hidden="true"><circle class="bg" cx="90" cy="90" r="76"/><circle class="fg" id="ringFg" cx="90" cy="90" r="76" stroke-dasharray="477.5" stroke-dashoffset="477.5"/></svg><div><b id="wc">0</b><small id="wcT"></small></div></div>
+          <div class="wbox"><div class="tm" id="wtm">0:00</div><div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" class="btn k" id="wGo" data-i="wGo">Lancer le chrono</button><button type="button" class="btn o" id="wNew" data-i="wNew">Autre sujet</button></div></div>
+          <ul class="checks" id="checks"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="direct">
+    <div class="w">
+      <h2 data-i="dH" data-up>Les cours en direct, le soir.</h2>
+      <p class="lead" data-i="dP" data-up>À l’heure d’Alger, après le travail ou l’université. Chaque cours est enregistré si vous le ratez.</p>
+      <div class="week" id="week"></div>
+      <div class="wknote" id="wknote"></div>
+    </div>
+  </section>
+
+  <section id="dossier">
+    <div class="w">
+      <h2 data-i="oH" data-up>Votre dossier, case par case.</h2>
+      <p class="lead" id="oP" data-up></p>
+      <div class="dos">
+        <div class="ph"><img src="assets/img/panneau-640.webp" srcset="assets/img/panneau-640.webp 640w, assets/img/panneau-1280.webp 1280w" sizes="(min-width:1060px) 40vw, 92vw" width="1280" height="852" alt="" data-alt="panAlt" loading="lazy"></div>
+        <div><div class="prog"><div class="tr"><i id="progI" style="width:0"></i></div><b id="progB">0/6</b></div><ul class="todo" id="todo"></ul><p class="disc" data-i="oDisc">Liste indicative. Les démarches changent : vérifiez toujours sur les sites officiels de l’ambassade et des établissements.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tarifs">
+    <div class="w">
+      <h2 data-i="tH" data-up>Trois formules, un objectif.</h2>
+      <p class="lead" id="tP" data-up></p>
+      <div class="plans" id="plans"></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="w faq">
+      <div><h2 data-i="qH" data-up>Questions avant le départ.</h2><p class="lead" data-i="qP" data-up>Ce que les familles nous demandent le plus souvent.</p></div>
+      <div class="qs" id="qs"></div>
+    </div>
+  </section>
+
+  <section id="test">
+    <div class="w tst">
+      <div>
+        <h2 data-i="iH" data-up>Commencez par le test gratuit.</h2>
+        <p class="lead" data-i="iP" data-up>30 minutes en ligne avec un professeur, puis un plan de préparation adapté à votre destination.</p>
+        <ol class="steps3" id="steps3"></ol>
+      </div>
+      <form class="f" id="f" novalidate></form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="fh"><img src="assets/img/aeroport-1280.webp" srcset="assets/img/aeroport-640.webp 640w, assets/img/aeroport-1280.webp 1280w, assets/img/aeroport-1920.webp 1920w" sizes="100vw" width="1280" height="867" alt="" data-alt="aeroAlt" loading="lazy"><h2 data-i="bon">Bon départ.</h2></div>
+  <div class="w">
+    <div class="fc">
+      <div><b data-i="brand">wijha</b><p data-i="foA">Plateforme fictive de préparation aux examens de langue pour les étudiants algériens.</p></div>
+      <div><b data-i="foE">Examens</b><p>TCF · TEF · IELTS · Goethe-Zertifikat</p></div>
+      <div><b data-i="foH">Cours en direct</b><p data-i="foHv">Dimanche → jeudi, 19 h – 22 h, heure d’Alger.</p></div>
+      <div><b data-i="foC">Contact</b><p data-i="foCv">WhatsApp : numéro de démonstration.</p></div>
+    </div>
+    <div class="fb">
+      <p><span data-i="foot">© 2026 Wijha, plateforme fictive.</span> <span data-i="by">Site réalisé par</span> <a href="https://afexad.app" target="_blank" rel="noopener">AFEX Digital</a></p>
+      <p id="credits"></p>
+    </div>
+  </div>
+</footer>
+
+<button type="button" class="waf" id="waf"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></i><span data-i="waT">Un conseiller</span></button>
+<div id="toast" role="status"></div>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
