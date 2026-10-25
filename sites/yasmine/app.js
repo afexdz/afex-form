@@ -140,6 +140,7 @@
   var now = new Date();
   var OD = (function () { var d = new Date(now); d.setHours(10, 0, 0, 0); d.setDate(d.getDate() + ((6 - d.getDay() + 7) % 7) + 7); return d; })();
   function fmt(d, o) { try { return new Intl.DateTimeFormat(I[lang].loc, o).format(d); } catch (e) { return d.toDateString(); } }
+  function openWa() { var m = { fr: "Bonjour AFEX Digital, je viens du site de démonstration « " + document.title + " ». Je veux un site comme celui-ci.", ar: "مرحبًا AFEX Digital، أتيت من الموقع التجريبي « " + document.title + " ». أريد موقعًا مثله.", en: "Hello AFEX Digital, I found the demo site “" + document.title + "”. I would like a website like this one." }; window.open("https://wa.me/213657944090?text=" + encodeURIComponent(m[lang] || m.fr), "_blank", "noopener"); }
   function toast(t) { var el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(function () { el.classList.remove("on"); }, 4200); }
 
   function tick() {
@@ -263,7 +264,7 @@
     if (na + nc > SLOTS[slot][1] - SLOTS[slot][2]) { $("#msg").textContent = t.errCap; return; }
     $("#msg").textContent = t.demo;
   });
-  $("#waf").addEventListener("click", function () { toast(I[lang].waDemo); });
+  $("#waf").addEventListener("click", function () { openWa(); });
 
   render();
   setInterval(tick, 1000);

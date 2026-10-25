@@ -121,6 +121,7 @@
 
   var lang = "fr", open = 0, job = 0, qi = 0, ans = [], pay = 2, tm = 0, uname = "", ready = false, dyn = [];
   try { var sv = localStorage.getItem("asafar-lang"); if (I[sv]) lang = sv; } catch (e) {}
+  function openWa() { var m = { fr: "Bonjour AFEX Digital, je viens du site de démonstration « " + document.title + " ». Je veux un site comme celui-ci.", ar: "مرحبًا AFEX Digital، أتيت من الموقع التجريبي « " + document.title + " ». أريد موقعًا مثله.", en: "Hello AFEX Digital, I found the demo site “" + document.title + "”. I would like a website like this one." }; window.open("https://wa.me/213657944090?text=" + encodeURIComponent(m[lang] || m.fr), "_blank", "noopener"); }
   function toast(t) { var el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(function () { el.classList.remove("on"); }, 4200); }
   function go(sel) { var el = $(sel); if (!el) return; if (lenis) lenis.scrollTo(el, { offset: -10 }); else el.scrollIntoView(); }
 
@@ -243,7 +244,7 @@
   $("#faqL").addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; var on = b.getAttribute("aria-expanded") !== "true"; b.setAttribute("aria-expanded", on); $("#" + b.getAttribute("aria-controls")).hidden = !on; if (ready) ScrollTrigger.refresh(); });
   $("#f").addEventListener("change", function (e) { if (e.target.name === "job") { job = +e.target.value; renderBadge(true); } });
   $("#f").addEventListener("submit", function (e) { e.preventDefault(); var f = e.target, t = I[lang], m = $("#msg"); if (!f.name.value.trim() || !/^0[5-7]\d{8}$/.test(f.tel.value.replace(/\s/g, ""))) { m.textContent = t.err; m.className = "err"; (f.name.value.trim() ? f.tel : f.name).focus(); return; } m.className = ""; m.textContent = t.demo; });
-  $("#wa").addEventListener("click", function () { toast(I[lang].waDemo); });
+  $("#wa").addEventListener("click", function () { openWa(); });
 
   var lenis = null;
   setLang(lang);

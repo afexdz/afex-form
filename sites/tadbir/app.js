@@ -120,6 +120,7 @@
   function fmt(d, o) { try { return new Intl.DateTimeFormat(I[lang].loc === "ar-DZ" ? "ar-DZ-u-nu-latn" : I[lang].loc, o).format(d); } catch (e) { return d.toDateString(); } }
   function durTxt(m) { var t = lang; if (m < 1) return t === "ar" ? Math.round(m * 4) + " أسابيع" : t === "en" ? Math.round(m * 4) + " weeks" : Math.round(m * 4) + " semaines"; if (m === 1.5) return t === "ar" ? "6 أسابيع" : t === "en" ? "6 weeks" : "6 semaines"; return t === "ar" ? m + (m === 1 ? " شهر" : " أشهر") : t === "en" ? m + (m === 1 ? " month" : " months") : m + " mois"; }
   function durBand(m) { return m < 1 ? 0 : m < 3 ? 1 : 2; }
+  function openWa() { var m = { fr: "Bonjour AFEX Digital, je viens du site de démonstration « " + document.title + " ». Je veux un site comme celui-ci.", ar: "مرحبًا AFEX Digital، أتيت من الموقع التجريبي « " + document.title + " ». أريد موقعًا مثله.", en: "Hello AFEX Digital, I found the demo site “" + document.title + "”. I would like a website like this one." }; window.open("https://wa.me/213657944090?text=" + encodeURIComponent(m[lang] || m.fr), "_blank", "noopener"); }
   function toast(t) { var el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(function () { el.classList.remove("on"); }, 4200); }
 
   /* promo slider */
@@ -252,7 +253,7 @@
   $("#cartD").addEventListener("submit", function (e) { e.preventDefault(); var f = e.target, t = I[lang]; if (!f.name.value.trim() || !/^0[5-7]\d{8}$/.test(f.tel.value.replace(/\s/g, ""))) { $("#msg").textContent = t.err; (f.name.value.trim() ? f.tel : f.name).focus(); return; } $("#msg").textContent = t.demo; });
   $("#mtabs").addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; month = +b.dataset.m; renderCal(); if (!STATIC) gsap.from("#month .ev", { scale: .8, opacity: 0, duration: .35, stagger: .02 }); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && $(".drawer.on")) closeDrawers(); });
-  $("#waf").addEventListener("click", function () { toast(I[lang].waDemo); });
+  $("#waf").addEventListener("click", function () { openWa(); });
   $("#quoteB").addEventListener("click", function () { toast(I[lang].quote); });
 
   var lenis = null;

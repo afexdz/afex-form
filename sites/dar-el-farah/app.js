@@ -145,6 +145,7 @@
   var lang = "fr", zone = 0, ready = false, dyn = [], shown = 0, step = 0, story = -1, sIdx = 0, sTl = null, busTl = null;
   try { var sv = localStorage.getItem("farah-lang"); if (I[sv]) lang = sv; } catch (e) {}
   function fmt(d, o) { try { return new Intl.DateTimeFormat(I[lang].loc, o).format(d); } catch (e) { return d.toDateString(); } }
+  function openWa() { var m = { fr: "Bonjour AFEX Digital, je viens du site de démonstration « " + document.title + " ». Je veux un site comme celui-ci.", ar: "مرحبًا AFEX Digital، أتيت من الموقع التجريبي « " + document.title + " ». أريد موقعًا مثله.", en: "Hello AFEX Digital, I found the demo site “" + document.title + "”. I would like a website like this one." }; window.open("https://wa.me/213657944090?text=" + encodeURIComponent(m[lang] || m.fr), "_blank", "noopener"); }
   function toast(t) { var el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(function () { el.classList.remove("on"); }, 4200); }
 
   /* hero card stack */
@@ -349,9 +350,9 @@
   });
   $("#docs").addEventListener("change", summary);
   $("#f").addEventListener("submit", function (e) { e.preventDefault(); $("#next").click(); });
-  $("#waf").addEventListener("click", function () { toast(I[lang].waDemo); });
+  $("#waf").addEventListener("click", function () { openWa(); });
   $("#faqL").addEventListener("click", function (e) { var b = e.target.closest(".qchips button"); if (!b) return; faqI = +b.dataset.q; showFaq(true); });
-  $("#footWa").addEventListener("click", function () { toast(I[lang].waDemo); });
+  $("#footWa").addEventListener("click", function () { openWa(); });
 
   var lenis = null;
   render();

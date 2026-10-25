@@ -102,6 +102,7 @@
 
   var lang = "fr", di = 0, sk = [1, 1, 1, 1], pi = 0, wT = null, wS = 0, slot = 0, ready = false, dyn = [];
   try { var sv = localStorage.getItem("wijha-lang"); if (I[sv]) lang = sv; var sd = +localStorage.getItem("wijha-dest"); if (D[sd]) di = sd; } catch (e) {}
+  function openWa() { var m = { fr: "Bonjour AFEX Digital, je viens du site de démonstration « " + document.title + " ». Je veux un site comme celui-ci.", ar: "مرحبًا AFEX Digital، أتيت من الموقع التجريبي « " + document.title + " ». أريد موقعًا مثله.", en: "Hello AFEX Digital, I found the demo site “" + document.title + "”. I would like a website like this one." }; window.open("https://wa.me/213657944090?text=" + encodeURIComponent(m[lang] || m.fr), "_blank", "noopener"); }
   function toast(t) { var el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(function () { el.classList.remove("on"); }, 4200); }
   function fmt(d, o) { try { return new Intl.DateTimeFormat(lang === "ar" ? "ar-DZ-u-nu-latn" : I[lang].loc, o).format(d); } catch (e) { return d.toDateString(); } }
   function dest() { return D[di]; }
@@ -217,7 +218,7 @@
   $("#todo").addEventListener("change", function () { var done = $$("#todo input:checked").map(function (x) { return +x.dataset.td; }); try { localStorage.setItem(doneKey(), JSON.stringify(done)); } catch (e) {} renderProg(); });
   $("#f").addEventListener("change", function (e) { if (e.target.id === "fDest") setDest(+e.target.value, true); });
   $("#f").addEventListener("submit", function (e) { e.preventDefault(); var f = e.target, t = I[lang], m = $("#msg"); if (!f.name.value.trim() || !/^0[5-7]\d{8}$/.test(f.tel.value.replace(/\s/g, ""))) { m.textContent = t.err; m.className = "err"; (f.name.value.trim() ? f.tel : f.name).focus(); return; } m.className = ""; m.textContent = t.demo; });
-  $("#waf").addEventListener("click", function () { toast(I[lang].waDemo); });
+  $("#waf").addEventListener("click", function () { openWa(); });
 
   var lenis = null;
   setLang(lang);
