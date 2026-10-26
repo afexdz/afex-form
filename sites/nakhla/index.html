@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nakhla, école de formation polyvalente à Ghardaïa</title>
+<meta name="description" content="Nakhla : école de formation polyvalente à Ghardaïa. Couture, tissage du tapis, pâtisserie, cuisine et traiteur, artisanat, installation solaire, culture du palmier dattier. Groupes femmes, simulateur de micro-projet.">
+<meta name="theme-color" content="#B8643C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='14' fill='%23B8643C'/%3E%3Cpath d='M16 26V13M16 13c-4-4-8-3-10-1M16 13c4-4 8-3 10-1M16 13c-2-5-6-6-8-6M16 13c2-5 6-6 8-6' stroke='%23F5EFE4' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&family=Rakkas&family=Lateef:wght@400;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('static');</script>
+<style>
+:root{--chaux:#F5EFE4;--sand:#EAD9BF;--ochre:#D99A5B;--clay:#B8643C;--clayD:#97492A;--sky:#7FB8CC;--skyL:#D5EAF1;--skyD:#2F6D82;--palm:#2F5D3A;--ink:#2B2118;--ink2:#6E5E4E;--white:#FFFCF7;--line:#E0D2BC;--wa:#25D366;
+  --h:"Caprasimo","Rakkas",Georgia,serif;--t:"Nunito Sans","Lateef",system-ui,sans-serif;--ease:cubic-bezier(.22,1,.36,1);--blob:44% 56% 52% 48% / 46% 44% 56% 54%}
+[dir="rtl"]{--h:"Rakkas",serif;--t:"Lateef",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip}
+html.lenis,html.lenis body{height:auto}
+body{font-family:var(--t);background:var(--chaux);color:var(--ink);line-height:1.6;overflow-x:clip;font-size:17px}
+[dir="rtl"] body{font-size:21px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+img{display:block;max-width:100%;height:auto}
+:focus-visible{outline:3px solid var(--skyD);outline-offset:3px}
+.w{max-width:1260px;margin:0 auto;padding:0 clamp(16px,3vw,40px)}
+h1,h2,h3{font-family:var(--h);font-weight:400;line-height:1.02;overflow-wrap:break-word;min-width:0}
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3{line-height:1.35}
+h2{font-size:clamp(2.3rem,5vw,4.4rem);color:var(--clayD)}
+.lead{font-size:1.12rem;color:var(--ink2);max-width:54ch;margin-top:16px}
+section{padding:clamp(70px,9vw,130px) 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:999px;font-weight:800;white-space:nowrap;transition:transform .25s var(--ease),background-color .25s,color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:none}
+.btn.c{background:var(--clay);color:var(--white)}
+.btn.c:hover{background:var(--clayD)}
+.btn.s{background:var(--skyD);color:var(--white)}
+.btn.o{border:2px solid var(--clay);color:var(--clayD)}
+.btn.o:hover{background:var(--clay);color:var(--white)}
+
+/* header */
+.demo{text-align:center;font-size:.86rem;color:var(--ink2);padding:10px 16px;background:var(--sand)}
+.demo a{color:var(--clayD);font-weight:800;text-decoration:underline}
+header{position:sticky;top:0;z-index:40;background:rgba(245,239,228,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+header .w{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:16px;height:84px}
+header nav{display:flex;gap:4px}
+header nav.r{justify-content:flex-end}
+header nav a{padding:8px 12px;border-radius:999px;font-weight:600;font-size:.96rem;transition:background-color .2s}
+header nav a:hover{background:var(--sand)}
+.logo{display:flex;flex-direction:column;align-items:center;line-height:1}
+.logo .larch{width:58px;height:44px;border-radius:30px 30px 6px 6px;background:var(--clay);display:grid;place-items:center}
+.logo b{font-family:var(--h);font-size:1.4rem;color:var(--clayD);margin-top:4px}
+.lang{display:flex;background:var(--sand);border-radius:999px;padding:3px}
+.lang button{min-width:38px;height:34px;border-radius:999px;font-size:.84rem;font-weight:800;transition:background-color .2s,color .2s}
+.lang button[aria-pressed="true"]{background:var(--clay);color:var(--white)}
+
+/* hero */
+.hero{padding:clamp(20px,4vw,50px) 0 clamp(60px,8vw,110px)}
+.hero .w{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(24px,4vw,60px);align-items:center}
+.hero h1{font-size:clamp(3rem,7vw,6.2rem);color:var(--clayD)}
+[dir="rtl"] .hero h1{font-size:clamp(2.8rem,6vw,5rem)}
+.hero h1 span{color:var(--skyD)}
+.hero p{font-size:1.2rem;max-width:44ch;margin:22px 0 28px;color:var(--ink2)}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap}
+.hv{position:relative}
+.blob{aspect-ratio:1/1;border-radius:var(--blob);overflow:hidden;background:var(--sand);box-shadow:0 0 0 14px var(--white),0 40px 80px -30px rgba(91,52,24,.5)}
+.blob img{width:100%;height:100%;object-fit:cover}
+.seal{position:absolute;inset-inline-start:-14px;bottom:8%;width:150px;height:150px;border-radius:50%;background:var(--skyD);color:var(--white);display:grid;place-content:center;text-align:center;padding:16px;font-weight:800;line-height:1.2;box-shadow:0 0 0 8px var(--chaux)}
+.seal b{display:block;font-family:var(--h);font-weight:400;font-size:1.4rem}
+.hv .mini{position:absolute;inset-inline-end:-10px;top:-14px;width:34%;aspect-ratio:3/4;border-radius:50% 50% 18px 18px;overflow:hidden;box-shadow:0 0 0 8px var(--chaux)}
+.hv .mini img{width:100%;height:100%;object-fit:cover}
+
+/* house */
+#maison{background:var(--white)}
+.mz{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:28px;margin-top:44px;align-items:start}
+.house{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) minmax(0,.85fr);grid-template-rows:auto auto auto auto;gap:8px;padding:18px;background:var(--sand);border-radius:40px 40px 18px 18px}
+.house .roofl{grid-column:1/4;text-align:center;font-weight:800;color:var(--ink2);font-size:.86rem}
+.room{position:relative;min-height:120px;border-radius:22px 22px 10px 10px;background:var(--chaux);padding:14px;text-align:start;display:flex;flex-direction:column;justify-content:space-between;gap:8px;border:2px solid transparent;transition:background-color .3s,border-color .3s,transform .3s var(--ease)}
+.room:hover{transform:translateY(-3px)}
+.room b{font-family:var(--h);font-size:1.12rem;line-height:1.1;color:var(--clayD)}
+.room small{color:var(--ink2);font-size:.84rem}
+.room .door{position:absolute;bottom:0;inset-inline-end:14px;width:22px;height:34px;border-radius:12px 12px 0 0;background:var(--sky)}
+.room[aria-pressed="true"]{background:var(--clay);border-color:var(--clayD)}
+.room[aria-pressed="true"] b,.room[aria-pressed="true"] small{color:var(--white)}
+.room[aria-pressed="true"] .door{background:var(--white)}
+.room.terr{grid-column:1/4;background:#FFF6DC;min-height:96px}
+.room.wide{grid-column:span 2}
+.room.garden{grid-column:4;grid-row:2/7;background:#DCEBD9;border-radius:22px}
+.room.garden b{color:var(--palm)}
+.room.garden[aria-pressed="true"]{background:var(--palm);border-color:#1E4227}
+.flr{grid-column:1/4;font-size:.8rem;font-weight:800;color:var(--ink2);margin:4px 2px -2px}
+.panel{background:var(--chaux);border-radius:30px;overflow:hidden;position:sticky;top:104px}
+.panel .ph{aspect-ratio:16/10;overflow:hidden}
+.panel .ph img{width:100%;height:100%;object-fit:cover}
+.panel .bd{padding:24px;display:grid;gap:12px}
+.panel h3{font-size:2rem;color:var(--clayD)}
+.facts{display:flex;flex-wrap:wrap;gap:8px}
+.facts span{background:var(--white);border-radius:999px;padding:5px 14px;font-weight:600;font-size:.9rem}
+.panel ul{list-style:none;display:grid;gap:6px}
+.panel li{display:flex;gap:10px}
+.panel li::before{content:"";flex:none;width:10px;height:10px;border-radius:50% 50% 2px 2px;background:var(--ochre);margin-top:8px}
+
+/* simulator */
+#projet{background:var(--clay);color:var(--white)}
+#projet h2{color:var(--white)}
+#projet .lead{color:#F7DCC8}
+.sim{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:24px;margin-top:44px}
+.sctl{background:var(--clayD);border-radius:30px;padding:26px;display:grid;gap:18px;align-content:start}
+.acts2{display:flex;flex-wrap:wrap;gap:8px}
+.acts2 button{padding:10px 16px;border-radius:999px;border:2px solid rgba(255,252,247,.35);font-weight:800;transition:background-color .2s,color .2s}
+.acts2 button[aria-pressed="true"]{background:var(--white);color:var(--clayD);border-color:var(--white)}
+.sctl label{display:grid;gap:6px;font-weight:600}
+.sctl label span{display:flex;justify-content:space-between;gap:10px}
+.sctl output{font-weight:800}
+.sctl input[type=range]{accent-color:var(--ochre);width:100%}
+.sres{background:var(--white);color:var(--ink);border-radius:30px;padding:26px;display:grid;gap:16px}
+.sres .big{font-family:var(--h);font-size:clamp(2.6rem,5vw,4rem);color:var(--clayD);line-height:1}
+.bars{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:6px;align-items:end;height:170px}
+.bars div{display:flex;flex-direction:column;align-items:center;gap:4px;height:100%;justify-content:flex-end}
+.bars i{display:block;width:100%;border-radius:10px 10px 4px 4px;background:var(--ochre);transform-origin:bottom;transition:height .5s var(--ease)}
+.bars div:nth-child(n+4) i{background:var(--clay)}
+.bars small{font-size:.7rem;color:var(--ink2)}
+.snote{font-size:.86rem;color:var(--ink2)}
+
+/* horaires */
+.hor{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;margin-top:40px}
+.hcard{border-radius:30px;padding:28px;display:grid;gap:14px;align-content:start}
+.hcard.f{background:var(--skyL)}
+.hcard.m{background:var(--sand)}
+.hcard h3{font-size:1.8rem;color:var(--skyD)}
+.hcard.m h3{color:var(--clayD)}
+.hcard ul{list-style:none;display:grid;gap:8px}
+.hcard li{display:flex;justify-content:space-between;gap:14px;padding-bottom:8px;border-bottom:1px dashed rgba(43,33,24,.18)}
+.hcard li b{white-space:nowrap}
+
+/* galerie */
+.gal{columns:3 260px;column-gap:12px;margin-top:40px}
+.gal figure{break-inside:avoid;margin-bottom:12px;border-radius:24px;overflow:hidden;position:relative}
+.gal figure:nth-child(3n+1){border-radius:120px 120px 24px 24px}
+.gal img{width:100%;height:auto;transition:transform 1s var(--ease)}
+.gal figure:hover img{transform:scale(1.04)}
+.gal figcaption{position:absolute;inset-inline-start:12px;bottom:12px;background:var(--white);border-radius:999px;padding:4px 14px;font-weight:600;font-size:.88rem}
+
+/* tarifs */
+#tarifs{background:var(--white)}
+.menu{margin-top:40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 50px}
+.menu div{display:flex;align-items:baseline;gap:10px;padding:14px 0;border-bottom:1px solid var(--line)}
+.menu b{font-family:var(--h);font-weight:400;font-size:1.3rem;color:var(--clayD)}
+.menu i{flex:1;border-bottom:2px dotted var(--line);transform:translateY(-4px)}
+.menu span{font-weight:800;white-space:nowrap}
+.menu small{display:block;color:var(--ink2);font-size:.88rem}
+.incl{margin-top:24px;display:flex;flex-wrap:wrap;gap:10px}
+.incl span{background:var(--chaux);border-radius:999px;padding:8px 16px;font-weight:600}
+
+/* faq arches */
+.arches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:44px}
+.arch{background:var(--white);border-radius:160px 160px 24px 24px;padding:46px 24px 24px;text-align:center;display:flex;flex-direction:column;gap:10px;align-items:center;min-height:300px}
+.arch .q{font-family:var(--h);font-size:1.3rem;color:var(--clayD);line-height:1.2}
+.arch p{color:var(--ink2);font-size:.98rem}
+.arch .n{width:44px;height:44px;border-radius:50%;background:var(--skyL);color:var(--skyD);display:grid;place-items:center;font-weight:800}
+
+/* form */
+#inscription{background:var(--skyL)}
+.fw{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;margin-top:40px;align-items:start}
+form.f{background:var(--white);border-radius:30px;padding:clamp(22px,3.4vw,40px);display:grid;gap:14px}
+.f .r2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.f label{display:grid;gap:6px;font-weight:800;font-size:.94rem}
+.f input,.f select{height:52px;border-radius:16px;border:2px solid var(--line);background:var(--chaux);padding:0 14px;font-weight:400}
+.f input:focus-visible,.f select:focus-visible{outline:none;border-color:var(--skyD)}
+.f .seg{display:flex;flex-wrap:wrap;gap:8px}
+.f .seg label{display:flex;align-items:center;gap:8px;border:2px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer;font-weight:600}
+.f .seg input{height:auto;accent-color:var(--clay)}
+#msg{min-height:1.4em;font-weight:800;color:var(--skyD)}
+#msg.err{color:var(--clayD)}
+.vis{border-radius:30px;overflow:hidden;position:relative;min-height:480px}
+.vis img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vis .card{position:absolute;inset-inline:16px;bottom:16px;background:var(--white);border-radius:22px;padding:18px}
+.vis .card b{font-family:var(--h);font-weight:400;font-size:1.5rem;color:var(--clayD);display:block}
+.vis .card p{color:var(--ink2);font-size:.96rem}
+
+/* footer */
+footer{background:var(--ink);color:#D7C9B5;overflow:hidden}
+.fimg{height:clamp(220px,32vw,400px);position:relative}
+.fimg img{width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+.fimg::after{content:"";position:absolute;inset:auto 0 0 0;height:60%;background:linear-gradient(0deg,var(--ink),transparent)}
+.fimg p{position:absolute;z-index:2;inset-inline-start:clamp(16px,3vw,40px);bottom:10px;font-family:var(--h);color:var(--white);font-size:clamp(2.6rem,7vw,6rem);line-height:1}
+.fc{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;padding:40px 0 0}
+.fc b{display:block;color:var(--white);margin-bottom:8px}
+.fc p{font-size:.96rem}
+.fb{margin-top:36px;padding:18px 0 40px;border-top:1px solid #4A3C2E;font-size:.88rem;display:grid;gap:8px}
+.fb a{color:var(--white);text-decoration:underline}
+#credits{font-size:.8rem;color:#9C8C77}
+.waf{position:fixed;bottom:18px;inset-inline-end:18px;z-index:45;display:flex;align-items:center;gap:10px;height:58px;padding:0 20px 0 8px;border-radius:30px 30px 30px 8px;background:var(--palm);color:var(--white);font-weight:800;box-shadow:0 0 0 5px var(--chaux),0 18px 34px -14px rgba(0,0,0,.5);transition:transform .25s var(--ease)}
+[dir="rtl"] .waf{border-radius:30px 30px 8px 30px}
+.waf:hover{transform:translateY(-2px)}
+.waf i{width:42px;height:42px;border-radius:50%;background:var(--wa);display:grid;place-items:center}
+#toast{position:fixed;left:50%;bottom:96px;transform:translate(-50%,20px);background:var(--clayD);color:var(--white);padding:14px 18px;border-radius:18px;z-index:60;opacity:0;visibility:hidden;transition:opacity .3s,transform .3s var(--ease),visibility .3s;max-width:min(92vw,440px);font-weight:800;font-size:.92rem}
+#toast.on{opacity:1;visibility:visible;transform:translate(-50%,0)}
+
+html.js:not(.static) [data-up]{opacity:0;transform:translateY(30px)}
+
+@media(max-width:1060px){
+  header .w{grid-template-columns:auto minmax(0,1fr) auto;height:74px}
+  header nav{display:none}
+  .logo{flex-direction:row;gap:10px;justify-self:start}
+  .logo .larch{width:44px;height:34px}
+  .hdr-r{justify-self:end;grid-column:3}
+  .hero .w,.mz,.sim,.fw{grid-template-columns:minmax(0,1fr)}
+  .hv{max-width:560px;margin:0 auto;width:100%}
+  .panel{position:static}
+  .arches{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fc{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+  body{font-size:16px}
+  .house{grid-template-columns:repeat(2,minmax(0,1fr));padding:12px;gap:6px}
+  .room.terr,.flr,.house .roofl{grid-column:1/3}
+  .room.wide{grid-column:span 2}
+  .room.garden{grid-column:1/3;grid-row:auto;min-height:110px}
+  .room{min-height:104px}
+  .seal{width:118px;height:118px;font-size:.84rem}
+  .seal b{font-size:1.1rem}
+  .bars{gap:3px;height:140px}
+  .hor,.menu,.arches{grid-template-columns:minmax(0,1fr)}
+  .f .r2{grid-template-columns:minmax(0,1fr)}
+  .vis{min-height:360px}
+  .fc{grid-template-columns:minmax(0,1fr)}
+  .waf span{display:none}.waf{padding:0 8px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+/* v2 */
+.room b{font-size:1.02rem;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+.room small{overflow-wrap:break-word}
+
+/* v2 */
+.menu div>span:first-child{flex:0 1 auto !important;min-width:0}
+.menu b{overflow-wrap:break-word}
+
+/* v2 */
+.menu div>span:first-child{white-space:normal;font-weight:400}
+
+</style>
+</head>
+<body>
+<p class="demo"><span data-i="demo0">Site de démonstration, école fictive.</span> <a href="https://form.afexad.app/" data-i="demo1">Autres modèles</a></p>
+<header>
+  <div class="w">
+    <nav aria-label="Sections"><a href="#maison" data-i="n1">La maison</a><a href="#projet" data-i="n2">Mon projet</a><a href="#horaires" data-i="n3">Horaires</a></nav>
+    <a class="logo" href="#top" aria-label="Nakhla"><span class="larch" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 32 32"><path d="M16 28V13M16 13c-4-4-8-3-10-1M16 13c4-4 8-3 10-1M16 13c-2-5-6-6-8-6M16 13c2-5 6-6 8-6" stroke="#F5EFE4" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></span><b data-i="brand">Nakhla</b></a>
+    <div class="hdr-r" style="display:flex;justify-content:flex-end;align-items:center;gap:6px"><nav class="r" aria-label="Sections"><a href="#tarifs" data-i="n4">Tarifs</a><a href="#inscription" data-i="n5">Inscription</a></nav><div class="lang" role="group" aria-label="Langue"><button type="button" data-l="fr" aria-pressed="true">FR</button><button type="button" data-l="ar" aria-pressed="false">ع</button><button type="button" data-l="en" aria-pressed="false">EN</button></div></div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="w">
+      <div>
+        <h1 id="h1">Un métier dans les mains, <span>au cœur du M’zab.</span></h1>
+        <p data-i="hP">Couture, tapis, pâtisserie, cuisine, artisanat, solaire et palmier dattier : sept formations pratiques à Ghardaïa, avec des groupes réservés aux femmes le matin.</p>
+        <div class="acts"><a class="btn c" href="#maison" data-i="hB1">Visiter l’école</a><a class="btn o" href="#projet" data-i="hB2">Calculer mon projet</a></div>
+      </div>
+      <div class="hv">
+        <div class="blob"><img src="assets/img/ghardaia-1280.webp" srcset="assets/img/ghardaia-640.webp 640w, assets/img/ghardaia-1280.webp 1280w, assets/img/ghardaia-1920.webp 1920w" sizes="(min-width:1060px) 48vw, 92vw" width="1280" height="906" alt="" data-alt="ghAlt" fetchpriority="high"></div>
+        <div class="mini"><img src="assets/img/tapis-640.webp" width="640" height="960" alt="" data-alt="tapisAlt"></div>
+        <div class="seal"><b data-i="sealB">Groupes femmes</b><span data-i="sealS">chaque matin</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="maison">
+    <div class="w">
+      <h2 data-i="mH" data-up>Entrez dans la maison.</h2>
+      <p class="lead" data-i="mP" data-up>L’école est une maison du M’zab : chaque pièce est un atelier. Touchez une pièce pour voir la formation qui s’y donne.</p>
+      <div class="mz">
+        <div class="house" id="house"></div>
+        <div class="panel" id="panel" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projet">
+    <div class="w">
+      <h2 data-i="pH" data-up>Du métier au projet.</h2>
+      <p class="lead" data-i="pP" data-up>Beaucoup de nos stagiaires travaillent ensuite depuis la maison. Mettez vos propres chiffres et voyez ce que l’activité peut rapporter.</p>
+      <div class="sim">
+        <div class="sctl" id="sctl"></div>
+        <div class="sres" id="sres" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="horaires">
+    <div class="w">
+      <h2 data-i="hH" data-up>Des horaires pour chacun.</h2>
+      <p class="lead" data-i="hPl" data-up>Le matin entre femmes, le soir pour ceux qui travaillent, le week-end pour le solaire.</p>
+      <div class="hor" id="hor"></div>
+    </div>
+  </section>
+
+  <section id="galerie" style="padding-top:0">
+    <div class="w">
+      <h2 data-i="gH" data-up>Ghardaïa, notre atelier.</h2>
+      <div class="gal" id="gal"></div>
+    </div>
+  </section>
+
+  <section id="tarifs">
+    <div class="w">
+      <h2 data-i="tH" data-up>Les prix, comme au souk : clairs.</h2>
+      <p class="lead" data-i="tP" data-up>Prix total de chaque formation, matière première des ateliers comprise. Paiement au mois possible.</p>
+      <div class="menu" id="menu"></div>
+      <div class="incl" id="incl"></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="w">
+      <h2 data-i="qH" data-up>On nous demande souvent.</h2>
+      <div class="arches" id="arches"></div>
+    </div>
+  </section>
+
+  <section id="inscription">
+    <div class="w">
+      <h2 data-i="iH" data-up>Réservez votre place.</h2>
+      <p class="lead" data-i="iP" data-up>Laissez votre numéro : une formatrice ou un formateur vous rappelle pour l’entretien et la visite des ateliers.</p>
+      <div class="fw">
+        <form class="f" id="f" novalidate></form>
+        <div class="vis"><img src="assets/img/ruelle-1280.webp" srcset="assets/img/ruelle-640.webp 640w, assets/img/ruelle-1280.webp 1280w" sizes="(min-width:1060px) 45vw, 92vw" width="1280" height="1707" alt="" data-alt="ruelleAlt" loading="lazy"><div class="card"><b data-i="vH">Dans la vallée du M’zab</b><p data-i="vP">Adresse de démonstration, Ghardaïa. Samedi → jeudi, 8 h – 19 h.</p></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="fimg"><img src="assets/img/couchant-1280.webp" srcset="assets/img/couchant-640.webp 640w, assets/img/couchant-1280.webp 1280w, assets/img/couchant-1920.webp 1920w" sizes="100vw" width="1280" height="1600" alt="" data-alt="couchAlt" loading="lazy"><p data-i="brand">Nakhla</p></div>
+  <div class="w">
+    <div class="fc">
+      <div><b data-i="foA">Nakhla, école fictive</b><p data-i="foAd">Formation polyvalente, Ghardaïa.</p></div>
+      <div><b data-i="foH">Horaires</b><p data-i="foHv">Samedi → jeudi, 8 h – 19 h.</p></div>
+      <div><b data-i="foL">Ateliers</b><p data-i="foLv">Couture, tapis, pâtisserie, cuisine, artisanat, solaire, palmeraie.</p></div>
+      <div><b data-i="foC">Contact</b><p data-i="foCv">Téléphone : numéro de démonstration.</p></div>
+    </div>
+    <div class="fb"><p><span data-i="foot">© 2026 Nakhla, école fictive.</span> <span data-i="by">Site réalisé par</span> <a href="https://afexad.app" target="_blank" rel="noopener">AFEX Digital</a></p><p id="credits"></p></div>
+  </div>
+</footer>
+
+<button type="button" class="waf" id="waf"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></i><span data-i="waT">Écrire sur WhatsApp</span></button>
+<div id="toast" role="status"></div>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

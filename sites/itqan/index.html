@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Itqan, école de formation polyvalente à Bordj Bou Arréridj</title>
+<meta name="description" content="Itqan : école de formation polyvalente à Bordj Bou Arréridj. Réparation de smartphones, électronique, maintenance informatique et réseaux, froid et climatisation, infographie, montage vidéo, comptabilité, bureautique. Comparateur, emploi du temps et tarifs groupés.">
+<meta name="theme-color" content="#0B1220">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B1220'/%3E%3Cpath d='M8 16h6l3-6 3 12 2-6h2' stroke='%23FF7A00' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Rethink+Sans:wght@400;500;600;700&family=Zain:wght@400;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('static');</script>
+<style>
+:root{--bp:#E9EEF3;--bp2:#DCE4EC;--grid:rgba(11,18,32,.06);--white:#FFFFFF;--ink:#0B1220;--ink2:#4F5B6B;--cy:#0098C7;--cyL:#CDEFF9;--or:#FF7A00;--orD:#D96500;--ok:#13A36B;--ko:#E0413A;--line:#CBD5E0;--wa:#25D366;
+  --h:"Chakra Petch","Zain",system-ui,sans-serif;--t:"Rethink Sans","Zain",system-ui,sans-serif;--ease:cubic-bezier(.22,1,.36,1)}
+[dir="rtl"]{--h:"Zain",system-ui,sans-serif;--t:"Zain",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip}
+html.lenis,html.lenis body{height:auto}
+body{font-family:var(--t);background:var(--bp);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;color:var(--ink);line-height:1.6;overflow-x:clip;font-size:16.5px}
+[dir="rtl"] body{font-size:18.5px}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+img{display:block;max-width:100%;height:auto}
+:focus-visible{outline:3px solid var(--or);outline-offset:2px}
+.w{max-width:1320px;margin:0 auto;padding:0 clamp(16px,3vw,40px)}
+h1,h2,h3{font-family:var(--h);font-weight:700;line-height:1;letter-spacing:-.02em;overflow-wrap:break-word;min-width:0}
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3{font-weight:800;letter-spacing:0;line-height:1.25}
+h2{font-size:clamp(2.2rem,4.8vw,4.2rem)}
+.lead{font-size:1.1rem;color:var(--ink2);max-width:56ch;margin-top:14px}
+section{padding:clamp(64px,8vw,120px) 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 22px;border-radius:10px;font-weight:700;transition:transform .2s var(--ease),background-color .2s,color .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:none}
+.btn.or{background:var(--or);color:var(--white);box-shadow:0 10px 24px -12px var(--or)}
+.btn.or:hover{background:var(--orD)}
+.btn.k{background:var(--ink);color:var(--white)}
+.btn.ln{border:2px solid var(--ink)}
+.btn.ln:hover{background:var(--ink);color:var(--white)}
+kbd{font-family:var(--h);font-size:.78rem;border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:1px 6px;background:var(--white);color:var(--ink2)}
+.tile{background:var(--white);border:1px solid var(--line);border-radius:18px;position:relative;overflow:hidden}
+
+/* header */
+.demo{background:var(--ink);color:#B9C3D0;font-size:.84rem;text-align:center;padding:7px 16px}
+.demo a{color:var(--white);text-decoration:underline;font-weight:700}
+header{position:sticky;top:0;z-index:40;background:rgba(233,238,243,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .w{display:flex;align-items:center;gap:14px;height:70px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo b{font-family:var(--h);font-size:1.6rem;letter-spacing:-.01em}
+[dir="rtl"] .logo b{font-weight:800}
+.cmd{flex:1;max-width:460px;margin:0 auto;display:flex;align-items:center;gap:10px;height:44px;padding:0 12px;border:1px solid var(--line);border-radius:12px;background:var(--white);color:var(--ink2);text-align:start;transition:border-color .2s}
+.cmd:hover{border-color:var(--ink)}
+.cmd span{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lang{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--white)}
+.lang button{min-width:40px;height:38px;font-weight:700;font-size:.84rem;transition:background-color .2s,color .2s}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--white)}
+header .btn{min-height:42px;padding:0 16px}
+
+/* bento hero */
+.hero{padding:clamp(24px,4vw,44px) 0 clamp(50px,7vw,90px)}
+.bento{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(3,minmax(150px,auto));gap:12px}
+.b-main{grid-column:span 2;grid-row:span 2;padding:clamp(22px,3vw,40px);display:flex;flex-direction:column;justify-content:space-between;gap:20px;background:var(--ink);color:var(--white);border:0}
+.b-main h1{font-size:clamp(2.6rem,5.4vw,5rem)}
+[dir="rtl"] .b-main h1{font-size:clamp(2.4rem,4.6vw,4.2rem)}
+.b-main h1 em{font-style:normal;color:var(--or)}
+.b-main p{color:#B9C3D0;font-size:1.08rem;max-width:44ch}
+.b-main .acts{display:flex;gap:10px;flex-wrap:wrap}
+.b-main .btn.ln{border-color:rgba(255,255,255,.5);color:var(--white)}
+.b-main .btn.ln:hover{background:var(--white);color:var(--ink)}
+.b-ph{grid-row:span 2}
+.b-ph img,.b-ph2 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.b-ph2{grid-column:span 2}
+.b-fact{padding:20px;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.b-fact b{font-family:var(--h);font-size:clamp(1.8rem,3vw,2.6rem);line-height:1}
+.b-fact small{color:var(--ink2)}
+.b-fact.or{background:var(--or);color:var(--white);border:0}
+.b-fact.or small{color:#FFE2C7}
+.b-fact.cy{background:var(--cyL);border-color:#A9DDEE}
+.tag{position:absolute;inset-inline-start:12px;bottom:12px;background:var(--white);border-radius:8px;padding:5px 10px;font-size:.84rem;font-weight:600;z-index:2}
+
+/* formations */
+.fhead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:24px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chips button{padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--white);font-weight:600;transition:background-color .2s,color .2s,border-color .2s}
+.chips button[aria-pressed="true"]{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.card{display:flex;flex-direction:column}
+.card.wide{grid-column:span 2}
+.card .ph{position:relative;aspect-ratio:4/3;overflow:hidden}
+.card.wide .ph{aspect-ratio:8/3}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.card:hover .ph img{transform:scale(1.05)}
+.card .pole{position:absolute;top:10px;inset-inline-start:10px;font-size:.8rem;font-weight:700;padding:4px 10px;border-radius:8px;background:var(--white)}
+.card .bd{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:1.35rem;line-height:1.1}
+.card .meta{display:flex;gap:6px;flex-wrap:wrap;font-size:.84rem;color:var(--ink2)}
+.card .meta span{background:var(--bp);border-radius:6px;padding:2px 8px}
+.card .row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:8px}
+.card .pr{font-family:var(--h);font-size:1.25rem;font-weight:700}
+.card .ac{display:flex;gap:6px}
+.card .ac button{height:40px;padding:0 12px;border-radius:10px;font-weight:700;font-size:.88rem;transition:background-color .2s,color .2s,border-color .2s}
+.card .ac .info{border:1px solid var(--line)}
+.card .ac .add{background:var(--cyL);color:#005C7A}
+.card .ac .add[aria-pressed="true"]{background:var(--ok);color:var(--white)}
+.card[hidden]{display:none}
+
+/* fiche */
+.scrim{position:fixed;inset:0;background:rgba(11,18,32,.5);z-index:70;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.scrim.on{opacity:1;visibility:visible}
+.fiche{position:fixed;top:0;bottom:0;inset-inline-end:0;width:min(560px,100%);background:var(--white);z-index:71;transform:translateX(105%);transition:transform .45s var(--ease);display:flex;flex-direction:column;overflow:auto}
+[dir="rtl"] .fiche{transform:translateX(-105%)}
+.fiche.on{transform:none !important}
+.fiche .ph{aspect-ratio:16/9;position:relative;flex:none}
+.fiche .ph img{width:100%;height:100%;object-fit:cover}
+.fiche .x{position:absolute;top:12px;inset-inline-end:12px;width:42px;height:42px;border-radius:10px;background:var(--white);display:grid;place-items:center}
+.fiche .bd{padding:24px;display:grid;gap:16px}
+.fiche h3{font-size:2rem}
+.specs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.specs div{background:var(--white);padding:10px 12px}
+.specs small{display:block;color:var(--ink2);font-size:.8rem}
+.mods{list-style:none;display:grid;gap:6px}
+.mods li{display:flex;gap:10px}
+.mods li::before{content:"";flex:none;width:8px;height:8px;margin-top:9px;background:var(--or);border-radius:2px}
+
+/* compare */
+#comparer{background:var(--ink);color:var(--white)}
+#comparer .lead{color:#B9C3D0}
+.cmp{margin-top:36px;overflow-x:auto;border-radius:18px;border:1px solid #243145}
+.cmp table{width:100%;border-collapse:collapse;min-width:640px}
+.cmp th,.cmp td{padding:14px 16px;text-align:start;border-bottom:1px solid #243145;vertical-align:top}
+.cmp thead th{font-family:var(--h);font-size:1.15rem;background:#121C2E}
+.cmp tbody th{color:#8E9AAD;font-weight:500;width:180px}
+.cmp td b{font-family:var(--h);font-size:1.1rem}
+.cmp .best{color:#6FE3B4}
+.empty{padding:40px;text-align:center;color:#8E9AAD}
+
+/* planner */
+.plan{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,280px);gap:16px;margin-top:36px;align-items:start}
+.wk{display:grid;grid-template-columns:90px repeat(6,minmax(0,1fr));gap:4px}
+.wk .hd{font-weight:700;font-size:.86rem;text-align:center;padding:6px 0;color:var(--ink2)}
+.wk .sl{font-size:.82rem;color:var(--ink2);display:flex;align-items:center}
+.wk .cell{min-height:74px;border-radius:10px;background:var(--white);border:1px dashed var(--line);padding:4px;display:flex;flex-direction:column;gap:3px}
+.wk .cell.ko{border:2px solid var(--ko);background:#FDECEB}
+.wk .blk{border-radius:7px;padding:4px 6px;font-size:.74rem;font-weight:700;line-height:1.2;color:var(--white)}
+.side{display:grid;gap:12px}
+.side .tile{padding:18px}
+.side h3{font-size:1.2rem;margin-bottom:8px}
+.conf{font-weight:600}
+.conf.ok{color:var(--ok)}
+.conf.ko{color:var(--ko)}
+.legend{display:grid;gap:6px;font-size:.88rem}
+.legend span{display:flex;gap:8px;align-items:center}
+.legend i{width:12px;height:12px;border-radius:3px;flex:none}
+
+/* atelier rail */
+#atelier{padding-bottom:clamp(40px,6vw,80px)}
+.rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 0 16px;scrollbar-width:thin;margin-top:30px}
+.rail figure{flex:0 0 min(78vw,420px);aspect-ratio:4/3;border-radius:18px;overflow:hidden;position:relative;scroll-snap-align:start;background:var(--ink)}
+.rail figure img{width:100%;height:100%;object-fit:cover}
+.rail figcaption{position:absolute;inset-inline-start:12px;bottom:12px;background:var(--white);border-radius:8px;padding:5px 10px;font-size:.86rem;font-weight:600}
+.rnav{display:flex;gap:8px}
+.rnav button{width:46px;height:46px;border-radius:12px;background:var(--white);border:1px solid var(--line);display:grid;place-items:center;transition:background-color .2s,color .2s}
+.rnav button:hover{background:var(--ink);color:var(--white)}
+[dir="rtl"] .rnav svg{transform:scaleX(-1)}
+
+/* tarifs */
+.price{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:16px;margin-top:36px}
+.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.tier{padding:22px;display:flex;flex-direction:column;gap:8px}
+.tier b{font-family:var(--h);font-size:2.4rem;line-height:1}
+.tier.on{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.tier small{color:var(--ink2)}
+.tier.on small{color:#B9C3D0}
+.sum{padding:22px;display:grid;gap:10px;align-content:start}
+.sum .ln{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:8px}
+.sum .tot{font-family:var(--h);font-size:2rem;font-weight:700}
+
+/* terminal faq */
+.term{margin-top:36px;background:#0B1220;color:#D2DAE5;border-radius:18px;overflow:hidden;font-family:var(--h);direction:ltr;text-align:left}
+.term .bar{display:flex;gap:6px;padding:12px 14px;background:#121C2E}
+.term .bar i{width:12px;height:12px;border-radius:50%;background:#2A3850}
+.term .bar i:first-child{background:var(--ko)}
+.term .bar i:nth-child(2){background:var(--or)}
+.term .bar i:nth-child(3){background:var(--ok)}
+.term .body{padding:18px 20px;display:grid;gap:4px}
+.term button{display:block;width:100%;text-align:left;padding:8px 0;color:#D2DAE5;font-family:var(--t);font-size:1.02rem}
+[dir="rtl"] .term button,[dir="rtl"] .term .a{direction:rtl;text-align:right}
+.term button::before{content:"$ itqan --ask ";color:var(--or);font-family:var(--h);direction:ltr;unicode-bidi:isolate}
+.term button[aria-expanded="true"]{color:var(--white)}
+.term .a{padding:0 0 10px 18px;color:#8FD9F0;font-family:var(--t)}
+.term .a::before{content:"> ";color:#4F5B6B}
+.term .cur{display:inline-block;width:9px;height:18px;background:var(--or);vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* form */
+.fw{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:16px;margin-top:36px}
+.fw .ph{position:relative;min-height:440px}
+.fw .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+form.f{padding:clamp(20px,3vw,34px);display:grid;gap:14px;align-content:start}
+.f .r2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.f label{display:grid;gap:6px;font-weight:600;font-size:.94rem}
+.f input,.f select{height:50px;border:1px solid var(--line);border-radius:10px;background:var(--bp);padding:0 12px}
+.f input:focus-visible,.f select:focus-visible{outline:2px solid var(--cy);outline-offset:0}
+.picked{display:flex;gap:6px;flex-wrap:wrap;min-height:34px}
+.picked span{background:var(--cyL);color:#005C7A;border-radius:8px;padding:5px 10px;font-weight:600;font-size:.88rem}
+.picked em{color:var(--ink2);font-style:normal}
+#msg{min-height:1.4em;font-weight:600}
+#msg.err{color:var(--ko)}
+
+/* selection bar */
+.selbar{position:fixed;bottom:16px;left:50%;transform:translate(-50%,140%);z-index:50;display:flex;align-items:center;gap:12px;background:var(--ink);color:var(--white);border-radius:16px;padding:8px 8px 8px 16px;box-shadow:0 20px 40px -16px rgba(11,18,32,.6);transition:transform .4s var(--ease);max-width:calc(100% - 100px)}
+[dir="rtl"] .selbar{padding:8px 16px 8px 8px}
+.selbar.on{transform:translate(-50%,0)}
+.selbar b{font-family:var(--h);white-space:nowrap}
+.selbar small{color:#B9C3D0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.selbar .btn{min-height:42px;padding:0 14px}
+
+/* palette */
+.pal{position:fixed;inset:0;z-index:80;display:grid;place-items:start center;padding-top:12vh;background:rgba(11,18,32,.45);opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s}
+.pal.on{opacity:1;visibility:visible}
+.pbox{width:min(620px,92vw);background:var(--white);border-radius:18px;overflow:hidden;box-shadow:0 30px 70px -20px rgba(11,18,32,.6)}
+.pbox input{width:100%;height:60px;border:0;border-bottom:1px solid var(--line);padding:0 20px;font-size:1.1rem}
+.pbox input:focus-visible{outline:none}
+.plist{list-style:none;max-height:52vh;overflow:auto;padding:8px}
+.plist li button{width:100%;display:flex;justify-content:space-between;gap:12px;padding:12px;border-radius:10px;text-align:start}
+.plist li button[aria-selected="true"],.plist li button:hover{background:var(--bp)}
+.plist li small{color:var(--ink2)}
+.pfoot{display:flex;gap:14px;padding:10px 16px;border-top:1px solid var(--line);font-size:.8rem;color:var(--ink2);flex-wrap:wrap}
+
+/* footer */
+footer{background:var(--ink);color:#B9C3D0;overflow:hidden}
+.fimg{height:clamp(220px,30vw,380px);position:relative}
+.fimg img{width:100%;height:100%;object-fit:cover;opacity:.75}
+.fimg p{position:absolute;inset-inline-start:clamp(16px,3vw,40px);bottom:22px;font-family:var(--h);font-weight:700;color:var(--white);font-size:clamp(2rem,5vw,4rem);line-height:1;max-width:16ch}
+.fc{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;padding:44px 0 0}
+.fc b{display:block;color:var(--white);margin-bottom:8px}
+.fc p{font-size:.94rem}
+.fb{margin-top:36px;padding:18px 0 40px;border-top:1px solid #243145;font-size:.86rem;display:grid;gap:8px}
+.fb a{color:var(--white);text-decoration:underline}
+#credits{font-size:.78rem;color:#7D8A9C}
+.waf{position:fixed;bottom:16px;inset-inline-end:16px;z-index:45;display:flex;align-items:center;gap:10px;height:52px;padding:0 16px 0 6px;border-radius:12px;background:var(--white);border:1px solid var(--line);font-weight:700;box-shadow:0 14px 30px -14px rgba(11,18,32,.5);transition:transform .2s var(--ease)}
+.waf:hover{transform:translateY(-2px)}
+.waf i{width:40px;height:40px;border-radius:9px;background:var(--wa);display:grid;place-items:center}
+#toast{position:fixed;left:50%;top:84px;transform:translate(-50%,-20px);background:var(--ink);color:var(--white);padding:12px 18px;border-radius:12px;z-index:90;opacity:0;visibility:hidden;transition:opacity .3s,transform .3s var(--ease),visibility .3s;max-width:min(92vw,440px);font-weight:600;font-size:.92rem}
+#toast.on{opacity:1;visibility:visible;transform:translate(-50%,0)}
+
+html.js:not(.static) [data-up]{opacity:0;transform:translateY(26px)}
+
+@media(max-width:1060px){
+  .cmd span{display:none}.cmd{flex:none;width:44px;justify-content:center;padding:0;margin:0 0 0 auto}
+  [dir="rtl"] .cmd{margin:0 auto 0 0}
+  .cmd kbd{display:none}
+  .bento{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .b-main{grid-column:span 2;grid-row:auto}
+  .b-ph{grid-row:span 1;min-height:220px}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .plan,.price,.fw{grid-template-columns:minmax(0,1fr)}
+  .fc{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+  body{font-size:16px}
+  header .w{height:62px;gap:8px}
+  header .btn{display:none}
+  .logo b{font-size:1.35rem}
+  .bento{grid-template-columns:minmax(0,1fr)}
+  .b-main,.b-ph2{grid-column:auto}
+  .cards{grid-template-columns:minmax(0,1fr)}
+  .card.wide{grid-column:auto}
+  .card.wide .ph{aspect-ratio:4/3}
+  .wk{grid-template-columns:62px repeat(6,minmax(0,1fr));gap:3px}
+  .wk .hd{font-size:.7rem}
+  .wk .sl{font-size:.7rem}
+  .wk .blk{font-size:.6rem;padding:3px}
+  .tiers{grid-template-columns:minmax(0,1fr)}
+  .f .r2{grid-template-columns:minmax(0,1fr)}
+  .fw .ph{min-height:260px}
+  .fc{grid-template-columns:minmax(0,1fr)}
+  .selbar{left:10px;right:70px;transform:translateY(140%);max-width:none}
+  .selbar.on{transform:none}
+  .selbar small{display:none}
+  .waf span{display:none}.waf{padding:0 6px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}}
+/* v2 */
+.btn{white-space:nowrap}
+.card .row{flex-wrap:wrap}
+.card .pr{white-space:nowrap}
+.selbar small{max-width:42vw}
+
+</style>
+</head>
+<body>
+<div class="demo"><span data-i="demo0">Site de démonstration, école fictive.</span> <a href="https://form.afexad.app/" data-i="demo1">Autres modèles</a></div>
+<header>
+  <div class="w">
+    <a class="logo" href="#top" aria-label="Itqan"><svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0B1220"/><path d="M8 16h6l3-6 3 12 2-6h2" stroke="#FF7A00" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><b data-i="brand">Itqan</b></a>
+    <button type="button" class="cmd" id="cmdB" aria-label="Rechercher une formation"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span data-i="cmd">Rechercher une formation…</span><kbd>/</kbd></button>
+    <div class="lang" role="group" aria-label="Langue"><button type="button" data-l="fr" aria-pressed="true">FR</button><button type="button" data-l="ar" aria-pressed="false">ع</button><button type="button" data-l="en" aria-pressed="false">EN</button></div>
+    <a class="btn or" href="#inscription" data-i="cta">S’inscrire</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="w">
+      <div class="bento" id="bento">
+        <div class="tile b-main">
+          <h1 id="h1">Un métier entre <em>vos mains.</em></h1>
+          <div><p data-i="hP">Huit formations pratiques à Bordj Bou Arréridj : téléphones, électronique, réseaux, clim, design, vidéo et gestion. Composez votre semaine, l’école s’adapte.</p>
+          <div class="acts" style="margin-top:20px"><a class="btn or" href="#formations" data-i="hB1">Voir les formations</a><a class="btn ln" href="#semaine" data-i="hB2">Composer ma semaine</a></div></div>
+        </div>
+        <div class="tile b-ph"><img src="assets/img/mains-640.webp" srcset="assets/img/mains-640.webp 640w, assets/img/mains-1280.webp 1280w" sizes="(min-width:1060px) 24vw, 50vw" width="1280" height="2275" alt="" data-alt="mainsAlt" fetchpriority="high"><span class="tag" data-i="tag1">Atelier smartphones</span></div>
+        <div class="tile b-fact or"><small data-i="f1s">Prochaine rentrée</small><b id="rentree">—</b><small data-i="f1p">inscriptions ouvertes</small></div>
+        <div class="tile b-fact cy"><small data-i="f2s">Groupes</small><b data-i="f2b">12 max.</b><small data-i="f2p">un poste ou un établi chacun</small></div>
+        <div class="tile b-ph2"><img src="assets/img/demonte-640.webp" srcset="assets/img/demonte-640.webp 640w, assets/img/demonte-1280.webp 1280w, assets/img/demonte-1920.webp 1920w" sizes="(min-width:1060px) 48vw, 100vw" width="1280" height="853" alt="" data-alt="demAlt"><span class="tag" data-i="tag2">Pièces fournies pour les TP</span></div>
+        <div class="tile b-fact"><small data-i="f3s">Horaires</small><b data-i="f3b">8 h – 20 h</b><small data-i="f3p">matin, après-midi ou soir</small></div>
+        <div class="tile b-fact"><small data-i="f4s">Attestation</small><b data-i="f4b">+ stage</b><small data-i="f4p">dans un atelier ou une entreprise de la wilaya</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="formations" style="padding-top:0">
+    <div class="w">
+      <div class="fhead"><div><h2 data-i="fH" data-up>Huit formations, trois pôles.</h2><p class="lead" data-i="fP" data-up>Ajoutez une formation à votre sélection pour la comparer, la placer dans votre semaine et calculer le prix.</p></div><div class="chips" id="poles" role="group"></div></div>
+      <div class="cards" id="cards"></div>
+    </div>
+  </section>
+
+  <section id="comparer">
+    <div class="w">
+      <h2 data-i="cH" data-up>Comparez avant de choisir.</h2>
+      <p class="lead" data-i="cP" data-up>Les formations de votre sélection, côte à côte.</p>
+      <div class="cmp" id="cmp"></div>
+    </div>
+  </section>
+
+  <section id="semaine">
+    <div class="w">
+      <h2 data-i="sH" data-up>Composez votre semaine.</h2>
+      <p class="lead" data-i="sP" data-up>Chaque formation a ses créneaux. On vous montre tout de suite si deux cours tombent en même temps.</p>
+      <div class="plan"><div class="wk" id="wk"></div><div class="side" id="side"></div></div>
+    </div>
+  </section>
+
+  <section id="atelier">
+    <div class="w">
+      <div class="fhead"><div><h2 data-i="aH" data-up>Dans nos ateliers.</h2><p class="lead" data-i="aP" data-up>Établis, postes, outillage et pièces : on apprend en démontant.</p></div><div class="rnav"><button type="button" id="rPrev" aria-label="Précédent"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><button type="button" id="rNext" aria-label="Suivant"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div></div>
+      <div class="rail" id="rail" tabindex="0"></div>
+    </div>
+  </section>
+
+  <section id="tarifs">
+    <div class="w">
+      <h2 data-i="tH" data-up>Plus vous combinez, moins vous payez.</h2>
+      <p class="lead" data-i="tP" data-up>Le prix se calcule avec votre sélection. Paiement en 3 fois sans frais.</p>
+      <div class="price"><div class="tiers" id="tiers"></div><div class="tile sum" id="sum"></div></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="w">
+      <h2 data-i="qH" data-up>Vos questions, en ligne de commande.</h2>
+      <div class="term" id="term" data-up></div>
+    </div>
+  </section>
+
+  <section id="inscription">
+    <div class="w">
+      <h2 data-i="iH" data-up>Réservez votre place.</h2>
+      <p class="lead" data-i="iP" data-up>Votre sélection est déjà dans le formulaire. L’accueil vous rappelle pour fixer le jour de l’inscription.</p>
+      <div class="fw">
+        <div class="tile ph"><img src="assets/img/salle-640.webp" srcset="assets/img/salle-640.webp 640w, assets/img/salle-1280.webp 1280w" sizes="(min-width:1060px) 40vw, 92vw" width="1280" height="960" alt="" data-alt="salleAlt" loading="lazy"><span class="tag" data-i="tag3">La salle informatique</span></div>
+        <form class="tile f" id="f" novalidate></form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="fimg"><img src="assets/img/plateau-1280.webp" srcset="assets/img/plateau-640.webp 640w, assets/img/plateau-1280.webp 1280w, assets/img/plateau-1920.webp 1920w" sizes="100vw" width="1280" height="960" alt="" data-alt="plateauAlt" loading="lazy"><p data-i="foBig">Bordj Bou Arréridj, la ville qui répare.</p></div>
+  <div class="w">
+    <div class="fc">
+      <div><b data-i="brand">Itqan</b><p data-i="foA">École de formation polyvalente fictive, Bordj Bou Arréridj.</p></div>
+      <div><b data-i="foH">Horaires</b><p data-i="foHv">Samedi → jeudi, 8 h – 20 h.</p></div>
+      <div><b data-i="foL">Adresse</b><p data-i="foLv">Centre-ville, BBA (adresse de démonstration).</p></div>
+      <div><b data-i="foC">Contact</b><p data-i="foCv">Téléphone : numéro de démonstration.</p></div>
+    </div>
+    <div class="fb"><p><span data-i="foot">© 2026 Itqan, école fictive.</span> <span data-i="by">Site réalisé par</span> <a href="https://afexad.app" target="_blank" rel="noopener">AFEX Digital</a></p><p id="credits"></p></div>
+  </div>
+</footer>
+
+<div class="selbar" id="selbar" aria-live="polite"><b id="selN"></b><small id="selL"></small><a class="btn or" href="#tarifs" data-i="selB">Voir le prix</a></div>
+<div class="scrim" id="scrim"></div>
+<aside class="fiche" id="fiche" role="dialog" aria-modal="true" aria-labelledby="ficheT"></aside>
+<div class="pal" id="pal" role="dialog" aria-modal="true" aria-label="Rechercher"><div class="pbox"><input id="pq" autocomplete="off" aria-controls="plist"><ul class="plist" id="plist" role="listbox"></ul><div class="pfoot" id="pfoot"></div></div></div>
+<button type="button" class="waf" id="waf"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></i><span data-i="waT">WhatsApp</span></button>
+<div id="toast" role="status"></div>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/Flip.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
