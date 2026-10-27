@@ -83,7 +83,7 @@
   var lang = "fr", room = 0, si = 0, sv = { p: SIM[0].p, q: SIM[0].q, c: SIM[0].c }, ready = false, dyn = [];
   try { var sl = localStorage.getItem("nakhla-lang"); if (I[sl]) lang = sl; } catch (e) {}
   function go(s) { var el = $(s); if (!el) return; if (lenis) lenis.scrollTo(el, { offset: -80 }); else el.scrollIntoView(); }
-  function openWa() { var m = { fr: "Bonjour AFEX Digital, je viens du site de démonstration « " + document.title + " ». Je veux un site comme celui-ci.", ar: "مرحبًا AFEX Digital، أتيت من الموقع التجريبي « " + document.title + " ». أريد موقعًا مثله.", en: "Hello AFEX Digital, I found the demo site “" + document.title + "”. I would like a website like this one." }; window.open("https://wa.me/213657944090?text=" + encodeURIComponent(m[lang] || m.fr), "_blank", "noopener"); }
+  function openWa() { var m = { fr: "Bonjour AFEX Digital, je viens du site de démonstration « " + document.title + " ». Je veux un site comme celui-ci.", ar: "مرحبًا AFEX Digital، أتيت من الموقع التجريبي « " + document.title + " ». أريد موقعًا مثله.", en: "Hello AFEX Digital, I found the demo site “" + document.title + "”. I would like a website like this one." }; window.open("https://wa.me/213550284873?text=" + encodeURIComponent(m[lang] || m.fr), "_blank", "noopener"); }
 
   /* house */
   function rb(i, cls) { var f = F[i]; return '<button type="button" class="room ' + (cls || "") + '" data-r="' + i + '" aria-pressed="' + (i === room) + '"><b>' + L(f.t) + "</b><small>" + I[lang].mo.replace("{n}", f.m) + " · " + da(f.p) + '</small><span class="door" aria-hidden="true"></span></button>'; }

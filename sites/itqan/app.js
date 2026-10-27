@@ -97,7 +97,7 @@
   function go(s) { var el = $(s); if (!el) return; if (lenis) lenis.scrollTo(el, { offset: -76 }); else el.scrollIntoView(); }
   function fmt(d, o) { try { return new Intl.DateTimeFormat(lang === "ar" ? "ar-DZ-u-nu-latn" : I[lang].loc, o).format(d); } catch (e) { return d.toDateString(); } }
   function dur(f) { return f.m === 1.5 ? I[lang].wk6 : I[lang].mo.replace("{n}", f.m); }
-  function openWa() { var m = { fr: "Bonjour AFEX Digital, je viens du site de démonstration « " + document.title + " ». Je veux un site comme celui-ci.", ar: "مرحبًا AFEX Digital، أتيت من الموقع التجريبي « " + document.title + " ». أريد موقعًا مثله.", en: "Hello AFEX Digital, I found the demo site “" + document.title + "”. I would like a website like this one." }; window.open("https://wa.me/213657944090?text=" + encodeURIComponent(m[lang] || m.fr), "_blank", "noopener"); }
+  function openWa() { var m = { fr: "Bonjour AFEX Digital, je viens du site de démonstration « " + document.title + " ». Je veux un site comme celui-ci.", ar: "مرحبًا AFEX Digital، أتيت من الموقع التجريبي « " + document.title + " ». أريد موقعًا مثله.", en: "Hello AFEX Digital, I found the demo site “" + document.title + "”. I would like a website like this one." }; window.open("https://wa.me/213550284873?text=" + encodeURIComponent(m[lang] || m.fr), "_blank", "noopener"); }
 
   /* cards */
   function renderPoles() { var t = I[lang]; $("#poles").innerHTML = '<button type="button" data-p="" aria-pressed="' + (!pole) + '">' + t.all + "</button>" + Object.keys(POLES).map(function (k) { return '<button type="button" data-p="' + k + '" aria-pressed="' + (pole === k) + '">' + L(POLES[k][1]) + "</button>"; }).join(""); }
